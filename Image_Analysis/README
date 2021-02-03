@@ -1,0 +1,11 @@
+
+Les images se trouvant de base dans chaque fichier sont nécessaires au fonctionnement des scripts.
+NE PAS LES EFFACER sous peine de devoir toutes les recréer en partant du script 3A. 
+
+NE PAS EFFACER les formes dans chaque dossier.
+
+Pour visualiser les résultats, se rendre dans chacun des 4 dossiers traitant respectivement une des 4 questions et exécuter le script correspondant (3A.sh, 3B.sh, 3C.sh et 3D.sh).
+
+Dans le cas où les scripts ne fonctionneraient pas à l'exécution, un fichier contenant les images intermédiaires et le résultat final de chaque étape se trouve à l'intérieur de chaque dossier 3A, 3B, 3C et 3D (en espérant que vous n'ayez pas besoin de les regarder).
+
+

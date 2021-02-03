@@ -1,0 +1,147 @@
+
+<!-- saved from url=(0059)https://perso.esiee.fr/~coustyj/EnglishMorphoGraph/PS5.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body><font style="font-family: arial,sans-serif;" size="3"><font size="5"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><font size="6">MorphoGraphs and Imagery - Practical session 5</font><br>
+<br>
+Goals<br>
+</span></font></font>
+<ul><li><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Knowing how to apply morphological oper</span></font><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">ators by structuring elements and morphological connected operators to binary and grayscale images thanks to Pink library</span></font></li>
+<li><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Understanding the effect of basic </span></font><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">morphological oper</span></font><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">ators by structuring elements and of morphological connected operators on binary and grayscale images</span></font></li>
+<li><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Knowing how to compose </span></font><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">morphological oper</span></font><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">ators to </span></font><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">solve some typical problems of binary and grayscale image processing</span></font></li></ul>
+<font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br>
+<font size="5">General Instructions</font></span></font><br>
+<ul><li><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><font size="3">
+</font></span></font><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Solve each problem of the session step by step, following the provided guidelines.</span></font> <font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Note that there can
+ be multiple solutions.</span></font></li>
+<li><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">For each problem, use the operators (and the programs) given in the associated 'tools' section. </span></font><font size="3" face="arial, sans-serif">These programs must be called from a Linux terminal under the environment settled for the course MorphoGraph and Imagery. </font><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Use the provided links to access documentation.</span></font></li>
+<li><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">For each problem, save in a text file (a shell script) the series of commands that you use.</span></font></li>
+<li><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">If you do not have time to answer all items during the session, remaining items must be solved </span></font><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">as homework after the session. Note that you should send your solution to Problem 3 leading to bonus/malus on your final evaluation of the course.<br>
+</span></font></li>
+<li><font size="3">Read the whole description of a problem before starting to look for a solution.</font><br>
+</li></ul>
+<div><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+</span></font><span style="background-color: transparent; vertical-align: baseline; line-height: 20px;"><font size="3" face="arial, sans-serif">Bon Courage :) </font></span><br>
+</div>
+<br>
+<font size="3"><font size="5"><b style="font-family: arial,sans-serif;">Problem 1 (without a computer): connected filtering a synthetic image<br>
+</b></font></font><span style="background-color: transparent; vertical-align: baseline; line-height: 20px;"><font size="3" face="arial, sans-serif">Let F be the following image:<br>
+<br>
+<div style="display: block; text-align: center; margin-right: auto; margin-left: auto;"><a href="./MorphoGraphs and Imagery_files/ToyPS5.png" imageanchor="1"><img src="./MorphoGraphs and Imagery_files/ToyPS5.png" border="0"></a></div>
+<br>
+</font></span>
+<ul><li><span style="background-color: transparent; vertical-align: baseline; line-height: 20px;"><font size="3" face="arial, sans-serif"><i>1A</i> - Represent the k-section F_k of F with k=0,...,9</font></span></li>
+<li><span style="background-color: transparent; vertical-align: baseline; line-height: 20px;"><font size="3" face="arial, sans-serif"><i>1B</i> - Label the connected components of F (letters can be used as labels),&nbsp; assuming that the image is equipped with the 4-adjacency </font></span>Γ<sub>4</sub></li>
+<li><span style="background-color: transparent; vertical-align: baseline; line-height: 20px;"><font size="3" face="arial, sans-serif"><i>1C</i> - Draw the component tree of F</font></span></li>
+<li><span style="background-color: transparent; vertical-align: baseline; line-height: 20px;"><font size="3" face="arial, sans-serif"><i>1D</i> - Simplify the image F by iteratively razing the maxima of minimal area, until the image contains a unique maxima</font></span></li>
+<li><span style="background-color: transparent; vertical-align: baseline; line-height: 20px;"><font size="3" face="arial, sans-serif"><i>1E</i> - Same as 1D, but according to depth</font></span></li>
+<li><span style="background-color: transparent; vertical-align: baseline; line-height: 20px;"><font size="3" face="arial, sans-serif"><i>1F</i> - Same as 1D, but according to volume</font></span></li>
+<li><span style="background-color: transparent; vertical-align: baseline; line-height: 20px;"><font size="3" face="arial, sans-serif"><i>1G</i> - Draw the unique maximum of the image obtained in 1F</font></span></li></ul>
+<font size="3"><font size="5"><b style="font-family: arial,sans-serif;">Preliminary problem (using a computer)<br>
+</b></font>
+</font><span style="background-color: transparent; vertical-align: baseline; line-height: 20px;"><font size="3" face="arial, sans-serif"><br>
+Before going any further, download the file <a href="http://www.esiee.fr/~coustyj/EnglishMorphoGraph/PS5-Images.tgz" target="_blank">PS5-Images.tgz</a> and uncompress it<br>
+</font></span>
+<ul><li><span style="background-color: transparent; vertical-align: baseline; line-height: 20px; font-family: courier new,monospace;"><font size="3">tar -xvzf PS5-Images.tgz</font></span><br>
+</li></ul>
+
+<font size="3">This archive contains the images that will be used during the session. <br>
+<br>
+</font><font size="3"><font size="5"><b style="font-family: arial,sans-serif;">Problem 2: extracting the lobes of cil.pgm </b></font><br>
+<br>
+</font><font size="3">
+<table style="border-color: rgb(136, 136, 136); border-width: 1px; border-collapse: collapse;" border="1" bordercolor="#888888" cellspacing="0">
+<tbody>
+<tr>
+<td style="text-align: center; width: 200px; height: 38px;">&nbsp;<font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><b>&nbsp;<font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><b>
+</b></span></font><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">INPUT: cil.</span><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">pgm </span></font></b></span></font></td>
+<td style="text-align: center; width: 299px; height: 38px;"><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><b><span style="font-weight: normal;">&nbsp;DESCRIPTION OF THE PROBLEM</span></b></span></font> <br>
+</td>
+<td style="text-align: center; width: 200px; height: 38px;">&nbsp;<font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><b>&nbsp; <font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><b>&nbsp;<font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><b> </b></span></font><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">EXPECTED RESULT (2B)<br>
+</span></font></b></span></font></b></span></font></td>
+</tr>
+<tr>
+<td style="width: 200px; height: 193px;">&nbsp;<font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><b><font size="3"><font face="arial, sans-serif">
+<div style="display: block; text-align: right; margin-left: auto;"><a href="https://sites.google.com/site/beedotkiran/jean-tp/cell.png?attredirects=0" imageanchor="1"></a>
+<div style="display: block; text-align: center; margin-right: auto; margin-left: auto;"><a href="./MorphoGraphs and Imagery_files/cil.png" imageanchor="1"><img src="./MorphoGraphs and Imagery_files/cil.png" width="200" border="0" height="200"></a></div>
+<br>
+</div>
+</font></font></b></span></font></td>
+<td style="width: 299px; height: 193px;"><font size="2"><font size="3"><br>
+The image cil.pgm represents a slice of a cell. In order to know whether this cell is sane or not, it is important to perform a geometrical analysis of the visible bright lobes. In order to perform such analysis</font></font>, one usually starts by finding the spatial extension of these bright lobes. Problem 2 is about extracting (localizing) the bright lobes of image cil.pgm.<br>
+</td>
+<td style="width: 200px; height: 193px;">&nbsp;<font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><b><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><b><font size="3"><font face="arial, sans-serif">
+<div style="display: block; text-align: left; margin-right: auto;"><a href="https://sites.google.com/site/beedotkiran/jean-tp/result4CPrime.png?attredirects=0" imageanchor="1"></a>
+<div style="display: block; text-align: center; margin-right: auto; margin-left: auto;"><a href="./MorphoGraphs and Imagery_files/cilSeg.png" imageanchor="1"><img src="./MorphoGraphs and Imagery_files/cilSeg.png" width="200" border="0" height="200"></a></div>
+<br>
+</div>
+</font></font></b></span></font></b></span></font></td>
+</tr>
+</tbody>
+</table>
+</font><font size="3"><br>
+</font><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><b>Guideline</b>.</span></font><br>
+<ul><li><font size="3"><i>2A</i> - Try to extract the "significant" blobs by thresholding (without using a morphological operator)</font></li>
+<li><font size="3"><i>2B</i> - Extract the "significant" blobs: <font face="arial, sans-serif">produce an image like the one above on the right</font></font></li>
+<li><font size="3"><font face="arial, sans-serif"><i>2C</i> - Same as 2B, but using the operators of the section 'Extra tools.' below <br>
+</font></font></li></ul>
+<font size="3">
+<font face="arial, sans-serif"><b>Tools</b>.<br>
+</font></font><span style="background-color: transparent; vertical-align: baseline; line-height: 20px; font-family: arial,sans-serif;"><font size="3">You can use any tool presented for the previous problems (in this session and in <a href="http://www.esiee.fr/~coustyj/EnglishMorphoGraph/PS4.html" target="_blank">the previous one</a>). In addition, you can also use the following ones:</font></span><br>
+<ul><li>'<a href="https://perso.esiee.fr/~coupriem/Pink/doc/html/seuil_8c.html" target="_blank"><span style="font-family: courier new,monospace;">seuil</span></a>' <span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;&nbsp; </span>(NB: seuil means threshold in French)</li>
+<li>'<a href="https://perso.esiee.fr/~coupriem/Pink/doc/html/seuil_8tcl.html" target="_blank"><span style="font-family: courier new,monospace;">seuil.tcl</span></a>' <span>&nbsp; </span>(an interactive version of seuil)</li>
+<li>'<a href="https://perso.esiee.fr/~coupriem/Pink/doc/html/areaopening_8c.html" style="font-family: courier new,monospace;" target="_blank">areaopening</a>', '<a href="https://perso.esiee.fr/~coupriem/Pink/doc/html/areaclosing_8c.html" style="font-family: courier new,monospace;" target="_blank">areaclosing</a>', '<span style="font-family: courier new,monospace;">areaopening.tcl</span>', '<span style="font-family: courier new,monospace;">areaclosing.tcl</span>'<br>
+</li>
+<li>'<a href="https://perso.esiee.fr/~coupriem/Pink/doc/html/heightmaxima_8c.html" style="font-family: courier new,monospace;" target="_blank">heightmaxima</a>', '<a href="https://perso.esiee.fr/~coupriem/Pink/doc/html/heightminima_8c.html" style="font-family: courier new,monospace;" target="_blank">heightminima</a>'</li>
+<li>'<a href="https://perso.esiee.fr/~coupriem/Pink/doc/html/volmaxima_8c.html" style="font-family: courier new,monospace;" target="_blank">volmaxima</a>'</li>
+<li>'<a href="https://perso.esiee.fr/~coupriem/Pink/doc/html/maxima_8c.html" style="font-family: courier new,monospace;" target="_blank">maxima</a>', '<a href="https://perso.esiee.fr/~coupriem/Pink/doc/html/minima_8c.html" style="font-family: courier new,monospace;" target="_blank">minima</a>'<br>
+</li></ul>
+<font size="3">
+<font face="arial, sans-serif"><b>Extra tools</b>. (for solving item 2C)</font></font><br>
+<ul><li><span style="background-color: transparent; vertical-align: baseline; line-height: 20px; font-family: arial,sans-serif;"><font size="3">'<a href="https://perso.esiee.fr/~coupriem/Pink/doc/html/heightselnb_8c.html" target="_blank"><span style="font-family: courier new,monospace;">heightselnb</span></a>', '<span style="font-family: courier new,monospace;">heightselnb.tcl</span>'</font></span></li>
+<li><span style="background-color: transparent; vertical-align: baseline; line-height: 20px; font-family: arial,sans-serif;"><font size="3">'<a href="https://perso.esiee.fr/~coupriem/Pink/doc/html/areaselnb_8c.html" style="font-family: courier new,monospace;" target="_blank">areaselnb</a>'</font></span></li>
+<li><span style="background-color: transparent; vertical-align: baseline; line-height: 20px; font-family: arial,sans-serif;"><font size="3">'<a href="https://perso.esiee.fr/~coupriem/Pink/doc/html/volselnb_8c.html" target="_blank">volselnb</a>'</font></span></li>
+<li><span style="background-color: transparent; vertical-align: baseline; line-height: 20px; font-family: arial,sans-serif;"><font size="3">'<a href="https://perso.esiee.fr/~coupriem/Pink/doc/html/inverse_8c.html" target="_blank"><span style="font-family: courier new,monospace;">inverse</span></a>'<br>
+</font></span></li></ul>
+<font size="3">
+
+<font size="5"><b style="font-family: arial,sans-serif;">Problem 3: </b></font></font><font size="3"><font size="5"><b style="font-family: arial,sans-serif;">cleaning image s.pgm</b></font></font><br>
+<font size="3">
+<br>
+<b>Important remark:</b> Your have to send me your solution by e-mail before the next practical session. </font><font size="3">Your solution must be sent in the form of four scripts that solve items 3A, 3B, 3C, and 3D respectively. Depending of the quality of your solution, a bonus/malus</font>&nbsp; that ranges from -2&nbsp; to +2 points will be applied to your final grade of the course MorphoGraph and Imagery.&nbsp; <br>
+<font size="3"><br>
+<table style="border-color: rgb(136, 136, 136); border-width: 1px; border-collapse: collapse;" border="1" bordercolor="#888888" cellspacing="0">
+<tbody>
+<tr>
+<td style="width: 200px; height: 61px;">&nbsp;<font size="3"><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><b><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><b>
+</b></span></font><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">INPUT: s.</span><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">pgm </span></font></b></span></font></font></td>
+<td style="width: 394px; height: 61px;">&nbsp;<font size="3"><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><b><span style="font-weight: normal;"> DESCRIPTION OF THE SITUATION</span></b></span></font> </font></td>
+<td style="width: 200px; height: 61px;">&nbsp;<font size="3"><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><b><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><b><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">EXPECTED RESULT (2D)</span></font></b></span></font></b></span></font></font></td>
+</tr>
+<tr>
+<td style="width: 200px; height: 197px;">&nbsp;
+<div style="display: block; text-align: left;"><a href="./MorphoGraphs and Imagery_files/s.png" imageanchor="1"><img src="./MorphoGraphs and Imagery_files/s.png" width="200" border="0" height="148"></a></div>
+</td>
+<td style="width: 394px; height: 197px;"><br>
+You get the picture s.pgm that was taken with a digital camera. Before displaying the depicted building in a new website dedicated to New-York architecture, the picture must be processed. Indeed, for aesthetic reasons, <font size="3">salt and pepper noise must be removed</font>, and for copyright reasons, the name of the company that owns the building must be hidden. Problem 3 is about cleaning image s.pgm.<br>
+</td>
+<td style="width: 200px; height: 197px;">&nbsp;
+<div style="display: block; text-align: left;"><a href="./MorphoGraphs and Imagery_files/ResTrucage.png" imageanchor="1"><img src="./MorphoGraphs and Imagery_files/ResTrucage.png" width="200" border="0" height="148"></a></div>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+</font><font style="font-family: arial,sans-serif;" size="3"><span style="color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><b>Guideline</b>.</span></font><br>
+<ul><li><font size="3"><i>3A</i> - Remove salt and pepper noise (see the expected result for problem 6B of the <a href="http://www.esiee.fr/~coustyj/EnglishMorphoGraph/PS4.html" target="_blank">previous session</a>) <br>
+</font></li>
+<li><font size="3"><i>3B</i> - Extract the writings from the image obtained after 3A</font></li>
+<li><font size="3"><font face="arial, sans-serif"><i>3C</i> - Produce a patch (an image) such that the white pixels of the image obtained in 3B are replaced by gray pixels of intensity similar to the one of their "neighbors" that do not belong to the bright writings</font></font></li>
+<li><font size="3"><font face="arial, sans-serif">3D - Combine the result of 2A, 2B, and 2C to obtain&nbsp;&nbsp; an image that looks like s.pgm but without salt and pepper noise and where the bright letters are no more visible: produce </font></font><font size="3"><font face="arial, sans-serif">an image like the one above on the right</font></font></li></ul>
+<font size="3">
+<font face="arial, sans-serif"><b>Tools</b>.<br>
+</font></font><span style="background-color: transparent; vertical-align: baseline; line-height: 20px; font-family: arial,sans-serif;"><font size="3">You can use any tool presented for the previous problems (in this session and in <a href="http://www.esiee.fr/~coustyj/EnglishMorphoGraph/PS4.html" target="_blank">the previous one</a>). In addition, you can also use the following one:</font></span><br>
+<ul><li>'<a href="https://perso.esiee.fr/~coupriem/Pink/doc/html/convexhull_8c.html" target="_blank"><span style="font-family: courier new,monospace;">convexhull</span></a><a href="https://perso.esiee.fr/~coupriem/Pink/doc/html/seuil_8c.html" target="_blank"></a>'</li></ul>
+<br>
+<font size="1">This practical session was prepared by Jean Cousty<br>
+<i>Laboratoire d'Informatique Gaspard-Monge, Université Paris-Est - Département
+Informatique, ESIEE Paris</i></font><br>
+</body></html>
