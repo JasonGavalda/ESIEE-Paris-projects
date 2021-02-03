@@ -1,0 +1,15 @@
+Compiler le projet avec la ligne de commande : g++ `pkg-config --cflags opencv4` median.cpp sobel_projet.cpp sobel_projet_opti.cpp projet_base.cpp `pkg-config --libs opencv4` -o projet
+
+Puis lancer l'exécutable en tapant ./projet
+
+Pour changer l'utilisation des filtres, se référer aux commentaires dans le fichier source projet_base.cpp (les fonctions à changer sont situées lignes 193 pour le median et 207 pour le sobel.
+
+Filtre médian non optimisé : Utiliser la fonction computeMedianMat(frame_gray, median_mat_perso);
+
+Filtre médian optimisé : Utiliser la fonction computeMedianMatOpti(frame_gray, median_mat_perso);
+
+Filtre Sobel non optimisé : Utiliser la fonction sobelperso( median_mat_perso, grad_perso ); 
+
+Filtre Sobel optimisé : Utiliser la fonction sobel_perso_opti( median_mat_perso, grad_perso ); 
+
+Ne surtout pas hésiter à commenter / décommenter les lignes de code calculant les temps d'exécution des différents algorithmes pour gagner des fps sur le filtre en direct.
