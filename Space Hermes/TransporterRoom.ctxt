@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=TransporterRoom
+comment0.text=\r\n\ A\ precise\ type\ of\ Room\ used\ to\ teleport\ a\ player\ \r\n\ to\ another\ random\ selected\ Room.\r\n\r\n\ @author\ Jason\ GAVALDA\r\n\ @version\ 12.01.2020\r\n
+comment1.params=pDescription\ pImage
+comment1.target=TransporterRoom(java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ Constructor\ which\ creates\ a\ TransporterRoom\ using\ the\ Room\ constructor.\r\n\ @param\ pDescription\ The\ Description\ of\ the\ TransporterRoom\r\n\ @param\ pImage\ The\ image\ of\ the\ TransporterRoom.\r\n
+comment2.params=
+comment2.target=RoomRandomizer\ getRoomRandomizer()
+comment2.text=\r\n\ Accessor\ which\ gets\ the\ RoomRandomizer\ of\ the\ TransporterRoom.\r\n\ @return\ The\ RoomRandomizer\ of\ the\ TransporterRoom.\r\n
+comment3.params=pDirection
+comment3.target=Room\ getExit(java.lang.String)
+comment3.text=\r\n\ Overrides\ the\ previous\ getExit()\ method\ from\ Room\ to\ get\ a\ random\ exit\r\n\ for\ the\ current\ TransporterRoom\ rather\ than\ a\ normal\ exit.\r\n\ @param\ pDirection\ The\ Direction\ the\ player\ wants\ to\ moves\ in,\ \r\n\ useless\ in\ this\ method\ but\ used\ to\ be\ interpretated\ correctly\ by\ goRoom()\ in\ GameEngine.\r\n\ @return\ A\ random\ exit\ Room\ among\ those\ attached\ to\ the\ TransporterRoom.\r\n
+comment4.params=pRoom
+comment4.target=void\ addExit(Room)
+comment4.text=\r\n\ Adds\ a\ Room\ attached\ to\ the\ TransporterRoom.\r\n\ @param\ pRoom\ The\ Room\ to\ add\ to\ the\ list\ of\ attached\ Rooms\ in\ this\ TransporterRoom.\r\n
+comment5.params=pRoom
+comment5.target=void\ removeExit(Room)
+comment5.text=\r\n\ Removes\ a\ Room\ attached\ to\ the\ TransporterRoom.\r\n\ @param\ pRoom\ The\ Room\ to\ add\ to\ the\ list\ of\ attached\ Rooms\ in\ this\ TransporterRoom.\r\n
+numComments=6

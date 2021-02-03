@@ -1,0 +1,24 @@
+vPortal : https://hubblesite.org/contents/media/images/2019/56/4586-Image?page=2&filterUUID=4c394bbb-b21e-43ab-a160-2a4521d70243
+vSystem1 : https://manyworlds.space/2017/10/26/red-dwarf-stars-and-the-planets-around-them/
+vSystem2 : http://www.cosmosup.com/two-blue-giant-stars-are-starting-to-merge-to-create-a-megastar/
+vSystem3 : https://spaceplace.nasa.gov/all-about-exoplanets/en/
+vSystem1_1 : https://hubblesite.org/contents/media/images/2017/23/4045-Image.html?page=20&filterUUID=4c394bbb-b21e-43ab-a160-2a4521d70243
+vSystem2_1 : https://fr.m.wikipedia.org/wiki/Fichier:Black_hole_-_Messier_87.jpg
+vSystem3_1 : https://en.wikipedia.org/wiki/Nebula#/media/File:Omega_Nebula.jpg
+vSystem1_2 : https://en.wikipedia.org/wiki/Nebula#/media/File:Crab_Nebula.jpg
+vSystem2_2 : https://upload.wikimedia.org/wikipedia/commons/2/22/Artist%E2%80%99s_impression_of_the_double-star_system_GG_Tauri-A.jpg
+vSystem3_2 : https://hubblesite.org/contents/media/images/2019/60/4597-Image?page=2&filterUUID=4c394bbb-b21e-43ab-a160-2a4521d70243
+vSystem1_3 : https://hubblesite.org/contents/media/images/2018/42/4242-Image.html?page=11&filterUUID=4c394bbb-b21e-43ab-a160-2a4521d70243
+vSystem2_3 : https://hubblesite.org/contents/media/images/2018/43/4231-Image.html?page=12&filterUUID=4c394bbb-b21e-43ab-a160-2a4521d70243
+vSystem4 : https://hubblesite.org/contents/media/images/2018/26/4159-Image.html?page=13&filterUUID=4c394bbb-b21e-43ab-a160-2a4521d70243
+vSystem5 : https://hubblesite.org/contents/media/images/2019/19/4546-Image?page=4&filterUUID=4c394bbb-b21e-43ab-a160-2a4521d70243
+vSystem6_1 : https://hubblesite.org/contents/media/images/2018/26/4159-Image.html?page=13&filterUUID=4c394bbb-b21e-43ab-a160-2a4521d70243
+vSystem6_2 : https://hubblesite.org/contents/media/images/2018/47/4247-Image.html?page=11&filterUUID=4c394bbb-b21e-43ab-a160-2a4521d70243
+vSystem6_3 : https://www.sciencealert.com/experts-says-a-space-base-halfway-between-the-moon-and-earth-could-be-built-in-10-years
+vSystem7_1 : https://hubblesite.org/contents/media/images/2019/50/4569-Image?page=3&filterUUID=4c394bbb-b21e-43ab-a160-2a4521d70243
+vSystem7_2 : https://hubblesite.org/contents/media/images/2018/52/4275-Image.html?page=9&filterUUID=4c394bbb-b21e-43ab-a160-2a4521d70243
+vSystem7_3 : https://hubblesite.org/contents/media/images/2018/46/4241-Image.html?page=11&filterUUID=4c394bbb-b21e-43ab-a160-2a4521d70243
+vSystem8 : https://www.surfertoday.com/environment/sun-50-amazing-facts-about-the-star-of-the-solar-system
+vTerre : https://upload.wikimedia.org/wikipedia/commons/6/61/Mount_Ararat_and_the_Araratian_plain_%28cropped%29.jpg
+
+

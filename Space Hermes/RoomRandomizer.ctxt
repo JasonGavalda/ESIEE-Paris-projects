@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=RoomRandomizer
+comment0.text=\r\n\ Class\ which\ allows\ the\ game\ to\ select\ a\ Room\ randomly\r\n\r\n\ @author\ Jason\ GAVALDA\r\n\ @version\ 12.01.2020\r\n
+comment1.params=
+comment1.target=RoomRandomizer()
+comment1.text=\r\n\ Constructor\ which\ creates\ a\ List\ of\ the\ possible\ Rooms\ accessed\r\n\ by\ the\ Room\ Randomizer.\r\n
+comment2.params=pInt
+comment2.target=void\ setAleaInt(int)
+comment2.text=\r\n\ Modifies\ aAleaInt\ to\ the\ pInt\ value.\r\n\ @param\ pInt\ The\ value\ aAleaInt\ will\ take.\r\n
+comment3.params=pRoom
+comment3.target=void\ addRoom(Room)
+comment3.text=\r\n\ Adds\ a\ Room\ to\ the\ Array\ of\ possible\ Rooms.\r\n\ @param\ pRoom\ The\ Room\ to\ add\ in\ the\ ArrayList\ attribute.\r\n
+comment4.params=pRoom
+comment4.target=void\ removeRoom(Room)
+comment4.text=\r\n\ Removes\ a\ Room\ to\ the\ field\ of\ possible\ Rooms\ selected\ by\ the\ randomizer.\r\n\ @param\ pRoom\ The\ Room\ removed\ from\ the\ Randomizer.\r\n
+comment5.params=pRoom
+comment5.target=boolean\ roomCheck(Room)
+comment5.text=\r\n\ Checks\ if\ the\ Room\ pRoom\ is\ in\ the\ aRoomList\ ArrayList.\r\n\ @param\ pRoom\ The\ Room\ to\ be\ checked.\r\n\ @return\ true\ whether\ Room\ pRoom\ is\ in\ the\ aRoomList\ ArrayList\ or\ false\ either.\r\n
+comment6.params=
+comment6.target=Room\ findRandomRoom()
+comment6.text=\r\n\ Finds\ a\ RandomRoom\ within\ the\ ArrayList\ aRoomList.\r\n\ @return\ A\ random\ Room\ within\ the\ ArrayList\ aRoomList\ or\ the\ Room\ at\ the\ \r\n
+numComments=7

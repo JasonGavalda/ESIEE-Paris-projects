@@ -1,0 +1,16 @@
+take Map
+take StarGate
+charge
+go north
+go east
+take Upgraded_Hold
+Inventory
+use Upgraded_Hold
+drop Map
+go east
+take FuelTank_M
+use FuelTank_M
+back
+help
+look
+quit

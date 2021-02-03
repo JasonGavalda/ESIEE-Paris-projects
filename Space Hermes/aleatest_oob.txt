@@ -1,0 +1,11 @@
+go east
+go east
+go east
+take FuelTank_G
+use FuelTank_G
+take FuelTank_L
+use FuelTank_L
+go east
+alea blbl
+alea -8
+go north

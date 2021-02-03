@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=ItemList
+comment0.text=\r\n\ Class\ describing\ the\ ItemLists,\ collections\ which\ contains\ Items.\r\n\ Each\ of\ these\ are\ HashMaps.\r\n\ @author\ Jason\ GAVALDA\r\n\ @version\ 9/12/19\r\n
+comment1.params=
+comment1.target=ItemList()
+comment1.text=\r\n\ Constructor\ of\ an\ ItemList.\r\n\ Each\ ItemList\ is\ created\ as\ an\ HashMap\ which\ contains\ a\ String\ containing\ the\ name\ of\ the\ item,\r\n\ and\ the\ Item\ itself.\r\n
+comment2.params=
+comment2.target=java.util.Set\ getItemList()
+comment2.text=\r\n\ @return\ A\ Set\ of\ the\ ItemList.\r\n
+comment3.params=pItemName\ pItem
+comment3.target=void\ addItem(java.lang.String,\ Item)
+comment3.text=\r\n\ Adds\ an\ Item\ in\ the\ ItemList\ specified\ by\ its\ name\ and\ itself.\r\n\ @param\ pItemName\ The\ name\ of\ the\ Item\ to\ add\ to\ the\ ItemList.\r\n\ @param\ pItem\ The\ Item\ to\ add\ in\ the\ ItemList.\r\n
+comment4.params=pItemName
+comment4.target=boolean\ checkItem(java.lang.String)
+comment4.text=\r\n\ Returns\ whether\ a\ specified\ item\ is\ contained\ in\ an\ ItemList.\r\n\ @param\ pItemName\ The\ name\ of\ the\ item\ to\ be\ checked.\r\n\ @return\ Whether\ or\ not\ an\ Item\ is\ present\ in\ the\ ItemList.\r\n
+comment5.params=pItemName
+comment5.target=Item\ getItem(java.lang.String)
+comment5.text=\r\n\ Returns\ an\ Item\ contained\ in\ the\ ItemList.\r\n\ @param\ pItemName\ The\ name\ of\ the\ Item.\r\n\ @return\ The\ Item\ contained\ in\ the\ ItemList\ or\ null\ if\ not\ present.\r\n
+comment6.params=pItemName
+comment6.target=void\ removeItem(java.lang.String)
+comment6.text=\r\n\ Removes\ an\ Item\ specified\ by\ its\ name\ from\ the\ ItemList.\r\n\ @param\ pItemName\ The\ name\ of\ the\ Item.\r\n
+comment7.params=
+comment7.target=java.lang.String\ getItemString()
+comment7.text=\ Returns\ a\ String\ of\ the\ elements\ contained\ in\ an\ ItemList.\r\n\ for\ example\ \:\ "\ you\ manage\ to\ find\ a\ book\ ".\r\n\ @return\ The\ Items\ which\ are\ in\ the\ ItemList.\r\n
+numComments=8

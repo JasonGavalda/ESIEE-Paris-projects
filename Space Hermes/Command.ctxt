@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Command
+comment0.text=\ Class\ which\ deals\ with\ what\ a\ command\ contains\r\n\ @author\ Jason\ GAVALDA\r\n\ @version\ 29.10.19\r\n\ \r\n
+comment1.params=pCommandWord\ pSecondWord
+comment1.target=Command(java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ Creates\ a\ command\ composed\ of\ the\ words\ pCommandWord\ and\ pSecondWord.\r\n\ @param\ pCommandWord\ The\ first\ word\ of\ the\ command\ \:\ the\ action.\r\n\ @param\ pSecondWord\ The\ second\ word\ of\ the\ command\ \:\ the\ complement\ of\ the\ action.\r\n
+comment2.params=
+comment2.target=java.lang.String\ getCommandWord()
+comment2.text=\r\n\ Returns\ the\ first\ word\ of\ the\ command.\r\n\ @return\ The\ first\ word\ of\ the\ command.\r\n
+comment3.params=
+comment3.target=java.lang.String\ getSecondWord()
+comment3.text=\r\n\ Returns\ the\ second\ word\ of\ a\ command.\r\n\ @return\ The\ second\ word\ of\ a\ command.\r\n
+comment4.params=
+comment4.target=boolean\ hasSecondWord()
+comment4.text=\r\n\ @return\ True\ if\ the\ command\ has\ a\ second\ word,\ neither\ false.\r\n
+comment5.params=
+comment5.target=boolean\ isUnknown()
+comment5.text=\r\n\ @return\ True\ if\ the\ command\ is\ unknown,\ neither\ false.\r\n
+numComments=6

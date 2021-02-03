@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=CommandWords
+comment0.text=\r\n\ This\ class\ is\ part\ of\ the\ "Space\ Hermes"\ application.\ \r\n\ "Space\ Hermes"\ is\ a\ very\ simple,\ text\ based\ adventure\ game.\ \ \r\n\ \r\n\ This\ class\ holds\ an\ enumeration\ table\ of\ all\ command\ words\ known\ to\ the\ game.\r\n\ It\ is\ used\ to\ recognise\ commands\ as\ they\ are\ typed\ in.\r\n\r\n\ @author\ \ Michael\ Kolling\ and\ David\ J.\ Barnes\ +\ D.Bureau\ +\ J.Gavalda\r\n\ @version\ 2008.03.30\ +\ 2013.09.15\ +\ 2019.10.29\r\n
+comment1.params=
+comment1.target=CommandWords()
+comment1.text=\r\n\ Default\ constructor.\r\n
+comment2.params=pString
+comment2.target=boolean\ isCommand(java.lang.String)
+comment2.text=\r\n\ Checks\ if\ a\ String\ is\ part\ of\ the\ validCommands.\r\n\ @param\ pString\ The\ String\ to\ test\r\n\ @return\ True\ if\ pString\ is\ a\ valid\ command,\ neither\ returns\ false.\r\n
+comment3.params=
+comment3.target=java.lang.String\ getCommandList()
+comment3.text=\r\n\ Gets\ all\ the\ valid\ commands\r\n\ @return\ A\ String\ containing\ all\ the\ valid\ commands.\r\n
+numComments=4

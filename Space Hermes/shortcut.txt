@@ -1,0 +1,14 @@
+go south
+go east
+go east
+take FuelTank_M
+use FuelTank_M
+go east
+go east
+take FuelTank_G
+use FuelTank_G
+go north
+go east
+go east
+go south
+go down

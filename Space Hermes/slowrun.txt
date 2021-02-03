@@ -1,0 +1,60 @@
+help
+take StarGate
+charge
+take Map
+take FuelTank_G
+use FuelTank_G
+go south
+take Leaf
+go east
+look
+take Shard
+look
+take Book
+look
+Inventory
+go east
+take FuelTank_M
+use FuelTank_M
+go north
+take FuelTank_G
+use FuelTank_G
+go west
+take Holocron
+go west
+take Hologram
+warp
+back
+go north
+take Stone
+go east
+Inventory
+look
+drop Hologram
+look
+drop Holocron
+look
+go east
+take Upgraded_Hold
+use Upgraded_Hold
+back
+take Holocron
+take Hologram
+Inventory
+go east
+go south
+back
+go east
+go east
+go east
+go east
+take FuelTank_G
+use FuelTank_G
+go north
+back
+go east
+go east
+back
+go south
+Inventory
+go down
