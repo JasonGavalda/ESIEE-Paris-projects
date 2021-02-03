@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Algorithmique et Génome</title>
+</head>
+<body bgcolor="#ffffff">
+
+<h1 align="CENTER"><img src="Algorithmique%20et%20G%C3%A9nome_fichiers/dna.gif"></h1>
+
+<h2 align="CENTER">Algorithmique et Génome</h2>
+<br> <p>
+En biologie moléculaire,
+l'assemblage de fragments d'une séquence d'ADN est
+une opération fondamentale. En effet, les
+procédés de <i>séquençage</i> (identification de la
+séquence de bases A, C, G, T) actuels ne peuvent traiter des
+molécules complètes, qui ont typiquement entre 10000 et 100000
+paires de bases (PBs). Ces procédés fournissent des fragments
+de quelques centaines de PBs, prélevés aléatoirement,
+qui correspondent à des facteurs de la séquence recherchée.
+On obtient typiquement 500 à 2000 de ces fragments, qui
+présentent entre eux de nombreux recouvrements.
+</p><p>
+Le problème de la plus courte sur-séquence commune (SSC) d'un ensemble de
+séquences est une idéalisation du problème de l'assemblage.
+Soit une collection <i>F</i> de mots sur l'alphabet {A,C,G,T}, il s'agit
+de trouver un mot <i>S</i> de longueur minimale tel que tout mot <i>f</i> de <i>F</i>
+soit un facteur de <i>S</i>. Par exemple, si <i>F</i>={TAG,CTA,ACT}, les mots
+TAGCTAACT, CTACTAG et ACTAG sont des sur-séquences communes de <i>F</i>, et le mot <i>S</i>=ACTAG est la plus courte sur-séquence commune de <i>F</i>.
+</p><p>
+On peut voir également ce problème comme un problème de
+compression, la solution est en effet une représentation
+compacte des données d'origine. Dans l'exemple ci-dessus, le taux de compression est de 5/9.
+</p><p>
+On supposera, sans perte de généralité, qu'aucun mot de <i>F</i>
+n'est lui-même un facteur d'un autre mot de <i>F</i>. En effet,
+si <i>u</i> est facteur d'un autre mot de <i>F</i>, alors une solution
+pour <i>F</i> - {<i>u</i>} est également une solution pour <i>F</i>.
+</p><p>
+</p><h2><a name="SECTION00001000000000000000">Question 1</a></h2>
+<p>
+Les <i>recouvrements</i> (overlaps) entre les mots de <i>F</i> jouent
+évidemment un rôle majeur dans la solution de ce problème.
+Proposer une structure de graphe pondéré pour représenter
+une collection <i>F</i> et les recouvrements entre les mots de <i>F</i>.
+</p><p>
+Dans ce graphe pondéré, comment s'exprime le problème de la
+recherche d'une plus courte SSC&nbsp;? Connaissez-vous un problème
+apparenté&nbsp;?
+</p><p>
+</p><h2><a name="SECTION00002000000000000000">Question 2</a></h2>
+<p>
+Proposer un algorithme glouton <i>G</i> pour trouver une ``courte'' SSC.
+Un tel algorithme a été proposé
+en 1980 par Gallant, Maier et Storer. Ils ont montré que le taux de compression obtenu par <i>G</i> est au plus le double du taux de compression optimal.
+</p><p>
+Donner un exemple où la solution donnée par cet algorithme
+n'est pas la solution optimale.
+</p><p>
+</p><h2><a name="SECTION00003000000000000000">Question 3</a></h2>
+<p>
+L'efficacité de <i>G</i> est liée à celle de l'opération
+élémentaire qui consiste à calculer la longueur maximale
+d'un recouvrement entre deux mots <i>u</i> et <i>v</i>.
+Proposer un algorithme <i>linéaire</i> pour réaliser
+cette opération. (Indication&nbsp;: on essaiera de se ramener à un
+problème connu.)
+</p><p>
+</p><h2><a name="SECTION00004000000000000000">Question 4</a></h2>
+<p>
+Ecrire un programme construisant le graphe des recouvrements à
+partir d'une collection de fragments.
+</p><p>
+</p><h2><a name="SECTION00005000000000000000">Question 5</a></h2>
+
+<p>Dans certains cas, on est ``presque sûr'' que les recouvrements
+pertinents sont de taille supérieure à un certain seuil <i>t</i>.
+On peut alors retirer du graphe des recouvrements les arcs de poids
+inférieur à <i>t</i>.
+
+</p><p>De plus, si la séquence à reconstruire ne comporte pas
+de facteur répété de taille supérieure
+ou égale à <i>t</i>, ni de fragments qui sont
+eux-mêmes facteurs d'autres fragments, on peut montrer qu'alors le 
+graphe des recouvrements ainsi "filtré" est sans circuit. 
+
+</p><p>Plus précisément&nbsp;:
+<br>Soit F = {f<sub>i</sub>}, i=0..N-1 une famille de mots sur A, soit 
+      <i>t</i> un entier naturel,
+<br>La famille F est dite <i>t-connectée</i> si pour tout couple
+      f<sub>i</sub>, f<sub>j</sub> d'éléments de F, il
+      existe une séquence x<sub>0</sub>...x<sub>k</sub> de mots 
+      de F telle que x<sub>0</sub> = f<sub>i</sub>, x<sub>k</sub> =
+      f<sub>j</sub>, et pour tout i de 1 à k,
+      suffixe(x<sub>i-1</sub>, <i>t'</i>) = prefixe(x<sub>i</sub>,
+      <i>t'</i>) avec <i>t'</i> supérieur ou égal à <i>t</i>.
+<br>La famille F est dite <i>sans sous-intervalle</i> si pour tout mot 
+      f<sub>i</sub> de F, f<sub>i</sub> n'est pas un facteur d'un autre
+      mot f<sub>j</sub> de F.
+<br><b>Théorème&nbsp;</b> ("Introduction to Computational 
+Molecular Biology", J.C. Setubal, J. Meidanis, chap.&nbsp;4, p.&nbsp;129)
+<br>Soit X un mot sur A, soit F un échantillonnage (famille de facteurs)
+sans sous-intervalle et <i>t</i>-connecté de X.
+<br>Si X ne contient pas de facteur répété de taille
+supérieure ou égale à <i>t</i>, alors le graphe des recouvrements
+de longueur supérieure ou égale à <i>t</i> est sans circuit.
+
+</p><p>Combien y-a-t-il, au plus, de chemins Hamiltoniens 
+dans un graphe sans circuit ? Justifiez votre réponse.
+
+</p><p>Proposer un algorithme <i>linéaire</i> pour 
+trouver un chemin Hamiltonien
+dans le graphe des recouvrements "filtré", ou indiquer qu'il
+n'en existe pas.
+
+</p><p>Implémenter et tester cet algorithme.
+
+
+</p><p></p><hr width="100%" size="5"><p></p>
+<p>
+</p><h2>Références bibliographiques :</h2>
+<ul>
+<li><p>"Text Algorithms", M. Crochemore, W. Rytter, 
+Oxford University Press, 1994</p></li>
+<li><p>"Algorithms on Strings, Trees and Sequences", D. Gusfield,
+Cambridge University Press, 1997</p></li>
+<li><p>"Introduction to Computational Molecular Biology", J.C. Setubal, 
+J. Meidanis, PWS Publishing Company, 1997</p></li>
+<li><p>"Introduction to Computational Biology", M. S. Waterman, Chapman Ed., 
+1995</p></li>
+</ul>
+<p>
+
+</p><p>
+</p><h2>Données, utilitaires :</h2>
+<ul>
+<li><p><a href="https://perso.esiee.fr/~coupriem/Algo/fragments">Une collection de fragments du génome du bactériophage SK1</a></p></li>
+<li><p><a href="https://perso.esiee.fr/~coupriem/Algo/sk1">La séquence originale</a></p></li>
+<li><p><a href="https://perso.esiee.fr/~coupriem/Algo/seq.c">Quelques fonctions utilitaires en C pour les séquences</a></p></li>
+<li><p><a href="https://perso.esiee.fr/~coupriem/Algo/seq.h">Le fichier .h associé</a></p></li>
+</ul>
+<p>
+
+</p><p>
+</p><h2>Liens (un point d'entrée) :</h2>
+<ul>
+<li><p><a href="http://www.genoscope.cns.fr/">Genoscope (étude du génome)</a></p></li>
+</ul>
+
+
+
+</body></html>

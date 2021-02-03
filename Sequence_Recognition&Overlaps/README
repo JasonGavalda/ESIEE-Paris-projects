@@ -1,0 +1,7 @@
+Pour compiler le projet, il suffit de taper "make" dans un terminal pour compiler tous les fichiers nécessaires.
+
+Ensuite, rentrer ./TP1 sequence pour lancer l'exécutable.
+
+Des lignes sont à commenter/décommenter dans le code source pour essayer différentes utilisations.
+
+Les résultats sont à visualiser dans les fichiers .eps créés.

@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!-- saved from url=(0060)https://perso.esiee.fr/~coustyj/Sequences/IT-4301E-TDm2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Algorithmes pour le
+traitement de séquences. 
+Alignement optimal et logiciel d'aide à la dététection de plagiat
+</title>
+
+
+<meta name="GENERATOR" content="hevea 1.10">
+<style type="text/css">
+.li-itemize{margin:1ex 0ex;}
+.li-enumerate{margin:1ex 0ex;}
+.dd-description{margin:0ex 0ex 1ex 4ex;}
+.dt-description{margin:0ex;}
+.toc{list-style:none;}
+.thefootnotes{text-align:left;margin:0ex;}
+.dt-thefootnotes{margin:0em;}
+.dd-thefootnotes{margin:0em 0em 0em 2em;}
+.footnoterule{margin:1em auto 1em 0px;width:50%;}
+.caption{padding-left:2ex; padding-right:2ex; margin-left:auto; margin-right:auto}
+.title{margin:2ex auto;text-align:center}
+.center{text-align:center;margin-left:auto;margin-right:auto;}
+.flushleft{text-align:left;margin-left:0ex;margin-right:auto;}
+.flushright{text-align:right;margin-left:auto;margin-right:0ex;}
+DIV TABLE{margin-left:inherit;margin-right:inherit;}
+PRE{text-align:left;margin-left:0ex;margin-right:auto;}
+BLOCKQUOTE{margin-left:4ex;margin-right:4ex;text-align:left;}
+TD P{margin:0px;}
+.boxed{border:1px solid black}
+.textboxed{border:1px solid black}
+.vbar{border:none;width:2px;background-color:black;}
+.hbar{border:none;height:2px;width:100%;background-color:black;}
+.hfill{border:none;height:1px;width:200%;background-color:black;}
+.vdisplay{border-collapse:separate;border-spacing:2px;width:auto; empty-cells:show; border:2px solid red;}
+.vdcell{white-space:nowrap;padding:0px;width:auto; border:2px solid green;}
+.display{border-collapse:separate;border-spacing:2px;width:auto; border:none;}
+.dcell{white-space:nowrap;padding:0px;width:auto; border:none;}
+.dcenter{margin:0ex auto;}
+.vdcenter{border:solid #FF8000 2px; margin:0ex auto;}
+.minipage{text-align:left; margin-left:0em; margin-right:auto;}
+.marginpar{border:solid thin black; width:20%; text-align:left;}
+.marginparleft{float:left; margin-left:0ex; margin-right:1ex;}
+.marginparright{float:right; margin-left:1ex; margin-right:0ex;}
+.theorem{text-align:left;margin:1ex auto 1ex 0ex;}
+.part{margin:2ex auto;text-align:center}
+</style>
+</head>
+<body>
+<!--HEVEA command line is: hevea IT-4301E-TDm2 -->
+<!--CUT DEF section 1 --><table class="title"><tbody><tr><td><h1 class="titlemain">Algorithmes pour le
+traitement de séquences.<br>
+Alignement optimal et logiciel d’aide à la dététection de
+	plagiat</h1><h3 class="titlerest">Sujet rédigé par Jean Cousty</h3>
+	<h3 class="titlerest">
+	Ce TD est évalué à partir du rapport et du code à rendre selon
+	les modalités indiquées par ailleurs.
+</h3></td></tr>
+</tbody></table><blockquote class="figure"><div class="center"><hr width="80%" size="2"></div>
+<div class="center">
+<img src="./Algorithmes pour le traitement de séquences. Alignement optimal et logiciel d&#39;aide à la dététection de plagiat_files/IT-4301E-TDm2001.gif">
+<div class="caption"><table cellspacing="6" cellpadding="0"><tbody><tr><td valign="top" align="left">Figure 1: <a name="fig:intro"></a> Capture d’écran d’un logiciel d’aide à la
+détection de plagiat : un plagiat a été détecté et les deux textes
+ont été mis en correspondance.</td></tr>
+</tbody></table></div>
+</div>
+<div class="center"><hr width="80%" size="2"></div></blockquote><p>
+On s’intéresse à la conception d’un logiciel d’aide à la détection de
+plagiat comme celui illustré Figure&nbsp;<a href="https://perso.esiee.fr/~coustyj/Sequences/IT-4301E-TDm2.html#fig:intro">1</a>. Les algorithmes
+étudiés ont néanmoins une portée plus générale et sont intéressants
+dans d’autres contextes comme la mise en correspondance de séquences
+ADN ou de signaux, la visualisation des différences entre textes (par
+exemple utilitaire <tt>diff</tt> sous linux ou <tt>svn diff</tt> dans
+le contexte d’un logiciel gestions de version) <em>etc</em>.</p><p>Pour aider à détecter un plagiat, on souhaite afficher simultanément
+le texte soupçonné d’être un plagiat et le texte plagié de manière à
+mettre en lumière les correspondances (voir par exemple l’illustration
+de la Figure&nbsp;<a href="https://perso.esiee.fr/~coustyj/Sequences/IT-4301E-TDm2.html#fig:intro">1</a>). Pour cela on essaye “d’aligner au
+mieux” les deux textes. Par exemple, les textes&nbsp;<i>x</i> = <i>abbacb</i> et&nbsp;<i>y</i> =
+<i>cbbbacab</i> peuvent être alignées de la manière suivante :
+</p><div class="center">
+<table border="1" cellspacing="0" cellpadding="1"><tbody><tr><td align="center" nowrap=""> étirement de&nbsp;<i>x</i></td><td align="center" nowrap=""><i>a</i></td><td align="center" nowrap=""><i>b</i></td><td align="center" nowrap="">&#9251;</td><td align="center" nowrap=""><i>b</i></td><td align="center" nowrap=""><i>a</i></td><td align="center" nowrap=""><i>c</i></td><td align="center" nowrap="">&#9251;</td><td align="center" nowrap=""><i>b</i></td></tr>
+<tr><td align="center" nowrap=""> étirement de&nbsp;<i>y</i></td><td align="center" nowrap=""><i>c</i></td><td align="center" nowrap=""><i>b</i></td><td align="center" nowrap=""><i>b</i></td><td align="center" nowrap=""><i>b</i></td><td align="center" nowrap=""><i>a</i></td><td align="center" nowrap=""><i>c</i></td><td align="center" nowrap=""><i>a</i></td><td align="center" nowrap=""><i>b</i></td></tr>
+<tr><td align="center" nowrap=""> indice</td><td align="center" nowrap="">0</td><td align="center" nowrap="">1</td><td align="center" nowrap="">2</td><td align="center" nowrap="">3</td><td align="center" nowrap="">4</td><td align="center" nowrap="">5</td><td align="center" nowrap="">6</td><td align="center" nowrap="">7</td></tr>
+</tbody></table>
+</div><p>Pour aligner&nbsp;<i>x</i> et&nbsp;<i>y</i> il faut étirer les deux mots afin qu’ils aient
+la même longueur. Étirer un mot signifie simplement que l’on insère
+dans ce mot un ou plusieurs caractères blancs de manière à le
+rallonger.</p><p><u>Définition 1.</u> Soit&nbsp;<i>x</i> une séquence définie sur un
+alphabet&nbsp;<i>A</i> et&nbsp;&#9251; une lettre n’appartenant pas
+à&nbsp;<i>A</i>. On dit que la séquence&nbsp;<i>x</i>&#8242; définie sur l’alphabet&nbsp;<i>A</i> &#8746;
+{&#9251;} est un <em>étirement de&nbsp;</em><em><i>x</i></em> si&nbsp;<i>x</i> est
+exactement la séquence obtenue en retirant toutes les occurrences du
+caractères&nbsp;&#9251; dans&nbsp;<i>x</i>&#8242;.</p><p><u>Définitions 2.</u> Soient&nbsp;<i>x</i> et&nbsp;<i>y</i> deux séquences définies
+sur&nbsp;<i>A</i>. Un <em>alignement de&nbsp;</em><em><i>x</i></em><em> et&nbsp;</em><em><i>y</i></em> est une paire de
+séquences&nbsp;(<i>x</i>&#8242;,<i>y</i>&#8242;) définies sur&nbsp;<i>A</i> &#8746;{&#9251;} telle
+que&nbsp;:
+</p><ol class="enumerate" type="1"><li class="li-enumerate">
+<i>x</i>&#8242; et&nbsp;<i>y</i>&#8242; sont des étirements de&nbsp;<i>x</i> et&nbsp;<i>y</i>&nbsp;; et
+</li><li class="li-enumerate"><i>x</i>&#8242; et&nbsp;<i>y</i>&#8242; sont de même longueur.
+</li></ol><p>Dans l’alignement&nbsp;(<i>x</i>&#8242;,<i>y</i>&#8242;) de&nbsp;<i>x</i> et&nbsp;<i>y</i> présenté ci-dessus, on voit
+que 3 caractères (aux indices&nbsp;0,2 et&nbsp;6) sont mal appariés. Ce
+nombre constitue une bonne indication de la qualité de l’alignement
+considéré&nbsp;: plus il est petit, meilleur est l’alignement et plus la
+probabilité de détecter un plagiat est élevée. En particulier, lorsque
+ce nombre est égal à 0, l’alignement est parfait et le plagiat est
+complet (les deux textes sont identiques).</p><p><u>Définitions 3.</u> Le <em>score d’un alignement&nbsp;</em><em>(<i>x</i>&#8242;,<i>y</i>&#8242;)</em>
+est la grandeur&nbsp;<i>d</i>(<i>x</i>&#8242;,<i>y</i>&#8242;) égale au nombre de caractères mal appariés
+entre&nbsp;<i>x</i>&#8242; et <i>y</i>&#8242;, c’est-à-dire le nombre d’indices&nbsp;<i>i</i> &#8712; {0,
+…, |<i>x</i>&#8242;|&#8722;1} pour lesquels&nbsp;<i>x</i>&#8242;[<i>i</i>] &#8800; <i>y</i>&#8242;[<i>i</i>]. Un
+alignement&nbsp;(<i>x</i>&#8242;,<i>y</i>&#8242;) de deux séquences&nbsp;<i>x</i> et <i>y</i> définies sur&nbsp;<i>A</i> est
+dit <em>optimal (pour&nbsp;</em><em><i>d</i></em><em>)</em> si son score est inférieur ou égal au
+score de tout autre alignement de&nbsp;<i>x</i> et&nbsp;<i>y</i>.</p><!--TOC section Question 1-->
+<h2 class="section"><!--SEC ANCHOR -->Question 1</h2><!--SEC END --><p>Proposer un algorithme en&nbsp;<i>O</i>(|<i>x</i>| × |<i>y</i>|) pour calculer le score
+d’un alignement optimal entre&nbsp;<i>x</i> et&nbsp;<i>y</i> (indications : on essaiera de
+se ramener à un problème connu).</p><!--TOC section Question 2-->
+<h2 class="section"><!--SEC ANCHOR -->Question 2</h2><!--SEC END --><p>
+On considère la matrice&nbsp;<i>T</i> de taille (|<i>x</i>|+1) × (|<i>y</i>|+1) telle
+que&nbsp;<i>T</i>[<i>i</i>][<i>j</i>] est le score d’un alignement optimal entre&nbsp;<i>x</i><sub><i>i</i></sub>
+et&nbsp;<i>y</i><sub><i>j</i></sub>, où&nbsp;<i>x</i><sub><i>i</i></sub> et&nbsp;<i>y</i><sub><i>j</i></sub> désignent les préfixes de&nbsp;<i>x</i> et de <i>y</i> de
+longueur&nbsp;<i>i</i> et <i>j</i> respectivement.</p><p>Étant donnée la matrice&nbsp;<i>T</i> (obtenue par exemple avec l’algorithme de
+la question 2) et les séquences&nbsp;<i>x</i> et&nbsp;<i>y</i>, proposez un schéma de
+programme retournant un alignement optimal (<i>x</i>&#8242;,<i>y</i>&#8242;) de&nbsp;<i>x</i> et&nbsp;<i>y</i>.</p><p>Évaluer la complexité de calcul de l’algorithme proposé; si celle-ci
+n’est pas linéaire, proposez un autre algorithme de complexité
+linéaire. </p><!--TOC section Question 3-->
+<h2 class="section"><!--SEC ANCHOR -->Question 3</h2><!--SEC END --><p>
+<b>Ressource&nbsp;:</b> Pour répondre à cette question, vous pouvez utiliser
+le fichier source <a href="http://www.esiee.fr/~coustyj/Sequences/TD2.c">TD2.c</a> qui contient entre
+autre&nbsp;:
+</p><ul class="itemize"><li class="li-itemize">
+une fonction pour lire un texte à partir d’un fichier ;
+</li><li class="li-itemize">uns structure pour stocker un alignement ;
+</li><li class="li-itemize">une fonction pour afficher simultanément deux séquences.
+</li></ul><p>Implémentez les algorithmes des questions 1 et 2 et testez les en
+affichant un alignement optimal de <a href="http://www.esiee.fr/~coustyj/Sequences/texte1.txt">texte1.c</a>
+et <a href="http://www.esiee.fr/~coustyj/Sequences/texte2.txt">texte2.c</a>.</p><!--TOC section Question 4-->
+<h2 class="section"><!--SEC ANCHOR -->Question 4 : pour obtenir le A :-)</h2><!--SEC END --><p>La méthode proposée aux questions précédentes fonctionne correctement
+pour aligner un texte comprenant une seule ligne ou un seul
+paragraphe. On se propose désormais d’aligner et mettre en
+correspondance les différentes lignes/paragraphes d’un texte. Il
+s’agit donc de chercher à apparier les lignes (et non pas les
+caractères) d’un premier texte avec celles d’un second. Proposez une
+méthode, un algorithme de résolution et une implémentation pour cette
+nouvelle fonctionnalité (indications&nbsp;: on cherchera à se ramener un
+problème connu, dont on possède déjà une implémentation :)).</p><p>Vous pourrez tester votre méthode sur les fichiers
+<a href="http://www.esiee.fr/~coustyj/Sequences/t1.txt">t1.txt</a> et <a href="http://www.esiee.fr/~coustyj/Sequences/t2.txt">t2.txt</a>. Vous
+devriez obtenir un résultat qui ressemble fortement à celui de la
+Figure&nbsp;<a href="https://perso.esiee.fr/~coustyj/Sequences/IT-4301E-TDm2.html#fig:res">2</a></p><blockquote class="figure"><div class="center"><hr width="80%" size="2"></div>
+<div class="center">
+<img src="./Algorithmes pour le traitement de séquences. Alignement optimal et logiciel d&#39;aide à la dététection de plagiat_files/Resultat.png">
+<div class="caption"><table cellspacing="6" cellpadding="0"><tbody><tr><td valign="top" align="left">Figure 2: <a name="fig:res"></a> Capture d’écran du résultat produit par une
+logiciel d’alignement de séquences à réaliser dans cette séance.</td></tr>
+</tbody></table></div>
+</div>
+<div class="center"><hr width="80%" size="2"></div></blockquote><!--CUT END -->
+<!--HTMLFOOT-->
+<!--ENDHTML-->
+<!--FOOTER-->
+<hr size="2"><blockquote class="quote"><em>Ce document a été traduit de L<sup>A</sup>T<sub>E</sub>X par </em><a href="http://hevea.inria.fr/"><em>H</em><em><font size="2"><sup>E</sup></font></em><em>V</em><em><font size="2"><sup>E</sup></font></em><em>A</em></a></blockquote>
+
+</body></html>

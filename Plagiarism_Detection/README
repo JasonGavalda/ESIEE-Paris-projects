@@ -1,0 +1,7 @@
+Pour compiler le projet, taper make dans un terminal dans le répertoire de ce projet.
+
+Saisir dans le terminal ./TD2_test pour tester le projet sur les mots NICHE et CHIEN
+
+Saisir dans le terminal ./TD2 texte1.c texte2.c pour tester le projet sur ces deux fichiers texte.
+
+Vous pouvez remplacer texte1.c et texte2.c par n'importe quel fichier texte à condition de le mettre dans ce répertoire.
