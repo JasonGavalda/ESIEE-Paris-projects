@@ -1,0 +1,16 @@
+﻿Les 3 exercices à rendre ont été résolus.
+
+La commande make à l'invite de commandes en étant dans ce dossier compilera tous les fichiers nécessaires et crééra les exécutables.
+
+Il y a par conséquent 3 fichiers exécutables nommés "exo1" "exo2" et "exo3" se référant chacun à l'exercice correspondant à leur numéro.
+Ils sont compilés à partir des fichiers "main1.c", "main2.c" et "main3.c".
+
+Les tests réalisés dans ceux-ci ne concernant à chaque fois qu'un seul essai sur le graphe simple fourni (celui du métro étant difficile à vérifier en raison de sa longueur), je vous invite à changer les valeurs à l'appel de la fonction de Dijkstra ainsi qu'à la fonction des plus courts chemins dans les différents main.
+
+Notez cependant qu'en raison du graphe utilisé, vous ne pouvez rentrer que des valeurs allant de 0 à 5 inclus.
+
+L'entier à rentrer dans les 2 fonctions de Dijkstra (main1 et main3) correspond au sommet à partir duquel sont calculés les différents itinéraires, tandis que les 2 entiers à rentrer dans l'algorithme des plus courts chemins sont respectivement le sommet de départ et le sommet d'arrivée.
+
+Pour plus de clarté sur le résultat de la 2ème fonction, l'utilisation d'AfficheSuccesseurs est faite pour avoir directement une vue sur le chemin le plus court.
+
+La totalité du code source des 3 fonctions est consultable dans le fichier "Dijkstra_dans_le_metro.c".

@@ -1,0 +1,265 @@
+
+<!-- saved from url=(0070)https://perso.esiee.fr/~coustyj/EnglishMorphoGraph/MorphoGraphPS2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title></title>
+  
+  <script type="text/javascript" language="JavaScript" src="./MorphoGraphPS2_files/lastModDate.js.téléchargement">
+ </script>
+</head>
+
+<body text="#000000" vlink="#307777" bgcolor="#cccef4" link="#a02020" lang="en">
+<h1 align="center">MorphoGraph and Imagery - Practical session 2</h1>
+
+<p></p>
+
+<p align="center"><img src="./MorphoGraphPS2_files/petitgraphe.gif" width="200" border="0" height="141"></p>
+
+<h3 align="center">from an <a href="http://www.esiee.fr/~coupriem/Graphestp1/graphestp1.html">original
+subject</a> in French by Michel Couprie, Gilles Bertrand</h3>
+<hr>
+
+<p></p>
+
+<h1>1. Preliminaries</h1>
+
+<p>First of all, get the file <a href="http://www.esiee.fr/~coupriem/Graphestp1/GraphesTP1.tgz">GraphesTP1.tgz</a>
+and uncompress it:</p>
+<pre>    tar zxvf GraphesTP1.tgz
+    rm GraphesTP1.tgz
+    cd GraphesTP1; ls</pre>
+This archive contains C programs for manipulating graphs. Documentation of
+these programs can be found here: 
+
+<p></p>
+
+<center>
+<a href="http://www.esiee.fr/~coupriem/Graphesdoc/index.html"><b>Documentation</b></a></center>
+
+<p></p>
+
+<h2>1.1 First Graphs</h2>
+
+<p></p>
+
+<h3>1.1.1 Create and print a graph</h3>
+
+<p>In an ordinary file, enter the data of an arbitrary graph as follows: </p>
+<pre>&lt;number_of_vertices&gt; &lt;number_of_arcs&gt; 
+arcs
+&lt;initial_vertex&gt; &lt;final_vertex&gt;
+&lt;initial_vertex&gt; &lt;final_vertex&gt;
+...</pre>
+
+<p>For instance (see the file k5.graph)&nbsp;: </p>
+<pre>5 10
+arcs
+0 1
+0 2
+0 3
+0 4
+1 2
+1 3
+1 4
+2 3
+2 4
+3 4</pre>
+
+<p>Edit the files <b>exo111.c</b>, <b>exo112.c</b> and read them. Compile the
+library: </p>
+<pre>    make</pre>
+then compile these two programs: 
+<pre>    make exo111.exe
+    make exo112.exe</pre>
+and execute them: 
+<pre>    ./exo111.exe k5.graph
+    ./exo112.exe k5.graph</pre>
+
+<p></p>
+
+<p>The latter program creates a postscript file whose name extends the file
+name of the given graph (eg here: k5.graph.eps). You can view the PostScript
+file generated with <b>ghostview</b>, <b>kghostview</b> or <b>display</b>&nbsp;:
+</p>
+<pre>    display k5.graph.eps</pre>
+
+<p></p>
+
+<h3>1.1.2 Generate a random graph</h3>
+
+<p>Edit the file <b>exo113.c</b>, read it, compile it, and execute it.
+Visualize the results for several parameter values.</p>
+
+<p></p>
+
+<h2>1.2 First algorithms</h2>
+
+<p>Before going any further, study the <a href="http://www.esiee.fr/~coupriem/Graphestp1/gamma.html">descrption of
+the data structure</a> used to represent a graph by &#915; (its successors
+map). Also remind to refer to the documentation of the source code,
+including: </p>
+<ul>
+  <li><a href="http://www.esiee.fr/~coupriem/Graphesdoc/graphes_8h-source.html">source
+    of the definition of the main data structures (graphe, cell...)</a></li>
+  <li><a href="http://www.esiee.fr/~coupriem/Graphesdoc/graph__basic_8c.html">description
+    of the basic functions to handle graphs</a> (see in particular AjouteArc
+    -meaning <em>AddArc</em> in French -, EstSuccesseur - meaning
+    <em>IsSuccessor</em> in French)</li>
+  <li><a href="http://www.esiee.fr/~coupriem/Graphesdoc/graphaux_8c.html">description
+    of the functions to handle lists (LIFO) and Boolean arrays</a> (see in
+    particular CreeLifoVide - meaning <em>CreateEmptyLifo</em> in French-,
+    EnsembleVide - meaning <em>EmptySet</em> in Frence)</li>
+</ul>
+
+<p></p>
+
+<h3>1.2.1 Compute the symmetric of a graph</h3>
+
+<p>Edit the file <b>exo121.c</b>, read it, compile it, and execute it. Study
+the function <b>Sym</b>. Why isn't it efficient? What is the time complexity
+of the algorithm?</p>
+
+<p></p>
+
+<h3>1.2.2 Measure of computation timesdu temps</h3>
+
+<p>Edit the file <b>exo122.c</b>, read it, compile it, and execute it. Note
+the computation times obtained for various sizes of graphs.</p>
+
+<p></p>
+
+<h3>1.2.3 Linear-time algorithm for computing the symmetric of a graph</h3>
+
+<p>In the file <b>exo122.c</b>, change the function Sym to make the algorithm
+linear (for any help, see the <a href="http://www.esiee.fr/~coustyj/EnglishMorphoGraph/L1.pdf">slides of the
+first lecture</a>). Find below how to traverse a list of successors:</p>
+<pre>  pcell p;
+  ...
+    /* for any successor y of x */
+    for (p = g-&gt;gamma[x]; p != NULL; p = p-&gt;next) 
+    {
+      y = p-&gt;som;    
+      ...</pre>
+
+<p></p>
+
+<p>Measure the computation time with the new version and compare. </p>
+
+<p></p>
+<hr>
+
+<h1>2. Friends</h1>
+
+<p>Imagine a group of seven friends: Rachel, Monica, Ross, Chandler, Janice,
+Joe, and Phoebe. They live in New York and plan to rent two cars to spend a
+vacation in Florida. However, spending together the 18 hours that take the
+trip can be problematic if the passengers of both vehicles are not carefully
+selected.</p>
+
+<p>In fact, you should know that</p>
+<ul>
+  <li>Rachel and Ross just broke up, it would not be wise to make them travel
+    together. </li>
+  <li>Joe has made proposals to Rachel, so there are tensions between him and
+    Ross.</li>
+  <li>But Phoebe seems to try to attract the attention of Joe, which cast a
+    chill between her and Rachel. </li>
+  <li>Chandler just took Joe's position as captain of the football team, the
+    result is resentment.</li>
+  <li>Monica and Chandler are jealous of Janice, because she is pregnant and
+    they fail to have a baby.</li>
+  <li>Finally, Monica thinks Joe is an idiot.</li>
+</ul>
+
+<p>Formulate this problem in terms of graphs and give a solution for this
+particular case.</p>
+
+<p></p>
+<hr>
+
+<h1>3. Bipartite graphs</h1>
+
+<p>We say that a graph G = (E, &#915;) is <em>bipartite</em> if the set E of
+its vertices can be partitioned into two subsets E<sub>1</sub> and
+E<sub>2</sub> (ie, E<sub>1</sub> &#8746; E<sub>2</sub> = E and E<sub>1</sub>
+&#8745; E<sub>2</sub> = &#8709;) such that an arc of G cannot link two
+vertices of E<sub>1</sub>, and cannot link two vertices of E<sub>2</sub>
+either. Consider for instance </p>
+
+<p align="center"><img src="./MorphoGraphPS2_files/fig1.gif" width="475" border="0" height="106"></p>
+
+<p>We see that G<sub>1</sub> is a bipartite graph with E<sub>1</sub> = {1, 4,
+5} and E<sub>2</sub> = {2, 3}, and that G<sub>2</sub> is not a bipartite
+graph. We can interpret the bi-partition of the graph vertices into two
+subsets E<sub>1</sub> and E<sub>2</sub> as a ``coloring'' of the vertices
+with two distinct colors (bi-coloring), one color for E<sub>1</sub> and the
+other for E<sub>2</sub>. </p>
+
+<p>In the following, for simplicity, we assume that G is connected.</p>
+
+<p></p>
+
+<h2>3.1 Algorithm</h2>
+
+<p>Propose a linear time algorithm that indicates whether a given graph G is
+bipartite or not, and if so, that returns a bi-coloring of G. Getting
+inspired by the algorithm TRANS studied in course (see slide 21 of the <a href="http://www.esiee.fr/~coustyj/EnglishMorphoGraph/L3.pdf">lecture on
+connectivity</a>) might be a successful idea.</p>
+
+<h2>3.2 Implementation</h2>
+
+<p>For the implementation of your algorithm you could learn from the
+implementation of algorithm TRANS and of that of algorithm SCC, found in the
+file <a href="http://www.esiee.fr/~coustyj/EnglishMorphoGraph/scc.c">scc.c</a>. It
+will be probably easier to copy this code and modify it (you have to
+understand it before that!).</p>
+
+<p></p>
+
+<p>You can use the field <strong>v_sommets</strong> of the <a href="http://www.esiee.fr/~coupriem/Graphesdoc/structgraphe.html">graphe</a>
+structure to store the colors associated with the vertices, and the function
+<a href="http://www.esiee.fr/~coupriem/Graphesdoc/graph__print_8c.html#a4">AfficheValeursSommets</a>
+to display the result in text mode.</p>
+
+<p></p>
+
+<p>To graphically visualize the results of your algorithm, you may refer to
+the program <strong>demo_couleurs.c</strong> located in your directory. This
+program draws a graph whose vertices are named (by a string) and valued (by
+the field v_sommets). These values, which are integers between 0 and 4, are
+interpreted as colors (white, black, red, green and blue for 0, 1, 2, 3, 4
+respectively). The file <strong>demo_couleurs.graph</strong> contains an
+example.</p>
+
+<p>Test your program on several graphs that are bipartite or not, including
+the one from section `` Friends.''</p>
+<hr>
+
+<h1>4. Bonus (extra-work to be done after the practical session)</h1>
+
+<p></p>
+
+<h2>4.1 Property</h2>
+
+<p>Prove that a graph is bipartite if and only if it has no cycle of odd
+length. </p>
+
+<p></p>
+
+<h2>4.2 Detect odd cycles</h2>
+
+<p>Given a non bipartite graph, propose and implement a method to detect and
+display a cycle of odd length.</p>
+
+<h2>4.3 Find bipartite graphs</h2>
+
+<p>We can now imagine two strategies for finding a bipartite graph from a
+graph that is not: the idea is to detect and remove cycles of odd length, by
+deleting arcs, or by removing vertices. In our application "friends", the
+first strategy consists of neglecting one or more animosity relations, the
+second one is more radical because it excludes friends from the group.
+Implement one of these two strategies.</p>
+<hr>
+<font size="-2">Last update&nbsp;: </font><font size="-2">October 4th, 2011 by
+Jean Cousty.</font> 
+
+</body></html>
