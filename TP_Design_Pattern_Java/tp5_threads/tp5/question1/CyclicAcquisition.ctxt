@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=CyclicAcquisition
+comment1.params=pSensor\ pPeriod\ pCommand
+comment1.target=CyclicAcquisition(HumiditySensor,\ long,\ Command)
+comment2.params=
+comment2.target=void\ start()
+comment3.params=
+comment3.target=void\ stop()
+comment4.params=pPeriod
+comment4.target=void\ setPeriod(long)
+comment5.params=
+comment5.target=void\ run()
+numComments=6

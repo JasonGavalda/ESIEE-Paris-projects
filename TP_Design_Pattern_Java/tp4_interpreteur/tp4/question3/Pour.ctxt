@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Pour
+comment1.params=init\ cond\ i1\ inc
+comment1.target=Pour(Instruction,\ question2.ExpressionBooleenne,\ Instruction,\ Instruction)
+comment2.params=vi
+comment2.target=java.lang.Object\ accepter(VisiteurInstruction)
+comment3.params=
+comment3.target=Instruction\ init()
+comment4.params=
+comment4.target=Instruction\ inc()
+numComments=5

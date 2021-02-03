@@ -1,0 +1,31 @@
+#BlueJ class context
+comment0.target=VisiteurInstToJava
+comment0.text=\r\n\ \r\n
+comment1.params=vi\ vb\ tabulations
+comment1.target=VisiteurInstToJava(question1.VisiteurExpression,\ question2.VisiteurExpressionBooleenne,\ int)
+comment1.text=\r\n\ Cr\u00E9ation\ d'un\ visiteur\ d'instructions\r\n\ \r\n\ @param\ vi\r\n\ \ \ \ \ \ \ \ \ \ \ \ le\ visiteur\ d'expressions\ arithm\u00E9tiques\r\n\ @param\ vb\r\n\ \ \ \ \ \ \ \ \ \ \ \ le\ visiteur\ d'expression\ bool\u00E9ennes\r\n\ @param\ tabulations\r\n\ \ \ \ \ \ \ \ \ \ \ \ tabulations\ initiales\r\n
+comment10.params=a
+comment10.target=java.lang.String\ visite(Assertion)
+comment11.params=n
+comment11.target=java.lang.String\ tab(int)
+comment2.params=vi\ vb
+comment2.target=VisiteurInstToJava(question1.VisiteurExpression,\ question2.VisiteurExpressionBooleenne)
+comment2.text=\r\n\ Cr\u00E9ation\ d'un\ visiteur\ d'instructions\r\n\ \r\n\ @param\ vi\r\n\ \ \ \ \ \ \ \ \ \ \ \ le\ visiteur\ d'expressions\ arithm\u00E9tiques\r\n\ @param\ vb\r\n\ \ \ \ \ \ \ \ \ \ \ \ le\ visiteur\ d'expression\ bool\u00E9ennes\r\n
+comment3.params=
+comment3.target=question1.Contexte\ contexte()
+comment3.text=\r\n\ obtention\ du\ contexte,\ ici\ celui\ du\ visiteur\ d'expression\ arithm\u00E9tiques\r\n\ \r\n\ @return\ le\ contexte\ ici\ de\ vi(le\ visiteur\ d'expression)\r\n
+comment4.params=a
+comment4.target=java.lang.String\ visite(Affectation)
+comment4.text=\r\n\ Visite\ d'une\ instance\ de\ la\ classe\ Affectation.\r\n\ \r\n\ \r\n\ @param\ a\r\n\ \ \ \ \ \ \ \ \ \ \ \ une\ affectation\r\n\ @return\ a\ \:\=\ exp\r\n
+comment5.params=seq
+comment5.target=java.lang.String\ visite(Sequence)
+comment5.text=\r\n\ Visiste\ d'une\ s\u00E9quence\ seq(I1,I2)\ <br>\r\n\ \r\n\ @param\ seq\r\n\ \ \ \ \ \ \ \ \ \ \ \ une\ s\u00E9quence\r\n\ @return\ i1;i2\r\n
+comment6.params=sel
+comment6.target=java.lang.String\ visite(Selection)
+comment7.params=tq
+comment7.target=java.lang.String\ visite(TantQue)
+comment8.params=pour
+comment8.target=java.lang.String\ visite(Pour)
+comment9.params=a
+comment9.target=java.lang.String\ visite(Afficher)
+numComments=12

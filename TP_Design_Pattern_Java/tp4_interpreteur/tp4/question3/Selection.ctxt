@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Selection
+comment1.params=cond\ i1\ i2
+comment1.target=Selection(question2.ExpressionBooleenne,\ Instruction,\ Instruction)
+comment2.params=cond\ i1
+comment2.target=Selection(question2.ExpressionBooleenne,\ Instruction)
+comment3.params=vi
+comment3.target=java.lang.Object\ accepter(VisiteurInstruction)
+comment4.params=
+comment4.target=question2.ExpressionBooleenne\ cond()
+comment5.params=
+comment5.target=Instruction\ i1()
+comment6.params=
+comment6.target=Instruction\ i2()
+numComments=7

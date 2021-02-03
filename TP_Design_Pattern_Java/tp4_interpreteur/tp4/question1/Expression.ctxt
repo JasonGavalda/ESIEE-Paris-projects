@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Expression
+comment0.text=\r\n\ Une\ expression\ arithm\u00E9tique\r\n
+comment1.params=v
+comment1.target=java.lang.Object\ accepter(VisiteurExpression)
+numComments=2

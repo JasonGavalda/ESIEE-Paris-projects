@@ -1,0 +1,292 @@
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <META name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+  <TITLE>ESIEE.IN413.TP0</TITLE>
+</HEAD>
+<BODY bgcolor="#FFFC17">
+<P align="center">
+<FONT size="6"><STRONG>TP0</STRONG></FONT><FONT size="5"><BR>
+</FONT>
+<DIV align="center">
+  <CENTER>
+    <TABLE border="18" cellpadding="2">
+      <TR>
+	<TD valign="top"><TABLE border="0" cellpadding="2">
+	    <TR>
+	      <TD><FONT size="4">Lectures pr&eacute;alables : &nbsp; </FONT></TD>
+	    </TR>
+	    <TR>
+	      <TD><UL>
+		  <LI>
+		    <FONT size="4">Java_I</FONT>
+		  <LI>
+		    <A href="http://java.sun.com/docs/books/tutorial/index.html"><FONT size="4">tutorial</FONT></A>
+		    <UL>
+		      <LI>
+			Getting Started
+		      <LI>
+			Learning the Java Language
+		    </UL>
+		</UL>
+	      </TD>
+	    </TR>
+	  </TABLE>
+	</TD>
+	<TD><TABLE border="0" cellpadding="2">
+	    <TR>
+	      <TD><FONT size="4">Th&egrave;mes du TP</FONT> :</TD>
+	    </TR>
+	    <TR>
+	      <TD><UL>
+		  <LI>
+		    <FONT size="4">utilisation de
+		    </FONT><A href="http://www.bluej.org"><FONT size="4">bluej</FONT></A> (&gt;=
+		    2.1.3)
+		  <LI>
+		    <FONT size="4">Java imp&eacute;ratif</FONT>
+		  <LI>
+		    <FONT size="4">Exceptions</FONT><FONT size="3"> </FONT>
+		</UL>
+	      </TD>
+	    </TR>
+	  </TABLE>
+	</TD>
+      </TR>
+    </TABLE>
+  </CENTER>
+</DIV>
+<P>
+<h2>
+Visualisez le sujet en ouvrant <tt>index.html</tt> du r&eacute;pertoire qui a &eacute;t&eacute;
+cr&eacute;&eacute; &agrave; l'ouverture de <tt>tp0.jar</tt> par BlueJ; vous aurez ainsi acc&egrave;s
+aux applettes et pourrez exp&eacute;rimenter les comportements qui sont attendus.
+</h2>
+  <HR>
+<P>
+<IMG SRC="pict1.jpg" ALT="question1" WIDTH="91" HEIGHT="73"
+ ALIGN="Middle"><FONT size="4"><BIG>.1 &nbsp;
+D&eacute;veloppez une application Java de conversion
+des degr&eacute;s Fahrenheit en degr&eacute;s Celsius. </BIG></FONT>
+<P>
+<FONT size="4">La classe &nbsp;effectuant la conversion se nomme
+FahrenheitClesius, vous compl&eacute;terez les 2 m&eacute;thodes de
+celle-ci</FONT>
+<BLOCKQUOTE>
+  <BLOCKQUOTE>
+    <BLOCKQUOTE>
+      <IMG SRC="capture_01302006_110157.jpg" WIDTH="583" HEIGHT="436">
+    </BLOCKQUOTE>
+  </BLOCKQUOTE>
+</BLOCKQUOTE>
+<P>
+<I>Contraintes : </I>
+<BLOCKQUOTE>
+  la formule de conversion&nbsp; &nbsp; <B>&#176;C = 5/9 * (&#176;F
+  -32)</B><BR>
+  <I>Les valeurs en degr&eacute;s Fahrenheit &agrave; convertir sont donn&eacute;es
+  sur la ligne de commande.<BR>
+  Ce sont des valeurs enti&egrave;res. <BR>
+  <b>Le r&eacute;sultat affich&eacute; est attendu avec un seul chiffre derri&egrave;re la virgule</b>,
+  obtenu uniquement par le calcul.</I>
+</BLOCKQUOTE>
+<P>
+<BR>
+<FONT size="4"><B>ex&eacute;cution sous Bluej </B>:&nbsp;clic droit sur le
+diagramme de la classe "FahrenheitCelsius" , choisir l'item "void main(String[]
+args)", introduire des donn&eacute;es come ci dessous...</FONT>
+<BLOCKQUOTE>
+  <BLOCKQUOTE>
+    <BLOCKQUOTE>
+      <P align="left">
+      <FONT size="4">&nbsp;
+      </FONT><IMG SRC="capture_01302006_112517.jpg" WIDTH="583" HEIGHT="436">
+    </BLOCKQUOTE>
+  </BLOCKQUOTE>
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+  <BLOCKQUOTE>
+    <BLOCKQUOTE>
+      <P align="left">
+      <FONT size="4">Le r&eacute;sultat dans la fen&ecirc;tre Terminal<BR>
+      <B>&nbsp;</B>&nbsp; &nbsp;
+      <IMG SRC="capture_01302006_112634.jpg" WIDTH="268" HEIGHT="146"><BR>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; </FONT>
+    </BLOCKQUOTE>
+  </BLOCKQUOTE>
+</BLOCKQUOTE>
+<P>
+<FONT size="4"><B><I>technique Java : </I></B></FONT>
+<UL>
+  <LI>
+    <FONT size="4"><I>Les arguments de la ligne de commande sont des
+    cha&icirc;nes(String), donc &agrave; convertir en entiers <BR>
+    (cf. </I><CODE><STRONG><I>static int parseInt(String s)
+    </I></STRONG></CODE><I>&nbsp;de la classe
+    </I></FONT><A href="http://java.sun.com/javase/6/docs/api/java/lang/Integer.html" target=_blank><FONT size="4"><CODE><STRONG><I>Integer</I></STRONG></CODE></FONT></A><FONT
+	size="4"><CODE><STRONG><I>)</I></STRONG></CODE></FONT><BR>
+    { "0","100","2006"} sur l'exemple ci-dessus<FONT size="4"><I> </I></FONT>
+  <LI>
+    <FONT size="4"><I>Pour les tableaux, le champ
+    </I><CODE><STRONG><I>length</I></STRONG></CODE><I> contient le nombre
+    d'&eacute;l&eacute;ments du tableau (attention le premier indice d'un tableau
+    est 0).</I></FONT>
+  <LI>
+    <FONT size="4"><I>Attention la division entre 2 entiers est une division
+    enti&egrave;re . Exemple 5/9 = 0</I></FONT> .
+</UL>
+<P>
+  <HR>
+<FONT size="4"><B></B></FONT>
+<P>
+<IMG SRC="pict1.jpg" ALT="question1" WIDTH="91" HEIGHT="73"
+ ALIGN="Middle"><FONT size="4"><BIG>.2 &nbsp;
+D&eacute;veloppez une classe de tests unitaires (comparant
+des r&eacute;sultats calcul&eacute;s &agrave; des r&eacute;sultats attendus)
+</BIG></FONT>
+<P>
+<FONT size="4"><B>construction d'une classe de test sous Bluej
+</B>:&nbsp;</FONT>
+<UL>
+  <LI>
+    <FONT size="4">activation des outils de test :
+    </FONT><FONT COLOR="#008000"><BIG>menu "Outils" -&gt; "item
+    Pr&eacute;f&eacute;rences..." -&gt; onglet "Divers" : cocher la case "Montrer
+    les outils de test"</BIG></FONT><BIG><BR>
+    en profiter pour donner l'adresse de votre documentation Java et pour
+    d&eacute;sactiver la derni&egrave;re case en bas "Show compiler war.....</BIG>
+    &nbsp;"
+  </LI>
+  <LI>
+   <big>Dans le menu contextuel de la classe de test,
+    choisir "Enregistrer une m&eacute;thode de test",
+    puis d&eacute;clencher la m&eacute;thode de conversion
+    et v&eacute;rifier que le r&eacute;sultat est celui que voulez
+    en utilisant la comparaison sp&eacute;cifique aux r&eacute;els.</big>
+  </LI>
+  <LI>
+    <BIG>Pour plus d'explications, lire le
+    <A HREF="http://www.bluej.org/doc/documentation.html">Testing Tutorial</A></BIG>
+  </LI>
+</UL>
+<P>
+<FONT size="4"><B>Vous &ecirc;tes satisfait ?</B>
+<br>
+Soumettez la question 1 à l'&eacute;valuation junit3 au cas o&ugrave;
+vous n'auriez pas pens&eacute; &agrave; tester quelquechose ...
+</FONT>
+<P>
+<P>
+  <HR>
+  <HR>
+<P>
+<IMG SRC="pict0.jpg" ALT="question2" WIDTH="90" HEIGHT="73" ALIGN="Middle"><BIG><BIG>.1 &nbsp;
+Traitement des exceptions (&agrave; l'ex&eacute;cution) :</BIG></BIG>
+<P>
+<FONT size="4">D&eacute;veloppez une nouvelle version de votre programme
+en ajoutant la gestion de l'exception 'NumberFormatException', celle-ci est
+lev&eacute;e lors d'une mauvaise entr&eacute;e i.e. d'une entr&eacute;e autre
+qu'une cha&icirc;ne convertible en "int"</FONT>
+<P>
+Exemple : {"10","ZZ","100"} engendre : 
+<P>
+<IMG SRC="Capture-4.jpg" WIDTH="269" HEIGHT="100">
+<P>
+<STRONG>For input string: "ZZ"</STRONG> est g&eacute;n&eacute;r&eacute; par
+l'appel de e.getMessage() e est une Exception
+<P>
+  <HR>
+<IMG SRC="pict0.jpg" ALT="question2" WIDTH="87" HEIGHT="75" ALIGN="Middle"><BIG><BIG>.2</BIG></BIG> &nbsp;
+<FONT size="4"><B> Soumettez cette nouvelle version &agrave; junit3. </FONT>
+<P>
+  <HR>
+  <HR>
+<P>
+<IMG SRC="pict2.jpg" ALT="question3" WIDTH="87" HEIGHT="75" ALIGN="Middle"><BIG><BIG>Applette
+: </BIG></BIG>
+<P>
+&nbsp;<FONT size="4">Compl&eacute;tez l'"Applette" fournie dans la question3
+en utilisant votre fonction de conversion, issue de la question
+pr&eacute;c&eacute;dente</FONT>
+<P align="center">
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;
+<APPLET code="question3.AppletteFahrenheit.class" align="baseline" width="400"
+    height="66" archive="applettes.jar"><PARAM name="backgroundColor" value="0xc0c0c0"></APPLET>&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <BR>
+&nbsp; <BR align="Center">
+&nbsp; <FONT size="2">&nbsp; &nbsp; L'applette compl&eacute;t&eacute;e</FONT>
+<P>
+<IMG SRC="pict2.jpg" ALT="question3" WIDTH="87" HEIGHT="75" ALIGN="Middle"><BIG><BIG>.1 &nbsp;
+</BIG></BIG><FONT size="4"><B>Ex&eacute;cution sous Bluej </B>:&nbsp;</FONT>
+<UL>
+  <LI>
+    <FONT size="4">clic droit sur le diagramme de la classe "AppletteFahrenheit"
+    , </FONT>
+  <LI>
+    <FONT size="4">choisir l'item "Ex&eacute;cuter l'applet", </FONT>
+  <LI>
+    <FONT size="4">cocher "Utiliser le visualisateur d'applets", </FONT>
+  <LI>
+    <FONT size="4">puis "ok"</FONT>
+</UL>
+<P>
+<FONT size="4"><B>
+  <HR>
+</B></FONT><IMG SRC="pict2.jpg" ALT="question3" WIDTH="87" HEIGHT="75" ALIGN="Middle"><BIG><BIG>.2</BIG></BIG> &nbsp;
+<FONT size="4"><B> Ajoutez &agrave; cette Applette</B> la prise en compte de
+l'exception "NumberFormatException" :</FONT>
+<P>
+<FONT size="4">si cette exception est lev&eacute;e la sortie mentionnera
+le libell&eacute; "error !", comme le montre cette copie d'&eacute;cran</FONT>
+<P align="center">
+<FONT size="4"><IMG src="Capture-5.jpg" width="408" height="143"></FONT>
+<P>
+  <HR>
+<IMG SRC="pict2.jpg" ALT="question3" WIDTH="87" HEIGHT="75" ALIGN="Middle"><BIG><BIG>.3</BIG></BIG> &nbsp;
+<FONT size="4"><B> Compl&eacute;tez l'Applette de 3.2 </B>par la prise en compte
+du z&eacute;ro absolu : la valeur r&eacute;sultante minimale ne peut &ecirc;tre inf&eacute;rieure
+&agrave; -273.1&#176;C </FONT>
+<P>
+  <HR>
+<IMG SRC="pict2.jpg" ALT="question3" WIDTH="87" HEIGHT="75" ALIGN="Middle"><BIG><BIG>.4</BIG></BIG> &nbsp;
+<FONT size="4"><B> Ajoutez &agrave; cette Applette</B> la prise en compte du
+param&egrave;tre "backgroundColor" pour la couleur du fond. </FONT>
+<P>
+<FONT size="4">Sous BlueJ, il vous suffit d'ajouter ce param&egrave;tre comme
+le sugg&egrave;re cette interface ci-dessous et de modifier votre programme
+en cons&eacute;quence.</FONT>
+<P>
+<FONT size="4">ex&eacute;cuter l'applet,</FONT> <FONT size="4">puis ajouter
+un param&egrave;tre</FONT>
+<P align="center">
+<IMG SRC="capture_01302006_113536.jpg" WIDTH="583" HEIGHT="436">
+<P ALIGN=Left>
+<FONT size="4"><B><I>technique Java : </I></B></FONT>
+<UL>
+  <LI>
+    <P ALIGN=Left>
+    <FONT size="4">La m&eacute;thode
+    </FONT><A href="http://java.sun.com/javase/6/docs/api/java/applet/Applet.html" target=_blank><FONT
+	size="4">getParameter</FONT></A><FONT size="4"> permet de r&eacute;cup&eacute;rer le
+        param&egrave;tre "backgroundColor" sous forme de String. </FONT>
+  <LI>
+    <P ALIGN=Left>
+    <FONT size="4">La m&eacute;thode de classe : static Color decode(String
+    nm); &nbsp;de la classe
+    </FONT><A href="http://java.sun.com/javase/6/docs/api/java/awt/Color.html" target=_blank><FONT
+	size="4">java.awt.Color</FONT></A><FONT size="4"> permet d'en d&eacute;duire
+        une <i><b>couleur</b></i>.</FONT>
+  <LI>
+    <P ALIGN=Left>
+    <FONT size="4">Si une erreur se produit, c'est la couleur rose (Color.pink)
+    qui doit &ecirc;tre conserv&eacute;e.</FONT>
+</UL>
+<P>
+  <HR>
+<IMG SRC="pict2.jpg" ALT="question3" WIDTH="87" HEIGHT="75" ALIGN="Middle"><BIG><BIG>.5</BIG></BIG> &nbsp;
+<FONT size="4"><B> Soumettez votre applette &agrave; junit3. </FONT>
+<P>
+  <HR>
+</BODY></HTML>

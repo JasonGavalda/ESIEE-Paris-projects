@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Inf
+comment1.params=op1\ op2
+comment1.target=Inf(question1.Expression,\ question1.Expression)
+comment2.params=v
+comment2.target=java.lang.Object\ accepter(VisiteurExpressionBooleenne)
+numComments=3

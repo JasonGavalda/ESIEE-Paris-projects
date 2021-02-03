@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=v\ exp
+comment0.target=Affectation(tp4.question1.Variable,\ tp4.question1.Expression)
+comment1.params=vi
+comment1.target=java.lang.Object\ accepter(tp6.question3.VisiteurInstruction)
+comment2.params=
+comment2.target=tp4.question1.Expression\ exp()
+comment3.params=
+comment3.target=tp4.question1.Variable\ v()
+numComments=4

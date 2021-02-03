@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=float\ value()
+comment0.text=valeur\ du\ capteur,\ precision\ de\ 0.1
+comment1.params=
+comment1.target=long\ minimalPeriod()
+comment1.text=periode\ minimale\ entre\ deux\ lectures
+numComments=2

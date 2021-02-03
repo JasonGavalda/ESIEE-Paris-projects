@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=SerialiseDeserialiseAST_XML
+comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ SerialiseDeserialiseAST_XML\ ici.\r\n\ \r\n\ @author\ (votre\ nom)\ \r\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\r\n
+comment1.params=p\ nomDuFichier
+comment1.target=void\ serialAst2xml(question2.IProgr,\ java.lang.String)
+comment2.params=nomDuFichier
+comment2.target=org.jdom.Element\ deserialXml(java.lang.String)
+numComments=3

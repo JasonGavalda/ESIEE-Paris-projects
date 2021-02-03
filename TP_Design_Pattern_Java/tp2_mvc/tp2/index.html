@@ -1,0 +1,543 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  
+  <meta http-equiv="Bulletin-Text" content="tp2 pattern observateur">
+
+  
+  <meta http-equiv="Bulletin-Date" content="Wed, 06-Jul-05 17:56:02">
+
+  
+  <meta name="GENERATOR" content="Microsoft FrontPage 5.0"><title>ESIEE.BureauD.IN413.TP2</title><!-- Created with AOLpress/2.0 --></head><body style="background-color: rgb(255, 252, 23);">
+<p align="center"><font size="6"><strong>TP2</strong></font> </p>
+
+<div align="center">
+<center>
+<table border="1" cellpadding="2">
+  <tbody>
+    <tr>
+      <td><font size="4">Thème</font>
+      <ul>
+        <li><a href="http://csis.pace.edu/%7Ebergin/mvc/mvcgui.html"><font size="4">modèle MVC</font></a><font size="5"> <br>
+          </font></li>
+      </ul>
+      <p><font size="2">lecture <b>préalable</b> du </font><a href="http://www.eli.sdsu.edu/courses/spring01/cs635/notes/observer/observer.html"><font size="2">Pattern Observateur (note 10</font></a><font size="2">)</font>,
+      <font color="#000000">du<b> </b></font><font size="2">Modèle </font><a href="http://csis.pace.edu/%7Ebergin/mvc/mvcgui.html"><font size="2">MVC</font></a>
+et du modèle <a href="https://web.archive.org/web/20101106225111/http://download.oracle.com/javase/1.4.2/docs/guide/awt/1.3/designspec/events.html">événementiel</a></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+</div>
+
+<p>&nbsp; </p>
+
+<h3>
+<ul>
+  <li>Visualisez le sujet en ouvrant <tt>index.html</tt> du répertoire
+qui a été créé à l'ouverture de <tt>tp2.jar</tt> par BlueJ; <br>
+  </li>
+  <li>Vous pourrez expérimenter les comportements qui sont
+attendus, plusieurs applications de tests se trouvent dans votre répertoire.&nbsp; </li>
+  <li>Soumettez chaque question à l'outil d'évaluation <i>JNews/junit3</i>
+pendant et après le TP, puis <br>
+</li>
+  <li><big>Rendez le tp avant la date limite indiquée
+dans l'agenda grâce à l'outil <i>JNews/depot_seul</i>.</big></li>
+
+</ul>
+</h3>
+
+<hr>
+<p><img src="question1.jpg" alt="[Image]" align="middle" height="73" width="91"><font size="4"><strong>Pattern
+Observateur/Observé</strong></font> </p>
+
+<p><font size="4">Soit le Pattern Observateur en notation UML
+selon LA référence : <em>Erich Gamma, Richard Helm, Ralph
+Johnson and John Vlissides Design Patterns Elements of Reusable
+Object-Oriented Software Addison-Wesley, 1995. </em>En Java, le
+paquetage </font><font color="#ff0080" size="5"><strong><tt>java.util</tt></strong></font><font size="4"> implemente ce Pattern et propose la classe </font><a href="http://java.sun.com/javase/6/docs/api/java/util/Observable.html"><font size="4"><tt>Observable</tt></font></a><font size="4"> pour
+Subject et l'interface </font><a href="http://java.sun.com/javase/6/docs/api/java/util/Observer.html"><font size="4"><tt>Observer</tt></font></a><font size="4"> (lire leur
+javadoc). </font></p>
+
+<blockquote>
+  <blockquote>
+    <p><img src="observerT.gif" height="243" width="615"> </p>
+  </blockquote>
+</blockquote>
+
+<p><strong>Les participants </strong></p>
+
+<blockquote>
+  <ul>
+    <li>L'observé : la Classe <font color="#ff0080"><strong>Subject</strong></font>
+ou <strong>java.util.Observable</strong> </li>
+  </ul>
+  <ul>
+    <li>L'observateur ici l'interface <font color="#ff0080"><strong>Observer</strong></font>
+ou <strong>java.util.Observer</strong> </li>
+  </ul>
+  <ul>
+    <li>L'observé concret : la Classe <font color="#ff0080"><strong>ConcreteSubject</strong></font>
+    </li>
+  </ul>
+  <ul>
+    <li>L'observateur concret :la classe <font color="#ff0080"><strong>ConcreteObserver</strong></font>
+utilise une référence du sujet concret qu'il observe et réagit à chaque
+mise à jour
+      <p>&nbsp; </p>
+    </li>
+  </ul>
+</blockquote>
+
+<p>Pour cette question, nous souhaitons développer une classe de
+tests afin de "<strong>vérifier</strong>" le bon
+fonctionnement de ce Pattern, </p>
+
+<p>Quelques exemples de "validation", d'assertions </p>
+
+<blockquote>
+  <p>Vérifier que lors d'une notification, <strong>TOUS</strong> les
+observateurs ont bien été informés, <br>
+Vérifier que les arguments ont bien été <strong>transmis</strong>,<br>
+Vérifier que le <strong>notifiant est le bon</strong> ... etc ...<br>
+  </p>
+</blockquote>
+
+<p>Un exemple de test avec BlueJ: <strong>vérification qu'un
+observateur est bien notifié</strong> avec le paramètre bien
+reçu :</p>
+
+<blockquote>
+  <p><strong>prémisses et classes retenues:</strong><br>
+la classe <font color="#ff0080"><strong>ConcreteSubject </strong></font>gère
+une liste de noms, chaque modification de cette liste engendre une <strong>notification</strong>.<br>
+la classe <font color="#ff0080"><strong>ConcreteObserver </strong></font>se
+contente, à chaque notification, d'afficher cette liste et de mémoriser
+l'origine des notifications et les paramètres transmis. <br>
+La mémorisation du notifiant et du paramètre transmis utilise deux
+piles(java.util.Stack&lt;T&gt;), <strong>senders</strong> et <strong>arguments</strong>,
+accessibles de l'"extérieur" </p>
+  <blockquote>
+    <p><strong>senders : </strong>mémorise les émetteurs des
+notifications<br>
+    <strong>arguments : </strong>mémorise les arguments transmis lors
+d'une notification</p>
+  </blockquote>
+</blockquote>
+
+<blockquote>
+  <blockquote>
+    <pre>ConcreteSubject  list = new ConcreteSubject();       // <strong>création</strong> d'une liste<br>ConcreteObserver observer = new ConcreteObserver();  // <strong>création</strong> d'un observateur<br>list.addObserver(observer);                          // <strong>ajout</strong> de cet observateur à la liste<br>list.insert("il fait beau, ce matin");               // <strong>modification</strong> de cette liste, l'observateur <strong>doit</strong> être notifié<br></pre>
+    <pre>// "vérification" : <br>assertFalse(observer.<strong>senders</strong>().empty());        // la pile <strong>senders</strong> ne doit pas être vide,<br>assertEquals( list,observer.<strong>senders</strong>().pop() );  // est-ce le bon émetteur  ?<br>assertEquals( "il fait beau, ce matin",<br>              observer.<strong>arguments</strong>().pop() );     // le paramètre reçu est-il correct ?<br></pre>
+Combien d'<tt>AssertEquals</tt> devrez-vous écrire dans cet
+exercice&nbsp;? </blockquote>
+</blockquote>
+
+<blockquote>
+  <blockquote>
+    <p><img src="index.1.gif" border="0" height="317" width="445"> </p>
+  </blockquote>
+</blockquote>
+
+<p><font size="4"><b>Complétez les 3 méthodes de test de la
+classe "PatternObservateur"</b></font>
+et n'oubliez pas de supprimer les <tt>fail();</tt> !
+</p>
+
+<p>
+</p>
+
+<blockquote>
+  <table col="1" border="5" cellpadding="5">
+    <tbody>
+      <tr>
+        <td> <b>AIDE :</b>
+        <ul>
+          <li> <u><b>Attention !</b> Au bout d'une heure maximum, il
+vaut mieux passer à la question 2.</u> </li>
+          <li> Compléter <tt>test1()</tt> en dépilant toutes les piles
+jusqu'à ce qu'elles soient vides, et en vérifiant à chaque fois que
+l'élément retourné est bien celui attendu. Ne pas chercher à faire des
+boucles &nbsp;! </li>
+          <li> Idem pour <tt>test2()</tt> </li>
+          <li> Pour <tt>test3()</tt>, utiliser les 3 méthodes <tt>count</tt>...,
+            <tt>delete</tt>..., et <tt>delete</tt>...<tt>s</tt>, et
+vérifier que <tt>count</tt>... retourne à chaque étape le nombre
+attendu. </li>
+          <li>Soumettre cette question à JNews <b>après avoir commenté</b>
+le <tt>System.out.println</tt> dans <tt>ConcreteObserver.update()</tt>.
+          </li>
+        </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr>
+<p><img src="question2.jpg" alt="[Image]" align="middle" height="73" width="90"><font size="4"><b>Introduction aux
+événements de l'AWT </b></font></p>
+
+<p><font size="3"><strong>&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;(paquetage java.awt.event, événements engendrés par une
+instance de la classe javax.swing.JButton</strong></font><font size="2"><strong>)</strong></font>
+</p>
+
+<blockquote>
+  <p><font size="4">En java, la gestion des évènements utilise le
+pattern Observateur, seuls les noms des méthodes diffèrent, les
+notifications sont ici engendrées par un changement d'état de
+l'interface graphique : un clic sur un bouton, un déplacement de
+souris, etc... <br>
+&nbsp; &nbsp;</font><font size="4">
+  <table col="2" border="1" cellpadding="5">
+    <tbody>
+      <tr>
+        <th align="right" width="250"><font color="red">... de la
+question 1</font></th>
+        <th align="right" width="250"><font color="green">... de la
+question 2</font></th>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <th colspan="2" align="center">e s t &nbsp; r e m p l a c é e
+&nbsp; p a r</th>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td>la classe <b><i>Observable</i></b></td>
+        <td><b><i>java.awt.JButton</i></b></td>
+      </tr>
+      <tr>
+        <td>l'interface <b><i>Observer</i></b></td>
+        <td><b><i>java.awt.event.ActionListener</i></b></td>
+      </tr>
+      <tr>
+        <td>la méthode <b><i>addObserver()</i></b></td>
+        <td><b><i>java.awt.event.addActionListener()</i></b></td>
+      </tr>
+      <tr>
+        <td>la méthode <b><i>&nbsp;update()</i></b></td>
+        <td><b><i>ActionListener.actionPerformed()</i></b></td>
+      </tr>
+    </tbody>
+  </table>
+  </font> </p>
+</blockquote>
+
+<blockquote>
+  <blockquote>
+    <p><font size="4"><strong>A chaque clic, un ou plusieurs
+observateurs sont réveillés</strong></font> </p>
+    <ul>
+      <li><font size="5">le bouton A a 3 observateurs <b><i>( jbo1,
+jbo2 et jbo3</i></b>)</font></li>
+      <li> <img src="images/tp4.ht1.jpg" border="0" height="240" width="578"></li>
+    </ul>
+    <font size="5">le bouton B a 2 observateurs <i> <b>(jbo1 et
+jbo2)</b></i></font>
+    <ul>
+      <li> <img src="images/tp4.ht2.jpg" border="0" height="239" width="586"></li>
+    </ul>
+    <ul>
+      <li><font size="5">&nbsp;le bouton C a 1 observateur <b><i>(jbo1)</i></b></font>
+      </li>
+      <li> <img src="images/tp4.ht14.jpg" border="0" height="239" width="586"></li>
+    </ul>
+    <big><big>Interface au comportement attendu&nbsp;</big> <small style="font-weight: bold;"><font size="5">tp2&gt;java -jar
+ihm_q2_1.jar</font></small></big> </blockquote>
+</blockquote>
+
+<p> <br>
+<img src="question2.jpg" alt="Q2" align="middle" height="73" width="90"><font size="4"><b>.1) </b></font> <b>Compléter les classes IHMQuestion2_1
+et JButtonObserver afin d'obtenir le même comportement<br>
+</b></p>
+
+<blockquote>
+  <blockquote>
+    <p align="left"> &nbsp;</p>
+  </blockquote>
+</blockquote>
+
+<blockquote>
+  <table col="1" border="5" cellpadding="5">
+    <tbody>
+      <tr>
+        <td> <b>AIDE :</b>
+        <ul>
+          <li> <tt>getActionCommand()</tt> sur un <tt>ActionEvent</tt>
+retourne le nom du composant qui a provoqué cet évènement. </li>
+        </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<p><img src="question2.jpg" alt="Q2" align="middle" height="73" width="90"><font size="4"><b>.2) Complétez la classe
+JMouseObserver pour obtenir le comportement ci-dessous</b></font><br>
+</p>
+
+
+<blockquote>
+  <blockquote>
+    <p> <b>A chaque déplacement de la souris vers&nbsp; l'un des
+boutons, un observateur est réveillé :</b> </p>
+    <ul>
+      <li>Le bouton A a 4 observateurs (jmo1) et (jbo1, jbo2 et
+jbo3), ici la souris est entrée sur le bouton A</li>
+      <li> <img src="images/tp4.ht15.jpg" border="0" height="204" width="559"></li>
+      <li>la souris est entrée et un clic a eu lieu sur le bouton
+A(cf. question2_1)</li>
+      <li> <img src="images/tp4.ht16.jpg" border="0" height="204" width="559"></li>
+    </ul>
+    
+    <ul>
+      <li>Déplacement vers le&nbsp; bouton B avec un clic</li>
+      <li> <img src="images/tp4.ht17.jpg" border="0" height="224" width="537"></li>
+    </ul>
+    
+    <ul>
+      <li>déplacement vers le bouton C avec un clic</li>
+      <li> <img src="images/tp4.ht18.jpg" border="0" height="224" width="537"></li>
+    </ul>
+    
+    <p> <b>Compléter les classes IHMQuestion2_2 et JMouseObserver
+afin d'obtenir </b><b>le même comportement</b></p>
+    
+    <p><big><big>Interface au comportement
+attendu&nbsp;</big> <small style="font-weight: bold;"><font size="5">tp2&gt;java
+-jar
+ihm_q2_2.jar</font></small></big></p>
+    <p><big><small style="font-weight: bold;"><font size="5"><br>
+    </font></small></big></p>
+
+    
+  </blockquote>
+  <font size="5"> </font> </blockquote>
+
+<p align="left"><font size="4"><b>cette fois</b></font> </p>
+
+<p align="left"><font size="4">
+<table col="2" border="1" cellpadding="5">
+  <tbody>
+    <tr>
+      <th align="right" width="250"><font color="red">... de la
+question 1</font></th>
+      <th align="right" width="250"><font color="green">... de la
+question 2.2</font></th>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <th colspan="2" align="center">e s t &nbsp; r e m p l a c é e
+&nbsp; p a r</th>
+    </tr>
+    <tr>
+      <td>l'interface <b><i>Observer</i></b></td>
+      <td><b><i>java.awt.event.MouseListener</i></b></td>
+    </tr>
+    <tr>
+      <td>la méthode <b><i>addObserver()</i></b></td>
+      <td><b><i>java.awt.event.addMouseListener()</i></b></td>
+    </tr>
+    <tr>
+      <td>la méthode <b><i>&nbsp;update()</i></b></td>
+      <td><b><i>MouseListener.mouse<font color="blue" size="+1"><tt>Xxxx</tt></font><tt><tt>ed()</tt></tt></i></b></td>
+    </tr>
+  </tbody>
+</table>
+</font></p>
+
+<p align="left"><font size="4"><b>implémentant la méthodes
+de votre choix</b> :
+mouse<font color="blue">Enter</font>ed<br>
+</font></p>
+
+<blockquote><br>
+</blockquote>
+
+<hr>
+<p>&nbsp; </p>
+
+<p><img src="question3.jpg" alt="[Image]" height="75" width="87"><font size="5"><b>Le modèle MVC</b></font> </p>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p> <img src="MVC.gif" height="385" width="550"><br>
+extraite de <a href="https://edelivery.oracle.com/otn-pub/java/designing_enterprise_apps/2.0/designing_enterprise_apps-2_0-book.pdf">designing_enterprise_apps-2_0-book.pdf</a></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<p><font size="4">Selon le "pattern MVC"
+(Modèle-Vue-Contrôleur)</font> </p>
+
+<ul>
+
+  <li><font size="4">Le Modèle contient la logique et l'état de
+l'application, il prévient ses observateurs lors d'un changement d'état</font>.</li>
+  <li><font size="4">La Vue représente l'interface utilisateur.</font> </li>
+  <li><font size="4">Le Contrôleur assure la synchronisation entre la
+vue et le modèle.</font> </li>
+</ul>
+
+<hr>
+<p><img src="question3.jpg" alt="Q2" align="middle" height="73" width="90"><font size="4"><b>.1) Développez une application de
+type calculette à pile, selon le paradigme MVC</b></font> </p>
+
+<blockquote>
+  <p><font size="4">L'évaluation d'une expression arithmétique peut
+être réalisée par l'usage d'une pile d'entiers </font><font size="5"><br align="Left">
+&nbsp; &nbsp;</font><font size="4">Par exemple l'expression <b>3 + 2</b>
+engendre la séquence : <br align="Left">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>&nbsp;
+empiler(3); </b><br align="Left">
+  <b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; empiler(2); </b><br align="Left">
+  <b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; empiler(depiler()+depiler())</b></font> <font size="4">;</font>
+  </p>
+  <p><font size="3">de même que l'expression <b>3 + 2 * 5 </b>correspond
+à la séquence<b>: <br>
+empiler(3);empiler(2);empiler(5);</b> <b>empiler(depiler()*depiler());</b>
+  <b>empiler(depiler()+depiler())</b> </font></p>
+  <p><font size="3"><b>Attention</b> à l'ordre des valeurs pour la
+soustraction ! </font></p>
+  <p><font size="3"> Ne pas changer la pile en cas de division par zéro.</font></p>
+  <p> <img src="images/tp4.ht19.jpg" border="0" height="342" width="547"></p>
+</blockquote>
+
+<p><font size="4">L'architecture logicielle induite par l'usage
+du paradigme MVC nous donne</font> </p>
+
+<ul>
+
+  <li><font size="4">Le Modèle est une pile (classe <strong>PileModele&lt;T&gt;</strong>).</font><font size="5"><br>
+    </font><font color="#800000"><em>Le Modèle, lors d'un changement
+d'état, prévient ses observateurs.</em></font></li>
+  <li><font size="4">La Vue correspond à l'affichage de l'état de la
+pile (classe <strong>Vue</strong>).</font><br>
+    <font color="#800000"><em>La vue s'inscrit auprès du Modèle lors de
+l'appel du constructeur d'une Vue; à chaque notification, la vue
+s'enquiert de l'état du modèle et l'affiche.</em></font></li>
+  <li><font size="4">Le Contrôleur gère les évènements issus des
+boutons +, -, *, /,[] (classe <strong>Controleur</strong>)</font>.<br>
+    <font color="#800000"><em>Le contrôleur gère localement les
+écouteurs (Listener) des boutons de l'IHM. Notons que la gestion des
+boutons utilise aussi une architecture MVC.</em></font></li>
+  <li>L'IHM crée, assemble le modèle, la vue et le contrôle (classe <b>IHMCalculette</b>).</li>
+</ul>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>&nbsp;</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<p align="left"><font size="4"><br>
+Une des implémentations des piles (issue du tp sur les piles) est
+installée
+dans le package tp_pile. Proposer l'implémentation des classes
+PileModele&lt;T&gt; et Contrôleur</font> </p>
+
+<blockquote>
+  <ul>
+    <li>Selon "MVC", la classe <strong>PileModele&lt;T&gt;</strong>
+hérite de la classe Observable et implémente PileI&lt;T&gt;; à chaque
+changement d'état (modification de la pile), les observateurs inscrits
+seront notifiés. </li>
+    <li>La pile du tp_pile, sans modification, est utilisée; seules
+certaines méthodes seront redéfinies, enrichies, décorées ... </li>
+    <li>La classe <strong>Controleur</strong> implémente les actions,
+évènements engendrés par l'utilisateur; à chaque opération souhaitée,
+le contrôleur altère les données du modèle de la pile; celle-ci, à
+chaque occurrence d'un changement d'état, prévient ses observateurs; la
+vue en est un.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <table col="1" border="5" cellpadding="5">
+    <tbody>
+      <tr>
+        <td> <b>AIDE :</b>
+        <ul>
+          <li> Il est conseillé de créer une classe interne (non
+anonyme) par bouton pour ne pas avoir une énorme méthode <tt>actionPerformed()</tt>
+et de créer une méthode <tt>actualiserIHM()</tt> qui <i>enable/disable</i>
+les bons boutons selon l'état de la pile. </li>
+          <li> Il est également conseillé de soumettre à JNEWS le code
+java dès le 1<sup>er</sup> bouton, puis, une fois correct, de procéder
+par copier/coller/adapter. </li>
+        </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+
+<blockquote>
+  <p align="center"><font size="4"><strong><br>
+  </strong></font> </p>
+  </blockquote>
+<p style="text-align: left; margin-left: 80px;"><big><big>Interface au comportement attendu&nbsp;</big>
+  <small style="font-weight: bold;"><font size="5">tp2&gt;java -jar
+ihm_q3.jar</font></small></big></p>
+<blockquote>
+</blockquote>
+
+<blockquote>
+  </blockquote>
+<p style="text-align: left; margin-left: 80px;"><b><font color="red" size="4">Notez bien qu'un
+mauvais format de nombre ou une division par zéro ne doivent avoir
+aucune incidence sur la pile.</font></b></p>
+<blockquote>
+  <p align="left"><font color="#800000" size="5">Soumettez cette
+question à JNEWS avant de poursuivre.</font></p>
+</blockquote>
+
+<hr>
+<blockquote>
+  <p><img src="question3.jpg" alt="Q2" align="middle" height="73" width="90"><font size="4"><b>.2) Modification de l'application
+respectant le principe "MVC"</b></font></p>
+  <b> </b>
+  <blockquote><b> </b>
+    <p align="left"><b><font size="4">Ajouter cette nouvelle Vue au
+modèle, </font></b></p>
+    <b> </b>
+    <blockquote><b> </b>
+      <p align="left"><b><font size="4">vérifiez que seule la classe
+IHM est concernée par cet ajout, et que les modifications du
+source sont mineures.</font></b></p>
+      <b> </b></blockquote>
+    <b> </b>
+    <table border="0" width="500">
+      <tbody>
+        <tr>
+          <td bgcolor="#ffffff">
+          <pre> public class Vue2 extends JPanel implements Observer<br> {<br>   private JSlider jauge;<br>   private PileModele&lt;Integer&gt; pile;<br>  <br>   public Vue2( PileModele&lt;Integer&gt; pile )<br>   {<br>     super();<br>     this.pile  = pile;<br>     this.jauge = new JSlider( JSlider.HORIZONTAL, 0, pile.capacite(), 0 );<br>     this.jauge.setValue( 0 );<br>     setLayout( new FlowLayout( FlowLayout.CENTER ) );<br>     this.jauge.setEnabled( false );<br>     add( this.jauge );<br>     setBackground( Color.magenta );<br>     pile.addObserver( this );<br>   }<br><br>   public void update( Observable obs, Object arg )<br>   {<br>     jauge.setValue( pile.taille() ); <br>   }<br> }<br></pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <b> </b></blockquote>
+</blockquote>
+
+<blockquote> <b> </b>
+  <p><b><font color="#800000" size="5">Cette modification n'est pas à
+soumettre à JNEWS.</font></b></p>
+</blockquote>
+
+</body></html>

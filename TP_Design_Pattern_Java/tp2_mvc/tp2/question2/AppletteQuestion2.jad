@@ -1,0 +1,71 @@
+// Decompiled by DJ v3.2.2.67 Copyright 2002 Atanas Neshkov  Date: 01/07/2005 18:37:43
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   AppletteQuestion2.java
+
+package question2;
+
+import java.awt.*;
+import javax.swing.*;
+
+// Referenced classes of package question2:
+//            JButtonObserver, JMouseObserver
+
+public class AppletteQuestion2 extends JApplet
+{
+
+    public AppletteQuestion2()
+    {
+        boutonA = new JButton("A");
+        boutonB = new JButton("B");
+        boutonC = new JButton("C");
+        testSouris = false;
+        contenu = new TextArea(40, 10);
+    }
+
+    public void init()
+    {
+        JRootPane rootPane = getRootPane();
+        rootPane.putClientProperty("defeatSystemEventQueueCheck", Boolean.TRUE);
+        try
+        {
+            testSouris = getParameter("mouse").equals("oui");
+        }
+        catch(Exception e) { }
+        JPanel enHaut = new JPanel();
+        enHaut.add(boutonA);
+        enHaut.add(boutonB);
+        enHaut.add(boutonC);
+        setLayout(new BorderLayout(5, 5));
+        add("North", enHaut);
+        add("Center", contenu);
+        if(testSouris)
+            enHaut.setBackground(Color.magenta);
+        else
+            enHaut.setBackground(Color.blue);
+        JButtonObserver jbo1 = new JButtonObserver("jbo1", contenu);
+        JButtonObserver jbo2 = new JButtonObserver("jbo2", contenu);
+        JButtonObserver jbo3 = new JButtonObserver("jbo3", contenu);
+        boutonA.addActionListener(jbo1);
+        boutonA.addActionListener(jbo2);
+        boutonA.addActionListener(jbo3);
+        boutonB.addActionListener(jbo1);
+        boutonB.addActionListener(jbo2);
+        boutonC.addActionListener(jbo1);
+        if(testSouris)
+        {
+            JMouseObserver jmo1 = new JMouseObserver("jmo1", contenu);
+            JMouseObserver jmo2 = new JMouseObserver("jmo2", contenu);
+            JMouseObserver jmo3 = new JMouseObserver("jmo3", contenu);
+            boutonA.addMouseListener(jmo1);
+            boutonB.addMouseListener(jmo2);
+            boutonC.addMouseListener(jmo3);
+        }
+    }
+
+    private JButton boutonA;
+    private JButton boutonB;
+    private JButton boutonC;
+    private boolean testSouris;
+    private TextArea contenu;
+}

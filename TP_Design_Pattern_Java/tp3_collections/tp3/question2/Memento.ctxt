@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Memento
+comment1.params=liste\ map
+comment1.target=Memento(java.util.List,\ java.util.Map)
+comment2.params=
+comment2.target=java.util.List\ getSavedList()
+comment3.params=
+comment3.target=java.util.Map\ getSavedMap()
+numComments=4

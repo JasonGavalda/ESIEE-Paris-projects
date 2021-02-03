@@ -1,0 +1,339 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0"><title>ESIEE.BureauD.IN413.TP1</title><!-- Created with AOLpress/2.0 --></head><body bgcolor="#e9cfec">
+
+<p align="center"><font size="6"><strong>TP1</strong></font> </p>
+<div align="center"><center>
+
+<table border="18" cellpadding="2">
+    <tbody><tr>
+        <td valign="top"><div align="center"><center><table border="0" cellpadding="2">
+            <tbody><tr>
+                <td align="left"><font size="4">Lectures
+                préalables : &nbsp; </font></td>
+            </tr>
+            <tr>
+                <td align="left"><ul>
+                    <li><font size="4">tutorial</font>
+                        <ul>
+                            <li>Getting Started</li>
+                            <li>Learning the Java Language</li>
+                        </ul>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        </tbody></table>
+        </center></div></td>
+        <td><table border="0" cellpadding="2">
+            <tbody><tr>
+                <td><font size="4">Thèmes du TP</font> :</td>
+            </tr>
+            <tr>
+                <td><ul>
+                    <li><font size="4">Une Pile d'Object</font> </li>
+                    <li><font size="4">Plusieurs classes</font> </li>
+                </ul>
+                </td>
+            </tr>
+        </tbody></table>
+        </td>
+    </tr>
+</tbody></table>
+</center></div>
+
+<p>&nbsp; </p>
+
+<h3>
+<ul>
+ <li>Visualisez maintenant le sujet en ouvrant <tt>index.html</tt> du répertoire qui a été
+  créé à l'ouverture de <tt>tp1.jar</tt> par BlueJ; vous aurez ainsi accès
+  aux applettes et pourrez expérimenter les comportements qui sont attendus.<br>
+  En cas de problème pour visualiser les applettes, ouvrez une fenêtre Terminal et lancez
+  <tt>appletviewer index.html</tt>
+</li>
+  <font color="red">
+ <li>Soumettez chaque question à l'outil d'évaluation <i>jnews/junit3</i>, puis rendez le tp avant la date limite
+     grâce à l'outil <i>jnews/depot</i>.</li>
+  </font>
+</ul>
+</h3>
+
+<hr>
+
+<p><img src="question1.jpg" align="middle" height="73" width="91"><font size="4"><strong>.1) Une pile d'"Object"s</strong></font>
+</p>
+
+<p align="left"><font size="4"><strong>Les éléments de la
+classe Pile sont des instances de la classe</strong></font>
+<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" target="_blank"><font size="5"><code><strong> java.lang.<b>Object</b></strong></code></font></a>
+<font size="4"> (<i>classe racine de toute classe Java)</i></font>. </p>
+
+<p><font size="4">Le code d'une classe pile qui n'acceptait que des entiers
+ a été modifié
+ pour qu'elle accepte n'importe quel <tt>Object</tt>.<br> 
+ </font> </p>
+
+<p><font size="4">- Complétez la méthode actionPerformed de la classe IHMPile et vérifiez ensuite le bon fonctionnement d'une pile via cette 
+interface</font></p><p>
+
+<table border="1" cellpadding="5">
+ <tbody><tr><td>
+  <b>AIDE :</b><br>
+  - <tt>champ.getText()</tt> permet de récupérer la <i>String</i>
+    tapée dans le champ de saisie
+  <br>
+  - <tt>champ.setText(<i>uneString</i>)</tt> modifie le contenu du champ avec <i>uneString</i>
+ </td></tr>
+</tbody></table>
+
+</p><p>&nbsp; </p>
+
+<p><img src="question1.jpg" align="middle" height="73" width="91"><font size="4"><strong>.2) </strong>Compilez la classe
+"UneUtilisation", lancez <tt>main()</tt>, vérifiez l'affichage produit,
+et comprenez l'exception produite.</font> </p>
+
+<pre>package question1;<br><br>public class UneUtilisation<br>{<br>  public static void main( final String[] pArgs) throws Exception<br>  {<br>    Pile p1 = new Pile(6);<br>    Pile p2 = new Pile(10);<br>    // p1 est ici une pile de polygones réguliers PolygoneRegulier.java<br>    p1.empiler( new PolygoneRegulier(4,100) );<br>    p1.empiler( new PolygoneRegulier(5,100) );<br>    p1.empiler( "polygone" );<br>    p1.empiler( new Integer(100) );<br>    System.out.println( " la pile p1 = " + p1 ); <br>                                          <br>    try {<br>      p1.empiler(new PolygoneRegulier(5,100));     <br>      // ....<br>      Boolean vB = (Boolean)p1.depiler();  // &lt;-- une exception est levée à l'exécution<br>    } catch( final Exception pE ) {<br>      pE.printStackTrace();<br>    }<br>  } // main()<br>} // UneUtilisation<br></pre>
+<!--
+<p><img src="question1.jpg" align="middle" width="91" height="73"><font
+size="4"><strong>.3) </strong>Proposez une classe conséquente de
+tests unitaires de la classe Pile, (classe PileTest) voir ce </font><a
+href="http://www.bluej.org/tutorial/testing-tutorial.pdf"
+target="tutoriel"><font size="4">tutoriel</font></a> </p>
+-->
+<strong>
+Soumettez cette première question à l'outil d'évaluation
+pour ne pas laisser passer de problèmes avant d'aborder
+la question suivante.
+</strong>
+
+<hr>
+
+<p><font size="4"><strong><img src="question2.jpg" align="middle" height="73" width="90"></strong>.1) Spécification : Interface</font>
+</p>
+
+<p><font size="4">Soit l'interface spécifiant le comportement
+d'une pile (fichier <tt>PileI.java</tt>) : </font></p>
+
+<table border="1" cellpadding="2">
+    <caption align="top"><font size="4"><strong>interface PileI</strong></font>
+    </caption>
+    <tbody><tr>
+        <td><pre>package question2;<br>import question1.PilePleineException;<br>import question1.PileVideException;<br><br>public interface PileI<br>{<br>    public final static int CAPACITE_PAR_DEFAUT = 6;<br>    // à utiliser quand le paramètre du constructeur &lt;= 0<br><br>    public void empiler(Object o) throws PilePleineException;<br>    public Object depiler() throws PileVideException;<br><br>    public boolean estVide();<br>    public boolean estPleine();<br><br>    public String toString();<br><br><strong>    public Object sommet() throws PileVideException; // retourne le sommet de la pile<br>    public int capacite(); // nb de cases<br>    public int taille();   // nb d'elements presents<br>    public boolean equals( final Object pO ); // si PileI et meme contenu<br>    public int hashCode();<br>    public Object clone() throws CloneNotSupportedException;</strong>
+} // PileI
+</pre>
+        </td>
+    </tr>
+</tbody></table>
+
+<p><font size="4"><i><strong>Attention</strong> :
+<br>
+- 6 nouvelles méthodes sont spécifiées dans PileI
+  (sommet, capacité, taille, equals, hashCode, et clone),
+  et donc toute implémentation de cette interface
+  doit implanter aussi ces 6 méthodes.
+<br>
+- Deux d'entre-elles vous sont fournies, mais cette note intitulée
+  "<a target="_blank" href="http://www.javaworld.com/article/2076332/java-se/how-to-avoid-traps-and-correctly-override-methods-from-java-lang-object.html">How
+  to avoid traps and correctly override methods from java.lang.Object</a>"
+  peut vous être utile si vous voulez les comprendre.
+<!--
+<br>
+- La compilation de la m&eacute;thode clone g&eacute;n&egrave;re un warning
+  que vous pouvez ignorer.
+-->
+</i></font>
+</p>
+
+<p>
+
+<table border="1" cellpadding="5">
+ <tbody><tr><td>
+  <b>AIDE :</b><br>
+  - Il nous faut convenir des critères pour décider si 2 piles seront égales ou non.
+<!--
+  <br>
+  - L'&eacute;nonc&eacute; "PileI et meme contenu" sugg&egrave;re de ne pas tenir compte de la capacit&eacute;.
+-->
+  <br>
+  - Un algorithme possible pour <tt>equals</tt> 
+    (voir aussi la <a target="_blank" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-">javadoc</a>)
+    est donc :
+  <ol>
+   <li>si p est la même référence que l'objet courant, retourner VRAI.</li>
+   <li>si p vaut <tt>null</tt>, retourner FAUX.</li>
+   <li>si p n'est pas du même type que l'objet courant, retourner FAUX. (*)</li>
+   <li>si p n'a pas la même taille que l'objet courant, retourner FAUX.</li>
+   <li>Il ne reste plus qu'à comparer un à un tous les éléments des 2 piles,
+       mais attention à ne modifier aucune des 2 piles !</li>
+  </ol>
+ </td></tr>
+</tbody></table>
+</p><p>
+(*) Facultatif : Si la condition 3 ci-dessus était
+    "si p n'implémente pas <tt>PileI</tt>",
+    comment feriez-vous ?
+    (implémentation difficile, mais réflexion intéressante)
+
+</p><p>&nbsp;</p>
+
+<hr>
+
+<p><font size="4"><strong><img src="question2.jpg" align="middle" height="73" width="90"></strong>.1) Implémenter une interface :
+PLUSIEURS implémentations UN SEUL comportement</font> </p>
+
+<blockquote>
+    <blockquote>
+        <pre></pre>
+    </blockquote>
+</blockquote>
+
+<p><font size="4">Proposez <strong>2 autres</strong>
+implémentations des Piles (donc implémentant l'interface </font><font color="#0f0f0f" size="4"><code><strong>PileI</strong></code></font><font size="4">).
+<br>
+<i><b>Attention !</b> Pour l'utilisateur, ici
+les piles doivent toujours être <b>bornées</b></i></font></p>
+
+<ul>
+    <li><font size="4">Pile2 : utilise la classe prédéfinie
+<a href="http://java.sun.com/javase/6/docs/api/java/util/Stack.html" target="_blank"><code><strong>java.util.Stack&lt;Object&gt;</strong></code></a>
+&nbsp;(<strong>Pile2</strong>.java)</font></li>
+    <li><font size="4">Pile3 : utilise la classe prédéfinie
+<a href="http://java.sun.com/javase/6/docs/api/java/util/Vector.html" target="_blank"><code><strong>java.util.Vector&lt;Object&gt;</strong></code></a>
+&nbsp;(<strong>Pile3</strong>.java)</font>
+    </li>
+</ul>
+
+ <blockquote>
+   <img src="question2_1.gif" border="0" height="376" width="563"></blockquote>
+
+<p><font size="4">Remarques : </font></p>
+
+<ul>
+    <li><p align="left"><font size="4">
+        Pile2 et Pile3 seront
+        composées d'une instance d'une classe prédéfinie comme
+        le suggère les extraits de code suivants :</font> </p>
+
+<blockquote>
+    <pre><font size="4">import java.util.Stack;</font>
+<font size="4">public class Pile2</font><font color="#0f0f0f" size="3"><code> </code><code><b>implements PileI,Cloneable</b> { </code></font>
+<font size="4">  <b>private Stack&lt;Object&gt; stk; </b></font>
+<font size="4">  ...</font>
+<font color="#0f0f0f" size="3"><code>} </code></font>
+
+<font size="4">import java.util.Vector;</font>
+<font size="4">public class Pile3 </font><font color="#0f0f0f" size="3"><code><b>implements PileI,Cloneable</b> { </code></font>
+<font size="4">  <b>private Vector&lt;Object&gt; v; </b></font>
+<font size="4">  ...</font>
+<font color="#0f0f0f" size="3"><code>}</code></font>
+</pre>
+
+</blockquote>
+    </li>
+    <li><font size="4">
+      Demander une <tt>Pile2</tt> ou une <tt>Pile3</tt> d'une taille &#8804;0
+      doit créer une pile de <tt>CAPACITE_PAR_DEFAUT</tt> éléments.
+    </font></li>
+    <li><font size="4">
+      Attention à l'ordre des éléments dans <tt>toString()</tt> !
+    </font></li>
+</ul>
+
+<div align="center">
+<table border="1" cellpadding="5" width="70%">
+    <tbody><tr>
+        <td>Cette approche est nommée par Mark Grand le
+        "Pattern delegation". Elle consiste à définir
+        une donnée d'instance d'une classe, ensuite utilisée
+        dans les méthodes. <br>
+        Ce pattern réalise une interface entre le client de la
+        classe et l'implémentation effective par une classe de
+        service. Il permet un couplage moins fort entre les deux
+        classes que si l'une héritait de l'autre.</td>
+    </tr>
+</tbody></table>
+</div>
+<p>
+</p><hr>
+
+&nbsp;<p><font size="4">Vérifiez le bon fonctionnement des classes de tests 
+ unitaires et ensuite le fonctionnement de votre IHM. </font></p><br>
+<hr>
+
+<p><img src="question3.jpg" alt="[Image]" align="top" height="75" width="87"><font size="4"><strong>Cette question supplémentaire n'a pas à être
+soumise à évaluation par junit3 ni à être "rendue",
+mais il est conseillé de la traiter en travail personnel.</strong>
+</font></p><p>
+<font size="4"><b>question 3-1)</b> <i>Généricité : un premier usage</i></font></p>
+
+<p><font size="4"><strong>L'interface pileI est désormais
+paramétrée par le type des éléments</strong></font> </p>
+
+<pre><font size="4">package question3;</font>
+
+<font size="4">import question1.PilePleineException;</font>
+<font size="4">import question1.PileVideException;</font>
+
+<font size="4">public interface PileI</font><font size="5"><strong>&lt;T&gt;</strong></font><font size="4"> {</font>
+
+<font size="4">  public final static int CAPACITE_PAR_DEFAUT = 6;</font>
+
+<font size="4">  public void empiler(</font><font size="5"><strong>T</strong></font><font size="4"> o) throws PilePleineException;</font>
+<font size="4">  public </font><font size="5"><strong>T</strong></font><font size="4"> dépiler() throws PileVideException;</font>
+
+<font size="4">  public </font><font size="5"><strong>T</strong></font><font size="4"> sommet() throws PileVideException;</font>
+
+.../... <font size="4">} // PileI</font> </pre>
+
+<p><font size="4"><b>question 3-2)</b> Vérifiez le source de la classe
+Pile2&lt;T&gt; et <strong>modifier</strong> l'IHM ApplettePile,
+ce type de message obtenu à la compilation <b>ne doit plus
+apparaître</b></font> </p>
+
+<blockquote>
+    <blockquote>
+        <p><img src="Capture-4.jpg" height="162" width="558"> </p>
+    </blockquote>
+</blockquote>
+
+<p>&nbsp;</p>
+
+<p><font size="4"><b>question 3-3)</b> Dans la méthode main de la classe
+UneUtilisation, proposez <strong>toutes</strong> les
+déclarations correctes afin que la compilation de cette classe
+s'effectue <strong>sans aucun message d'erreur ou alertes</strong>
+(<font color="red">sauf pour la méthode <tt>clone</tt></font>).
+</font></p>
+
+<blockquote>
+    <p><font size="4">i.e. proposez les déclarations telles que </font><font color="#ff0000" size="4">p1</font><font size="4"> contient
+    des éléments "de type PolygoneRegulier", </font><font color="#aa00aa" size="4">p2</font><font size="4"> que des
+    Piles de Polygone régulier , etc ...</font> </p>
+</blockquote>
+
+<blockquote>
+    <pre><font size="4">import question1.PolygoneRegulier;</font>
+
+<font size="4">public class UneUtilisation {</font>
+
+<font size="4">  public static void main(String[] args) throws Exception {</font>
+<font color="#ff0080" size="4"><strong>    </strong></font><font color="#ff0000" size="4"><strong>PileI ... p1 = new Pile2 ... (6);</strong></font>
+<font color="#ff0080" size="4"><strong>    </strong></font><font color="#aa00aa" size="4"><strong>PileI ... p2 = new Pile2 ... (10);</strong></font>
+<font size="4">    </font>etc ...</pre>
+
+    <p><font size="4">Vérifiez ensuite que ces lignes extraites
+    de la question 1 ne se compilent plus !</font></p>
+    <pre><font size="4">     try {<br>       p1.empiler(new PolygoneRegulier(5,100));     <br>       String s = p1.depiler();<br>     } catch(Exception e ) {<br>       e.printStackTrace();<br>     }</font>
+<font size="4">  }</font>
+<font size="4">}</font></pre>
+</blockquote>
+
+<hr>
+
+<p><font size="4"><br>
+</font></p>
+</body></html>

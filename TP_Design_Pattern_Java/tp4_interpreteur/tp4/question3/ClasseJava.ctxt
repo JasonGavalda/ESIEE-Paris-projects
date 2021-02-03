@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=ClasseJava
+comment0.text=\r\n\ Utilitaire\ de\ g\u00E9n\u00E9ration\ de\ classe\ Java\ \u00E0\ parir\ de\ votre\ Visiteur\r\n\ VisiteurInstToJava\r\n
+comment1.params=nomDeLaClasse\ inst\ vi
+comment1.target=ClasseJava(java.lang.String,\ Instruction,\ VisiteurInstruction)
+comment2.params=nomDeLaClasse\ nomDuPaquetage\ inst\ vi
+comment2.target=ClasseJava(java.lang.String,\ java.lang.String,\ Instruction,\ VisiteurInstruction)
+comment3.params=
+comment3.target=java.lang.String\ enTete()
+comment4.params=
+comment4.target=java.lang.String\ declarations()
+comment5.params=
+comment5.target=java.lang.String\ instructions()
+comment6.params=
+comment6.target=java.lang.String\ sourceComplet()
+comment7.params=className
+comment7.target=java.lang.String\ sourceComplet(java.lang.String)
+comment8.params=
+comment8.target=java.lang.String\ enPied()
+comment9.params=
+comment9.target=void\ enFichier()
+numComments=10

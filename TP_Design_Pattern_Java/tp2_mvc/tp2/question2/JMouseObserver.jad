@@ -1,0 +1,45 @@
+// Decompiled by DJ v3.2.2.67 Copyright 2002 Atanas Neshkov  Date: 01/07/2005 18:37:22
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   JMouseObserver.java
+
+package question2;
+
+import java.awt.TextArea;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+public class JMouseObserver
+    implements MouseListener
+{
+
+    public JMouseObserver(String nom, TextArea contenu)
+    {
+        this.nom = nom;
+        this.contenu = contenu;
+    }
+
+    public void mouseClicked(MouseEvent mouseevent)
+    {
+    }
+
+    public void mouseEntered(MouseEvent e)
+    {
+        contenu.append((new StringBuilder()).append("observateur ").append(nom).append(" : souris entr\351e en (").append(e.getX()).append(",").append(e.getY()).append(")\n").toString());
+    }
+
+    public void mouseExited(MouseEvent mouseevent)
+    {
+    }
+
+    public void mousePressed(MouseEvent mouseevent)
+    {
+    }
+
+    public void mouseReleased(MouseEvent mouseevent)
+    {
+    }
+
+    private String nom;
+    private TextArea contenu;
+}

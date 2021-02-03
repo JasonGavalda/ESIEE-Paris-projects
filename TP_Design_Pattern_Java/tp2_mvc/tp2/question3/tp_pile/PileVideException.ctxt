@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=PileVideException()
+comment1.params=message
+comment1.target=PileVideException(String)
+numComments=2

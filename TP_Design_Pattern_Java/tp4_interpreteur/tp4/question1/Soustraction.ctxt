@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Soustraction
+comment1.params=op1\ op2
+comment1.target=Soustraction(Expression,\ Expression)
+comment2.params=v
+comment2.target=java.lang.Object\ accepter(VisiteurExpression)
+numComments=3

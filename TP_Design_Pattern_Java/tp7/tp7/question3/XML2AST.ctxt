@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=XML2AST
+comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ XML2AST\ ici.\r\n\ \r\n\ @author\ (votre\ nom)\ \r\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\r\n
+comment1.params=m\ element
+comment1.target=tp4.question3.Instruction\ xmlInst2ast(tp4.question1.Contexte,\ org.jdom.Element)
+comment2.params=m\ element
+comment2.target=tp4.question1.Expression\ xmlExp2ast(tp4.question1.Contexte,\ org.jdom.Element)
+comment3.params=m\ element
+comment3.target=tp4.question2.ExpressionBooleenne\ xmlExpBool2ast(tp4.question1.Contexte,\ org.jdom.Element)
+numComments=4

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Sequence
+comment1.params=i1\ i2
+comment1.target=Sequence(Instruction,\ Instruction)
+comment2.params=vi
+comment2.target=java.lang.Object\ accepter(VisiteurInstruction)
+comment3.params=
+comment3.target=Instruction\ i1()
+comment4.params=
+comment4.target=Instruction\ i2()
+numComments=5

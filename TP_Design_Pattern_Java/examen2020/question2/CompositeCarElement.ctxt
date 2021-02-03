@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=CompositeCarElement
+comment1.params=modele
+comment1.target=CompositeCarElement(java.lang.String)
+comment2.params=element
+comment2.target=CompositeCarElement\ addCarElement(CarElement)
+comment3.params=element
+comment3.target=CompositeCarElement\ removeCarElement(CarElement)
+comment4.params=
+comment4.target=java.util.Iterator\ iterator()
+comment5.params=visitor
+comment5.target=java.lang.Object\ accept(CarElementVisitor)
+numComments=6

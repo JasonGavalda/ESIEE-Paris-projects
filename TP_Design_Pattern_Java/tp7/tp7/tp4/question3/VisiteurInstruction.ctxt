@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=aff
+comment0.target=java.lang.Object\ visite(Affectation)
+comment1.params=seq
+comment1.target=java.lang.Object\ visite(tp6.question3.Sequence)
+comment2.params=sel
+comment2.target=java.lang.Object\ visite(Selection)
+comment3.params=tq
+comment3.target=java.lang.Object\ visite(TantQue)
+comment4.params=pour
+comment4.target=java.lang.Object\ visite(Pour)
+comment5.params=a
+comment5.target=java.lang.Object\ visite(tp6.question3.Afficher)
+comment6.params=a
+comment6.target=java.lang.Object\ visite(Assertion)
+comment7.params=
+comment7.target=tp4.question1.Contexte\ contexte()
+numComments=8

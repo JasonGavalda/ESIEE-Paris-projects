@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=CondimentDecorator
+comment0.text=\r\n\ extrait\ de\ http\://www.oreilly.com/catalog/hfdesignpat/\r\n
+comment1.params=beverage
+comment1.target=CondimentDecorator(Beverage)
+comment2.params=
+comment2.target=java.lang.String\ getDescription()
+comment3.params=
+comment3.target=double\ cost()
+numComments=4

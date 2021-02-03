@@ -1,0 +1,29 @@
+// Decompiled by DJ v3.2.2.67 Copyright 2002 Atanas Neshkov  Date: 01/07/2005 18:37:33
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   JButtonObserver.java
+
+package question2;
+
+import java.awt.TextArea;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class JButtonObserver
+    implements ActionListener
+{
+
+    public JButtonObserver(String nom, TextArea contenu)
+    {
+        this.nom = nom;
+        this.contenu = contenu;
+    }
+
+    public void actionPerformed(ActionEvent ae)
+    {
+        contenu.append((new StringBuilder()).append("observateur ").append(nom).append(" : clic du bouton ").append(ae.getActionCommand()).append("\n").toString());
+    }
+
+    private String nom;
+    private TextArea contenu;
+}

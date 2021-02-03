@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=AST_Fact
+comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ AST_Fact\ ici.\r\n\ \r\n\ @author\ (votre\ nom)\ \r\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\r\n
+comment1.params=n
+comment1.target=AST_Fact(int)
+comment1.text=\ construire\ l'AST\ du\ programme\ "WhileL\ style"\ \ est\ \u00E0\ construire\ ci\ dessous\r\n\ \ \ \ xxx\:\=n\ ;\ \r\n\ \ \ \ fact\ \:\=\ 1\ ;\ \r\n\ \ \ \ while\ (~(xxx\=0)\ )\ do\r\n\ \ \ \ \ \ \ fact\ \:\=\ fact\ *\ xxx\ ;\ xxx\:\=\ xxx-1;\ \r\n\ \ \ \ \ \ \ ftp;\r\n\ \ \ \ afficher(fact);\r\nremarque\ \:\ on\ calcule\ ici\ fact(n)\ i.e.\ n\ est\ une\ donn\u00E9e\ fournie\ au\ moment\ de\ l'ex\u00E9cution,\ d'o\u00F9\ le\ constructeur\ suivant\r\n
+comment2.params=
+comment2.target=tp4.question1.Contexte\ getMem()
+comment3.params=
+comment3.target=tp4.question3.Instruction\ getAST()
+numComments=4

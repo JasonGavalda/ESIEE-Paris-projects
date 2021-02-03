@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=PileModele
+comment1.params=pile
+comment1.target=PileModele(tp_pile.PileI)
+comment1.text=a\ completer
+comment2.params=o
+comment2.target=void\ empiler(java.lang.Object)
+comment3.params=
+comment3.target=java.lang.Object\ depiler()
+comment4.params=
+comment4.target=java.lang.Object\ sommet()
+comment5.params=
+comment5.target=int\ taille()
+comment6.params=
+comment6.target=int\ capacite()
+comment7.params=
+comment7.target=boolean\ estVide()
+comment8.params=
+comment8.target=boolean\ estPleine()
+comment9.params=
+comment9.target=java.lang.String\ toString()
+numComments=10

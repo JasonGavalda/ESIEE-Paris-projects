@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=EnsembleTest
+comment1.params=
+comment1.target=void\ testAdd()
+comment1.text=\r\n\ Il\ ne\ vous\ reste\ plus\ qu'a\ definir\ une\ ou\ plusieurs\ methodes\ de\ test.\r\n\ Ces\ methodes\ doivent\ verifier\ les\ resultats\ attendus\ a\ l'aide\ d'assertions\r\n\ assertTrue(<boolean>).\r\n\ Par\ convention,\ leurs\ noms\ devraient\ debuter\ par\ "test".\r\n\ Vous\ pouvez\ ebaucher\ le\ corps\ gr\u00E2ce\ au\ menu\ contextuel\ "Enregistrer\ une\ methode\ de\ test".\r\n
+comment2.params=
+comment2.target=void\ testUnion()
+comment3.params=
+comment3.target=void\ testInter()
+comment4.params=
+comment4.target=void\ testDiff()
+comment5.params=
+comment5.target=void\ testDiffSym()
+comment6.params=
+comment6.target=void\ setUp()
+comment6.text=\r\n\ Met\ en\ place\ les\ engagements.\r\n\r\n\ Methode\ appelee\ avant\ chaque\ appel\ de\ methode\ de\ test.\r\n
+comment7.params=
+comment7.target=void\ tearDown()
+comment7.text=\r\n\ Supprime\ les\ engagements\r\n\r\n\ Methode\ appelee\ apr\u00E8s\ chaque\ appel\ de\ methode\ de\ test.\r\n
+numComments=8

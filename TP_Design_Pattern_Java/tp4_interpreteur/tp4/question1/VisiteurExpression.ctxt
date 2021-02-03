@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=VisiteurExpression
+comment1.params=c
+comment1.target=java.lang.Object\ visite(Constante)
+comment2.params=v
+comment2.target=java.lang.Object\ visite(Variable)
+comment3.params=d
+comment3.target=java.lang.Object\ visite(Division)
+comment4.params=a
+comment4.target=java.lang.Object\ visite(Addition)
+comment5.params=m
+comment5.target=java.lang.Object\ visite(Multiplication)
+comment6.params=s
+comment6.target=java.lang.Object\ visite(Soustraction)
+comment7.params=
+comment7.target=Contexte\ contexte()
+numComments=8

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=TantQue
+comment1.params=cond\ i1
+comment1.target=TantQue(question2.ExpressionBooleenne,\ Instruction)
+comment2.params=vi
+comment2.target=java.lang.Object\ accepter(VisiteurInstruction)
+numComments=3

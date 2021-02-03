@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Constante
+comment1.params=i
+comment1.target=Constante(int)
+comment2.params=
+comment2.target=int\ valeur()
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment4.params=c
+comment4.target=int\ interprete(Contexte)
+numComments=5

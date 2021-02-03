@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=pChain
+comment0.target=ChainCommand(Handler)
+comment1.params=pValue
+comment1.target=void\ make(java.lang.Object)
+numComments=2

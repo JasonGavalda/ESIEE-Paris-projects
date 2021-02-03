@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=bop1\ bop2
+comment0.target=Et(tp6.question2.ExpressionBooleenne,\ tp6.question2.ExpressionBooleenne)
+comment1.params=v
+comment1.target=java.lang.Object\ accepter(tp6.question2.VisiteurExpressionBooleenne)
+numComments=2

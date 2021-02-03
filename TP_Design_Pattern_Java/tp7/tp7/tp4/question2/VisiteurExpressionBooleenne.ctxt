@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=v
+comment0.target=java.lang.Object\ visite(tp6.question2.Vrai)
+comment1.params=f
+comment1.target=java.lang.Object\ visite(tp6.question2.Faux)
+comment2.params=n
+comment2.target=java.lang.Object\ visite(tp6.question2.Non)
+comment3.params=ou
+comment3.target=java.lang.Object\ visite(tp6.question2.Ou)
+comment4.params=et
+comment4.target=java.lang.Object\ visite(tp6.question2.Et)
+comment5.params=sup
+comment5.target=java.lang.Object\ visite(Sup)
+comment6.params=eg
+comment6.target=java.lang.Object\ visite(tp6.question2.Egal)
+comment7.params=inf
+comment7.target=java.lang.Object\ visite(tp6.question2.Inf)
+numComments=8

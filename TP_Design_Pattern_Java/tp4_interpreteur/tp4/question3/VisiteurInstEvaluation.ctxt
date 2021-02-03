@@ -1,0 +1,31 @@
+#BlueJ class context
+comment0.target=VisiteurInstEvaluation
+comment0.text=\r\n\ Visisteur\ d'instruction,\ chaque\ classe\ concr\u00E8te\ poss\u00E8de\ une\ impl\u00E9mentation\ de\ la\ visite\r\n\ \r\n
+comment1.params=vi\ vb
+comment1.target=VisiteurInstEvaluation(question1.VisiteurExpression,\ question2.VisiteurExpressionBooleenne)
+comment1.text=\ Cr\u00E9ation\ d'un\ visiteur\ d'instructions\r\n\ @param\ vi\ le\ visiteur\ d'expressions\ arithm\u00E9tiques\r\n\ @param\ vb\ le\ visiteur\ d'expression\ bool\u00E9ennes\r\n
+comment2.params=
+comment2.target=question1.Contexte\ contexte()
+comment2.text=\ obtention\ du\ contexte,\ ici\ celui\ du\ visiteur\ d'expression\ arithm\u00E9tiques\ \r\n\ @return\ le\ contexte\ ici\ de\ vi(le\ visiteur\ d'expression)\r\n
+comment3.params=a
+comment3.target=question1.Contexte\ visite(Affectation)
+comment3.text=\ Visite\ d'une\ instance\ de\ la\ classe\ Affectation.\r\n\ \r\n\ l'affectation,\ X\ \=\ Exp,\ Exp\ est\ une\ expression\ arithm\u00E9tique\ <br>\ \r\n\ <code>\r\n\ \r\n\ \ \ \ \ M,Exp\ -interprete->\ N\ \ \ \ \ \ \ <br>\ \ \ \ \ \ \r\n\ ________________________________<br>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ M,\ X\ \=\ Exp\ -interprete->\ M[X]\=N\ <br>\r\n\ </code>\r\n\ \r\n\ @param\ a\ \ une\ affectation\r\n\ @return\ la\ m\u00E9moire\ r\u00E9sultante\ \r\n
+comment4.params=seq
+comment4.target=question1.Contexte\ visite(Sequence)
+comment4.text=\ Visite\ d'une\ s\u00E9quence\ seq(I1,I2)\ <br>\r\n\ <code>\r\n\ \r\n\ \ \ \ M,I1\ -interprete->\ M1\ \ \ \ \ \ \ \ <br>\r\n\ \ \ \ M1,I2\ -interprete->\ M2\ \ \ \ \ \ \ <br>\r\n\ ________________________________<br>\r\n\ \ \ \ M,seq(I,I2)-interprete->\ M2\ \ <br>\r\n</code>\r\n\ \r\n\ @param\ seq\ \ une\ s\u00E9quence\r\n\ @return\ la\ m\u00E9moire\ r\u00E9sultante\ \r\n
+comment5.params=sel
+comment5.target=question1.Contexte\ visite(Selection)
+comment5.text=\ Visiste\ d'une\ s\u00E9lection\ si\ (Bexp)\ alors\ I1\ sinon\ I2\ fsi\ <br>\r\n\ ou\ si\ (Bexp)\ alors\ I1\ fsi\ <br>\r\n\r\n\ <code>\r\n\ \r\n\ \ \ \ \ \ M,Bexp-interprete->\ vrai\ \ \ \ \ \ \ \ \ \ \ \ \ <br>\r\n\ \ \ \ \ \ M,I1\ -interprete->\ M1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <br>\r\n\ _________________________________________\ <br>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ M,si(Bexp)alorsI1\ sinon\ I2-interprete->\ M1<br>\r\n\ \r\n\ \ \ \ \ \ M,Bexp\ -interprete->\ faux\ \ \ \ \ \ \ \ \ \ \ \ <br>\r\n\ \ \ \ \ \ M,I2\ -interprete->\ M2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <br>\r\n\ __________________________________________<br>\r\n\ M,si(Bexp)alorsI1\ sinon\ I2-interprete->M2\ <br>\r\n\ </code>\r\n\ \r\n\ @param\ sel\ \ une\ s\u00E9lection\r\n\ @return\ la\ m\u00E9moire\ r\u00E9sultante\ \r\n
+comment6.params=tq
+comment6.target=question1.Contexte\ visite(TantQue)
+comment6.text=\ La\ boucle\ tantque(Bexp,I1)<br>\r\n\ <code>\r\n\ \r\n\ \ \ \ \ M,Bexp\ -interprete->faux\ \ \ \ \ \ \ \ \ \ \ \ \ \ <br>\r\n\ _________________________________________\ <br>\r\n\ M,tantque(Bexp)\ faire\ I1-interprete->\ M\ \ \ <br>\r\n\ <br>\r\n\ M,Bexp\ -interprete->\ vrai\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <br>\r\n\ M,seq(I1,tantque(Bexp)faire\ I1)-interprete->\ M1\ \ \ \ <br>\r\n\ ___________________________________________________<br>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ M,tantque(Bexp)faire\ I1-interprete->\ M1\r\n\ </code>\r\n\ \r\n\ @param\ tq\ \ une\ it\u00E9ration\ de\ la\ classe\ tantque\r\n\ @return\ la\ m\u00E9moire\ r\u00E9sultante\ \r\n
+comment7.params=pour
+comment7.target=question1.Contexte\ visite(Pour)
+comment7.text=\ La\ boucle\ pour(init,Bexp,inc)I1<br>\r\n\ <code>\r\n\ M,seq(init,tantque(Bexp)seq(I1,inc))-visite->faux\ <br>\r\n\ _____________________________________________________\ <br>\r\n\ M,pour(init,Bexp,inc)\ faire\ I1-visite->\ M\ \ \ \ \ \ \ \ \ <br>\r\n\ </code>\r\n\ \r\n\ @param\ pour\ \ une\ it\u00E9ration\ de\ la\ classe\ Pour\r\n\ @return\ la\ m\u00E9moire\ r\u00E9sultante\ \r\n
+comment8.params=a
+comment8.target=question1.Contexte\ visite(Afficher)
+comment8.text=\ L'affichage<br>\r\n\ <code>\r\n\ \ \ \ \ \r\n\ \ \ \ M,Exp-visite->\ n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <br>\r\n\ ________________________________System.out.print(n)<br>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ M,afficher(Exp)-visite->\ M\r\n\ </code>\r\n\ \r\n\ @param\ a\ \ une\ instruction\ d'affichage\ d'une\ expression\ arithm\u00E9tique\r\n\ @return\ la\ m\u00E9moire\ intacte\ \r\n
+comment9.params=a
+comment9.target=question1.Contexte\ visite(Assertion)
+comment9.text=\ Une\ assertion,\ \r\n\ si\ celle-ci\ \u00E9choue\ une\ exception\ est\ lev\u00E9e,\ \r\n\ emploi\ de\ la\ clause\ <a\ href\=http\://java.sun.com/j2se/1.5.0/docs/guide/language/assert.html>\ assert</a>\ Expr\ \:\ "un\ Message";\r\n\ \r\n\ @param\ a\ \ une\ assertion\r\n\ @return\ la\ m\u00E9moire\ intacte\ \r\n\ @throws\ une\ exception\ AssertionError\r\n
+numComments=10

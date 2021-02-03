@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=c
+comment0.target=VisiteurInfixe(tp6.question1.Contexte)
+comment1.params=c
+comment1.target=java.lang.String\ visite(tp6.question1.Constante)
+comment2.params=v
+comment2.target=java.lang.String\ visite(tp6.question1.Variable)
+comment3.params=d
+comment3.target=java.lang.String\ visite(tp6.question1.Division)
+comment4.params=a
+comment4.target=java.lang.String\ visite(tp6.question1.Addition)
+comment5.params=m
+comment5.target=java.lang.String\ visite(tp6.question1.Multiplication)
+comment6.params=s
+comment6.target=java.lang.String\ visite(tp6.question1.Soustraction)
+comment7.params=
+comment7.target=tp6.question1.Contexte\ contexte()
+numComments=8

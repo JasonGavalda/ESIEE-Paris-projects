@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=CarElementCheckVisitor
+comment1.params=pneu
+comment1.target=java.lang.String\ visit(Pneu)
+comment2.params=moteur
+comment2.target=java.lang.String\ visit(Moteur)
+comment3.params=reservoir
+comment3.target=java.lang.String\ visit(Reservoir)
+comment4.params=voiture
+comment4.target=java.lang.String\ visitCar(Voiture)
+numComments=5

@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Handler()
+comment1.params=pSuccessor
+comment1.target=Handler(Handler)
+comment2.params=pSuccessor
+comment2.target=void\ setSuccessor(Handler)
+comment3.params=
+comment3.target=Handler\ getSuccessor()
+comment4.params=pValue
+comment4.target=boolean\ handleRequest(java.lang.Object)
+numComments=5

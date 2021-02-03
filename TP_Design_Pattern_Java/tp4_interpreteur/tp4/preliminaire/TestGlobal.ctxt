@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=TestGlobal
+comment1.params=
+comment1.target=void\ setUp()
+comment2.params=
+comment2.target=void\ test_UneConstante()
+comment3.params=
+comment3.target=void\ test_DeVariables()
+comment4.params=
+comment4.target=void\ test_UneAddition1()
+comment5.params=
+comment5.target=void\ test_UneAutreAddition2()
+comment6.params=
+comment6.target=void\ test_Multiplication()
+comment7.params=
+comment7.target=void\ test_Division()
+comment8.params=
+comment8.target=void\ testFactorielEtMoins()
+comment9.params=
+comment9.target=void\ testToString()
+numComments=10

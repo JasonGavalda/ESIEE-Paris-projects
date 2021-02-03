@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Instruction
+comment0.text=\ Classe\ abstraite\ Instruction,\ racine\ du\ Composite\r\n\r\n
+comment1.params=vi
+comment1.target=java.lang.Object\ accepter(VisiteurInstruction)
+comment1.text=\r\n\ accepter\ un\ visiteur,\r\n\ \r\n\ @param\ vi\r\n\ \ \ \ \ \ \ \ \ \ \ \ le\ Visiteur\ des\ instructions\r\n
+numComments=2

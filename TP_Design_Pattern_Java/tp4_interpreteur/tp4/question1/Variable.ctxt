@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Variable
+comment1.params=c\ nom\ valeur
+comment1.target=Variable(Contexte,\ java.lang.String,\ java.lang.Integer)
+comment2.params=c\ nom
+comment2.target=Variable(Contexte,\ java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ nom()
+comment4.params=v
+comment4.target=java.lang.Object\ accepter(VisiteurExpression)
+numComments=5

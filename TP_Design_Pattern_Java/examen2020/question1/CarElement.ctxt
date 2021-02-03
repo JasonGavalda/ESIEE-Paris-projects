@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=CarElement
+comment1.params=visitor
+comment1.target=java.lang.Object\ accept(CarElementVisitor)
+comment2.params=
+comment2.target=boolean\ safetyCheck()
+comment3.params=
+comment3.target=void\ setSafe()
+numComments=4

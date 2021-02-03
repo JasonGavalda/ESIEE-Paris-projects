@@ -1,0 +1,73 @@
+evaluation_OUAP4104{
+
+  evaluation_tp4_question1{
+    .file.include=*.class;
+    .transport=http://jnews.esiee.fr:8788/junit3/AllTests.html?auteur=<field:login>&matricule=<password:mot_de_passe>&uv=OUAP4104&tp=tp4q1&client=bluej;
+  }
+
+  evaluation_tp4_question2{
+    .file.include=*.class;
+    .transport=http://jnews.esiee.fr:8788/junit3/AllTests.html?auteur=<field:login>&matricule=<password:mot_de_passe>&uv=OUAP4104&tp=tp4q2&client=bluej;
+  }
+
+  evaluation_tp4_question3{
+    .file.include=*.class;
+    .transport=http://jnews.esiee.fr:8788/junit3/AllTests.html?auteur=<field:login>&matricule=<password:mot_de_passe>&uv=OUAP4104&tp=tp4q3&client=bluej;
+  }
+
+  javadoc_evaluation{
+    .file.include=*.java;
+    .transport=http://jnews.esiee.fr:8788/checkstyle/javadoc.html?auteur=<field:login>&matricule=<password:mot_de_passe>&uv=OUAP4104&tp=tp4&client=bluej;
+  }
+
+  PMD{
+    .file.include=*.java;
+    .transport=http://jnews.esiee.fr:8788/pmd/pmd.html?auteur=<field:login>&matricule=<password:mot_de_passe>&uv=OUAP4104&tp=tp4&client=bluej;
+  }
+
+  findbugs{
+    .file.include=*.class;
+    .transport=http://jnews.esiee.fr:8788/findbugs/findbugs.html?auteur=<field:login>&matricule=<password:mot_de_passe>&uv=OUAP4104&tp=tp4&client=bluej;
+  }
+
+}
+
+
+resultats_OUAP4104{
+
+  historique_perso_detail_6submit{
+    .file.include=README.TXT;
+    .transport=http://jnews.esiee.fr:8788/interrogation/historique.html?auteur=<field:login>&matricule=<password:mot_de_passe>&uv=OUAP4104&client=bluej;
+  }
+
+  historique_perso_tous_tp{
+    .file.include=README.TXT;
+    .transport=http://jnews.esiee.fr:8788/interrogation/historiqueResultats.html?auteur=<field:login>&matricule=<password:mot_de_passe>&uv=OUAP4104&client=bluej;
+  }
+
+  autres_resultats_tp4_question1{
+    .file.include=README.TXT;
+    .transport=http://jnews.esiee.fr:8788/interrogation/resultats.html?outil=junit3&uv=OUAP4104&tp=tp4q1&client=bluej;
+  }
+
+  autres_resultats_tp4_question2{
+    .file.include=README.TXT;
+    .transport=http://jnews.esiee.fr:8788/interrogation/resultats.html?outil=junit3&uv=OUAP4104&tp=tp4q2&client=bluej;
+  }
+
+  autres_resultats_tp4_question3{
+    .file.include=README.TXT;
+    .transport=http://jnews.esiee.fr:8788/interrogation/resultats.html?outil=junit3&uv=OUAP4104&tp=tp4q3&client=bluej;
+  }
+
+}
+
+
+rendre_TP_OUAP4104{
+   
+   depot_tp4_seul{
+    .file.include=*;
+    .transport=http://jnews.esiee.fr:8788/depot/OUAP4104_2021.html?auteur=<field:login>&matricule=<password:mot_de_passe>&co_auteur=AUCUN&uv=OUAP4104&tp=tp4&client=bluej;
+   }
+  
+}

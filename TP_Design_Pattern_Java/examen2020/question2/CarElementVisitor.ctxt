@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=CarElementVisitor
+comment1.params=element
+comment1.target=java.lang.Object\ visit(AtomicCarElement)
+comment2.params=system
+comment2.target=java.lang.Object\ visit(CompositeCarElement)
+numComments=3

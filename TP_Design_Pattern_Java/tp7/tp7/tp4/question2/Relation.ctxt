@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=op1\ op2
+comment0.target=Relation(tp4.question1.Expression,\ tp4.question1.Expression)
+comment1.params=
+comment1.target=tp4.question1.Expression\ op1()
+comment2.params=
+comment2.target=tp4.question1.Expression\ op2()
+numComments=3

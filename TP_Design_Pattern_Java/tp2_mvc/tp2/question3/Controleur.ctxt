@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Controleur
+comment0.text=\r\n\ Decrivez\ votre\ classe\ Controleur\ ici.\r\n\ \r\n\ @author\ (votre\ nom)\ \r\n\ @version\ (un\ numero\ de\ version\ ou\ une\ date)\r\n
+comment1.params=pile
+comment1.target=Controleur(PileModele)
+comment2.params=
+comment2.target=void\ actualiserInterface()
+comment3.params=
+comment3.target=java.lang.Integer\ operande()
+numComments=4

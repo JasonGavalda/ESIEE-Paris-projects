@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Pile3Test
+comment0.text=\r\n\ Classe-test\ Pile3Test.\r\n\r\n\ @author\ \ (votre\ nom)\r\n\ @version\ (un\ numero\ de\ version\ ou\ une\ date)\r\n\r\n\ Les\ classes-test\ sont\ documentees\ ici\ \:\r\n\ http\://junit.sourceforge.net/javadoc/junit/framework/TestCase.html\r\n\ et\ sont\ basees\ sur\ le\ document\ \u00A9\ 2002\ Robert\ A.\ Ballance\ intitule\r\n\ \u00ABJUnit\:\ Unit\ Testing\ Framework\u00BB.\r\n\r\n\ Les\ objets\ Test\ (et\ TestSuite)\ sont\ associes\ aux\ classes\ a\ tester\r\n\ par\ la\ simple\ relation\ yyyTest\ (e.g.\ qu'un\ Test\ de\ la\ classe\ Name.java\r\n\ se\ nommera\ NameTest.java);\ les\ deux\ se\ retrouvent\ dans\ le\ meme\ paquetage.\r\n\ Les\ "engagements"\ (anglais\ \:\ "fixture")\ forment\ un\ ensemble\ de\ conditions\r\n\ qui\ sont\ vraies\ pour\ chaque\ methode\ Test\ a\ executer.\ \ Il\ peut\ y\ avoir\r\n\ plus\ d'une\ methode\ Test\ dans\ une\ classe\ Test;\ leur\ ensemble\ forme\ un\r\n\ objet\ TestSuite.\r\n\ BlueJ\ decouvrira\ automatiquement\ (par\ introspection)\ les\ methodes\r\n\ Test\ de\ votre\ classe\ Test\ et\ generera\ la\ TestSuite\ consequente.\r\n\ Chaque\ appel\ d'une\ methode\ Test\ sera\ precede\ d'un\ appel\ de\ setUp(),\r\n\ qui\ realise\ les\ engagements,\ et\ suivi\ d'un\ appel\ a\ tearDown(),\ qui\ les\r\n\ detruit.\r\n
+comment1.params=
+comment1.target=void\ test_Pile3_estPleine()
+comment2.params=
+comment2.target=void\ test_Pile3_estVide()
+comment3.params=
+comment3.target=void\ test_Pile3_toString()
+comment4.params=
+comment4.target=void\ test_Pile3_sommet()
+comment5.params=
+comment5.target=void\ test_Pile3_TailleNegative()
+comment6.params=
+comment6.target=void\ test_Pile3_equals()
+numComments=7

@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Binaire
+comment1.params=op1\ op2
+comment1.target=Binaire(Expression,\ Expression)
+comment2.params=
+comment2.target=Expression\ op1()
+comment3.params=
+comment3.target=Expression\ op2()
+numComments=4

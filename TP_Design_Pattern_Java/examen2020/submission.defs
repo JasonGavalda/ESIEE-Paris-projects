@@ -1,0 +1,27 @@
+jnews_OUAP4104{
+
+  evaluation_examen2020_question1{
+    .file.include=*.class;
+    .transport=http://jnews.esiee.fr:8788/junit3/AllTests.html?auteur=<field:login>&matricule=<password:mot_de_passe>&uv=OUAP4104&tp=examen2020q1&client=bluej;
+  }
+  evaluation_examen2020_question2{
+    .file.include=*.class;
+    .transport=http://jnews.esiee.fr:8788/junit3/AllTests.html?auteur=<field:login>&matricule=<password:mot_de_passe>&uv=OUAP4104&tp=examen2020q2&client=bluej;
+  }
+  evaluation_examen2020_question3{
+    .file.include=*.class;
+    .transport=http://jnews.esiee.fr:8788/junit3/AllTests.html?auteur=<field:login>&matricule=<password:mot_de_passe>&uv=OUAP4104&tp=examen2020q3&client=bluej;
+  }
+
+}
+
+
+rendre_EXAMEN_OUAP4104{
+   
+   depot_examen2020{
+    .file.include=*;
+    .file.jar=examen2020.jar;
+    .transport=http://jnews.esiee.fr:8788/depot/OUAP4104_2021.html?auteur=<field:login>&matricule=<password:mot_de_passe>&co_auteur=AUCUN&uv=OUAP4104&tp=examen2020&client=bluej;
+   }
+
+}

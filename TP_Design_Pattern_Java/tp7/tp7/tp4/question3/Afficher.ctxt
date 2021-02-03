@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=exp
+comment0.target=Afficher(tp4.question1.Expression)
+comment1.params=vi
+comment1.target=java.lang.Object\ accepter(VisiteurInstruction)
+comment2.params=
+comment2.target=tp4.question1.Expression\ exp()
+numComments=3

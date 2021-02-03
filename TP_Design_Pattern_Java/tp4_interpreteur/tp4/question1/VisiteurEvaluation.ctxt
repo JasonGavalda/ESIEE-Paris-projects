@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=VisiteurEvaluation
+comment1.params=c
+comment1.target=VisiteurEvaluation(Contexte)
+comment2.params=c
+comment2.target=java.lang.Integer\ visite(Constante)
+comment3.params=v
+comment3.target=java.lang.Integer\ visite(Variable)
+comment4.params=d
+comment4.target=java.lang.Integer\ visite(Division)
+comment5.params=a
+comment5.target=java.lang.Integer\ visite(Addition)
+comment6.params=m
+comment6.target=java.lang.Integer\ visite(Multiplication)
+comment7.params=s
+comment7.target=java.lang.Integer\ visite(Soustraction)
+comment8.params=
+comment8.target=Contexte\ contexte()
+numComments=9

@@ -1,0 +1,429 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  
+  <meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+  <title>TP3</title>
+
+  
+<!-- saved from url=(0022)http://internet.e-mail --><!-- Created with AOLpress/2.0 -->
+</head><body style="background-color: rgb(100, 233, 166);">
+<p align="center"><font size="6">TP3<br>
+</font></p>
+
+<div align="center">
+<center>
+<table border="18" cellpadding="2">
+  <tbody>
+    <tr>
+      <td valign="top">
+      <div align="center">
+      <center>
+      <table border="0" cellpadding="2">
+        <tbody>
+          <tr>
+            <td align="center"><font size="4">Lectures préalables :
+&nbsp; </font></td>
+          </tr>
+          <tr>
+            <td align="center">
+            <ul>
+              <li>
+                <p align="left"><font size="4">Les notes de cours</font></p>
+              </li>
+              <li>
+                <p align="left"><font size="2">Ce tutorial sur les </font><a href="http://java.sun.com/docs/books/tutorial/collections/index.html"><font size="2"><b>collections</b></font></a><b>&nbsp;</b><font size="2">et/ou
+                </font><a href="http://developer.java.sun.com/developer/onlineTraining/collections/Collection.html"><font size="2"><b>celui_là</b></font></a><font size="2"> et/ou le </font><a href="http://developer.java.sun.com/developer/Books/javaprogramming/corejava/"><font size="2"><b>chapitre2</b></font></a> </p>
+              </li>
+              <li>
+                <p align="left"><font size="2">Revoir <b>également les
+                </b></font><a href="http://java.sun.com/docs/books/tutorial/java/javaOO/nested.html"><font size="2"><b>classes internes</b></font></a><font size="2"><b> </b></font></p>
+              </li>
+            </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </div>
+      </td>
+      <td>
+      <table border="0" cellpadding="2">
+        <tbody>
+          <tr>
+            <td><font size="4">Thèmes du TP</font> :</td>
+          </tr>
+          <tr>
+            <td><font size="4">classes abstraites, interface, héritage</font>
+            <ul>
+              <li><font size="4"><code><strong>package java.util</strong></code></font>
+                <ul>
+                  <li><font size="4"><code><strong><i>java.util.AbstractCollection</i></strong></code></font>
+                  </li>
+                  <li><font size="4"><code><strong><i>java.util.AbstractSet
+                    </i></strong></code></font></li>
+                  <li><font size="4"><code><strong><i>java.util.Set</i></strong></code></font>
+                  </li>
+                  <li><font size="4"><code><strong><i>java.util.TreeSet
+                    </i></strong></code></font></li>
+                  <li><font size="4"><code><strong><i>java.util.Vector</i></strong></code></font>
+                  </li>
+                  <li><font size="4"><code><strong><i>java.util.HashMap</i></strong></code></font>
+                  </li>
+                </ul>
+              </li>
+              <li><font size="4"><code><strong><i>Iterator , Comparator
+                </i></strong></code></font></li>
+              <li><a href="http://java.sun.com/docs/books/tutorial/java/javaOO/nested.html"><font size="4"><code><strong><i>classes internes</i></strong></code></font></a>
+              </li>
+            </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+</div>
+
+<h3>
+<ul>
+  <li>Visualisez le sujet dans un navigateur en ouvrant <tt>index.html</tt>
+du répertoire qui a été créé à l'ouverture de <tt>tp3.jar</tt> par
+BlueJ</li>
+  <li>Soumettez chaque question à l'outil d'évaluation junit3.</li>
+</ul>
+</h3>
+
+<hr>
+<p><small> <b><font size="4"><small>&gt;</small></font></b></small><big><big><font size="3"><big><big><b>java
+-jar ihm_q1.jar</b></big></big></font></big></big></p>
+
+<blockquote>
+  <p> <img src="images/tp5.ht1.jpg" border="0" height="341" width="716"></p>
+</blockquote>
+
+<p align="center">&nbsp;</p>
+
+<p><img src="question1.jpg" alt="[Image]" align="middle" height="73" width="91"><font size="4"><strong>.1) Compléter la classe "Ensemble",
+nommée</strong></font>
+<strong><font size="5"><code>Ensemble&lt;T&gt;</code></font></strong><font size="5">
+</font></p>
+
+<font size="5"><font size="4">
+<ul>
+  <li><i>L'implémentation préconisée utilise pour le stockage une
+instance de la classe </i><code><strong><i>java.util.Vector&lt;T&gt;</i></strong></code><i>.</i>&nbsp;
+&nbsp; </li>
+  <li><i>Seule </i><strong><i>une méthode est à développer ici</i></strong><i>
+: </i><code><strong><i><br>
+public boolean add(T t)</i></strong></code><i>. <br>
+    </i></li>
+  <li>Cette méthode doit garantir la sémantique de l'ajout d'un élément
+dans un ensemble (au sens mathématique). </li>
+  <li>Questions à se poser&nbsp;: Que se passe-t-il si on utilise <tt>this.add(...)</tt>
+dans cette méthode&nbsp;? Et <tt>this.contains()</tt>&nbsp;? </li>
+</ul>
+</font>
+</font>
+<p><font size="5"><img src="question1.jpg" alt="[Image]" align="middle" height="73" width="91"><font size="4"><strong>.2) Complétez la classe
+de tests
+unitaires de la classe <code>Ensemble&lt;T&gt;</code></strong>
+(pour la méthode <tt>add()</tt> )
+</font><br>
+<table border="1">
+  <tbody>
+    <tr>
+      <td><b>POUR CE TP :</b>
+Dès qu'une ou deux assertions sont vérifiées, passez à la suite du TP.
+Vous complèterez en travail personnel.
+      </td>
+    </tr>
+  </tbody>
+</table>
+</font></p>
+
+<p><font size="5"><img src="question1.jpg" alt="[Image]" align="middle" height="73" width="91"><font size="4"><strong>.3) Enrichissez la
+classe <code>Ensemble&lt;T&gt;</code></strong>
+avec ces <strong>4 opérations</strong> : </font></font></p>
+
+<table>
+
+  <tbody>
+    <tr>
+      <td align="center"> 1) union ° </td>
+      <td>&nbsp;&nbsp;</td>
+      <td align="center"> 2) intersection ° </td>
+      <td>&nbsp;&nbsp;</td>
+      <td align="center"> 3) différence ° </td>
+      <td>&nbsp;&nbsp;</td>
+      <td align="center"> 4) différence symétrique °° </td>
+    </tr>
+    <tr>
+      <td align="center"><img src="union.png" height="100"></td>
+      <td>&nbsp;&nbsp;</td>
+      <td align="center"><img src="inter.png" height="100"></td>
+      <td>&nbsp;&nbsp;</td>
+      <td align="center"><img src="diff.png" height="100"></td>
+      <td>&nbsp;&nbsp;</td>
+      <td align="center"><img src="diff-sym.png" height="100"></td>
+    </tr>
+  </tbody>
+</table>
+
+<font size="5"><br>
+<b>AIDE :</b>
+</font>
+<dir><font size="5"><font size="4"> ° <b>voir les méthodes <tt>xxxAll</tt>
+spécifiées dans l'interface <a href="http://java.sun.com/javase/6/docs/api/java/util/package-summary.html"><tt>java.util.Collection</tt></a></b>
+<i>(aucune boucle n'est nécessaire !)</i> <br>
+&nbsp;&nbsp;Dans la javadoc, "... adds each object ..." signifie "...
+calls <tt>add()</tt> for each object ..." <i>(pattern Template Method)</i>
+<br>
+&nbsp;&nbsp;Bien comprendre quelle méthode <tt>addAll</tt> et quelle
+méthode <tt>add</tt> sont appelées à chaque fois. <br>
+°° <b>(<i>(e union e1) - (e inter e1)</i>)</b> <br>
+&nbsp;&nbsp;<i>On peut coder cette méthode avec une seule instruction !</i>
+</font></font></dir>
+
+<p><font size="5"><font color="red" size="4"><b>Attention !</b> e et e1
+ne doivent pas être modifiés. </font>
+</font></p>
+
+<p><font size="5"><font size="4">Chaque opération <b>retourne un
+nouvel ensemble</b>,
+comme le suggère cette signature de la méthode
+"union"</font> </font></p>
+
+<blockquote>
+  <font size="5"> </font>
+  <p><font size="5">public Ensemble&lt;T&gt; union( Ensemble&lt;?
+extends T&gt;e1) ... </font></p>
+</blockquote>
+
+<p><font size="5"><font size="4">une utilisation possible</font><font size="2">
+:</font> </font></p>
+
+<blockquote>
+  <font size="5"> </font>
+  <p><font size="5">Ensemble e = ...<br>
+System.out.println(" union de e et de e1 : " + e.union(e1)); </font></p>
+</blockquote>
+
+<p><font size="5"><img src="question1.jpg" alt="[Image]" align="middle" height="73" width="91"><font size="4"><strong>.4) Enrichissez la
+classe de tests
+unitaires demandée en 1.2</strong>
+(chaque méthode doit avoir été testée au moins une fois)
+</font> </font></p>
+
+<p><font size="5"><img src="question1.jpg" alt="[Image]" align="middle" height="73" width="91"><font size="4"><strong>.5) Vérifiez le bon
+fonctionnement en complétant puis en utilisant l'interface nommée
+IHMTestEnsemble</strong></font></font></p>
+
+<p>
+<font size="5">Soumettez cette question à l'évaluation Jnews.
+</font></p>
+
+
+<hr>
+<p><font size="5"><img src="question2.jpg" alt="[Image]" align="middle" height="73" width="90"><font size="4"><strong>.1) Les listes et
+dictionnaires</strong></font> </font></p>
+
+<p><font size="5"><font size="4">Le texte de la fenêtre de l'applette
+ci-dessous est une liste constituée de mots extraits du </font><a href="http://developer.java.sun.com/developer/Books/javaprogramming/corejava/"><font size="4">chapitre 2 de CoreJava2 </font></a><font size="4">consacré
+au "<b>LinkedList</b>" (les mots sont rassemblés dans
+une constante de type "String", <b>nommée CHAPITRE2</b>
+dans la classe <b>Chapitre2CoreJava2</b>). </font></font></p>
+
+<font size="5">L'objectif est de pouvoir faire différents traitements
+sur cette liste de mots.
+</font>
+<blockquote><font size="5"> </font>
+  <p align="center"><font size="5"> <img src="images/tp5.ht2.jpg" border="0" height="341" width="716"></font></p>
+  <font size="5"> </font>
+  <p align="center"><font size="5"> &nbsp;</font></p>
+  <font size="5"> </font>
+  <div class="paragraphe"><font size="5"> &nbsp;</font></div>
+  <font size="5"> </font>
+  <p><font size="5">&nbsp;</font></p>
+</blockquote>
+
+<p><font size="5"><font size="4">Complétez la classe</font> <font size="4"><b>Chapitre2CoreJava2</b></font> <font size="4">en
+développant ces deux méthodes de classe :</font> </font></p>
+
+<ol>
+
+  <font size="5"> <font color="blue" size="4"><b> </b>
+  <li><b> Obtention d'une liste de mots à partir de la constante
+CHAPITRE2 </b></li>
+  </font> <br>
+&nbsp; &nbsp;<font size="4"><code><b>public static List&lt;String&gt;
+listeDesMots()</b></code></font> <br>
+&nbsp; &nbsp;<font size="4"><i>(utilisez une <tt>LinkedList</tt>)</i></font>
+  <font color="blue" size="4"><b> </b>
+  <li><b> Obtention d'une liste de couples &lt;String,Integer&gt; : à
+chaque mot du CHAPITRE2 est associé son nombre d'occurrences </b></li>
+  </font> <br>
+&nbsp; &nbsp;<font size="4"><code><b>public static
+Map&lt;String,Integer&gt; occurrencesDesMots( List&lt;String&gt; liste )</b></code></font>
+  <br>
+&nbsp; &nbsp;<font size="4"><i>(utilisez une <tt>HashMap</tt>)</i></font>
+  </font>
+</ol>
+
+<blockquote>
+  <font size="5"> </font>
+  <p><font size="5">&nbsp;</font></p>
+</blockquote>
+
+<p><font size="5">&nbsp;</font></p>
+
+<p><font size="5"><img src="question2.jpg" alt="[Image]" align="middle" height="73" width="90"><font size="4"><strong>.2) <br>
+</strong></font></font></p>
+
+<div class="paragraphe"> Complétez la classe <b>JPanelListe</b> afin
+d'implanter, toutes les actions associées aux noms des boutons<br>
+<br>
+<ul>
+  <li><b>rechercher</b>
+: recherche du mot tapé dans la zone de saisie; le booléen, le résultat
+de la recherche est affiché. la touche Entrée du clavier a le même
+effet qu'une action effectuée sur ce bouton.</li>
+  <li><b>retirer</b> : retrait de tous les mots commençant par le
+préfixe de la zone de saisie; le booléen, résultat du retrait est
+affiché.</li>
+  <li><b>croissant</b> : tri du texte selon cet ordre, utilisez
+Collections.sort.</li>
+  <li><b>décroissant</b> : proposer une classe interne implémentant
+l'interface Comparator.</li>
+  <li><b>occurrence</b> : obtention du nombre d'occurrences du mot
+présent dans la zone de saisie</li>
+</ul>
+une IHM au comportement attendu :
+<div class="paragraphe"> &nbsp;</div>
+<div class="paragraphe"> <b><font size="3">&gt;</font></b><font size="3"><b>java -jar ihm_q2_1.jar</b></font></div>
+</div>
+
+<p align="left"> &nbsp;</p>
+
+<p align="left"> <font face="Verdana" size="2"> <b>ATTENTION</b> le
+retrait d'un élément qui a déjà été présent dans la table retourne un
+nombre d'occurrences égal à <b>zéro</b>. </font></p>
+
+<p align="left"> <font face="Verdana" size="2"> Demander le nombre
+d'occurrences d'un élément qui n'a jamais été présent dans la liste
+initiale doit retourner <b>?</b></font></p>
+
+
+<p>
+<font size="5"><b>AIDE :</b>
+Croissant et Décroissant ne sont pas des boutons ; quel <i>listener</i>
+leur faut-il ?
+</font></p>
+
+<p align="left"><font size="5"><font size="4">
+Recopiez dans JPanel<tt>Liste2</tt> les deux méthodes d'<tt>JPanelListe</tt>
+complétées à la question 2.2, puis ...
+</font> </font></p>
+
+<p><font size="5"><img src="question2.jpg" alt="[Image]" align="middle" height="73" width="90"><font size="4"><strong>.3) Complétez
+maintenant, la classe </strong></font></font><b>JPanelListe2</b><font size="5"><font size="4"><strong> afin d'implanter la possibilité d'</strong></font><strong></strong></font><strong><font size="6">annuler</font><font size="4"> les actions de modification du
+texte comme le retrait ou le tri sur la liste. </font> </strong>
+</p>
+
+<div class="paragraphe">
+                Complétez maintenant, la classe JPanelListe2 afin d'implanter la possibilité d<b>'<font size="4">annuler</font>
+                </b>les actions de modification du texte comme le retrait ou le tri sur la liste.<br>
+                <br><font size="5"><font size="4">L'idée est de stocker
+l'état de
+la 'liste de String' à chaque action ('retirer' , 'croissant' ,
+'decroisssant') dans une pile (java.util.Stack&lt;E&gt;) . Et le
+dernier état de la 'liste de String' empilé est restitué à
+chaque action 'annuler'. Quand la pile est vide le bouton
+'annuler' est sans effet.
+<br>
+<b>Attention</b> de bien mettre à jour la table des occurrences.</font></font><e><br>
+                    <br>
+                    <b>ATTENTION de mettre à jour la table des occurrences</b>. 
+                    Pour la fonctionnalité annuler, Il est fortement encouragé 
+                    d'utiliser le patron
+                    <a href="http://en.wikipedia.org/wiki/Memento_pattern">
+                    Memento</a>, cette 
+                    <a href="https://www.youtube.com/watch?v=jOnxYT8Iaoo">vidéo</a> peut 
+                    vous être utile.<br>
+                    <br>
+            </e></div>
+
+                    
+<p><font size="4">Aide au comportement attendu</font>, une 
+                    interface graphique est disponible depuis votre répertoire<br>
+                </p>
+
+            
+<div class="paragraphe">
+                <b><font size="3">&gt;</font></b><font size="3"><b>java -jar 
+                ihm_q2_2.jar</b></font></div>
+
+
+                    
+<p><font size="5">Soumettez cette question à l'évaluation Jnews.
+</font></p>
+
+
+<hr>
+<p><font size="5"><img src="question3.jpg" alt="[Image]" align="middle" height="73" width="90"><font size="4"><strong>.1) Le pattern
+&nbsp;Fabrique</strong></font>/Factory </font></p>
+
+<p><font size="5"><font size="4">Selon la bibliographie habituelle,
+l'objectif
+du Pattern <em>Factory</em> est de définir une interface pour la
+création d'un objet, <br>
+en laissant aux classes implémentant cette interface le choix de la
+classe à instancier pour cet objet. </font></font></p>
+
+<blockquote>
+  <font size="5"> </font>
+  <p><font size="5"><font size="4">Interface Factory&lt;T&gt;,
+l'implémentation de la méthode create est laissée aux "clients"</font></font></p>
+</blockquote>
+
+<blockquote>
+  <font size="5"> </font>
+  <blockquote><font size="5"> </font>
+    <pre><font size="5">package question3;<br><br>public interface Factory&lt;<strong>T</strong>&gt;{ <br>  public <strong>T</strong> create();<br>}<br></font></pre>
+    <font size="5"> </font>
+    <p><font size="5"><font size="4">exemple : TextFactory </font></font></p>
+    <font size="5"> </font>
+    <pre><font size="5">public class TextFactory1 implements Factory&lt;TextComponent&gt;{<br>  public TextComponent create(){<br>    return new TextArea(100,50);<br>  }<br>}<br>public class TextFactory2 implements Factory&lt;TextComponent&gt;{<br>  public TextComponent create(){<br>    return new TextField(40);<br>  }<br>}<br></font></pre>
+    <font size="5"> </font>
+    <pre><font size="5"><font face="Times New Roman" size="4">Un usage :</font></font></pre>
+    <font size="5"> </font>
+    <blockquote><font size="5"> </font>
+      <pre><font size="5">	public void utilisation( Factory<textcomponent> fabrique ){<br>          TextComponent tc = fabrique.create();<br>          tc.setText( "essai" );<br>	}<br><br>	utilisation( new TextFactory1() );<br>	utilisation( new TextFactory2() );<br></textcomponent></font></pre>
+      <font size="5"> </font></blockquote>
+    <font size="5"> </font></blockquote>
+  <p><font size="5"><font size="5">Proposez les fabriques d'ensembles <em><strong>HashSetFactory</strong></em>,
+(en utilisant la classe concrète java.util.HashSet)
+et <em><strong>TreeSetFactory</strong></em>, (en
+utilisant la classe concrète java.util.TreeSet). </font></font></p>
+</blockquote>
+
+<p><font size="5"><img src="question3.jpg" alt="[Image]" align="middle" height="73" width="90"><font size="4"><strong>.2) Complétez la classe
+de Tests unitaires</strong></font>
+</font></p>
+
+<p>
+<font size="5">Soumettez cette question à l'évaluation Jnews.
+</font></p>
+
+
+<hr>
+
+</body></html>

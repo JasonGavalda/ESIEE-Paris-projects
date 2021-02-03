@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=vi
+comment0.target=java.lang.Object\ accepter(tp6.question3.VisiteurInstruction)
+comment0.text=\ accepter\ un\ visiteur,\ \r\n\ @param\ vi\ le\ Visiteur\ des\ instructions\r\n
+numComments=1

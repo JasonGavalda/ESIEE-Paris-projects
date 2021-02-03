@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Chapitre2CoreJava2
+comment1.params=
+comment1.target=java.util.List\ listeDesMots()
+comment1.text=Obtention\ d'une\ liste\ de\ mots\ a\ partir\ de\ la\ constante\ CHAPITRE2\ *
+comment2.params=liste
+comment2.target=java.util.Map\ occurrencesDesMots(java.util.List)
+comment2.text=\ Obtention\ d'une\ liste\ de\ couples\ <String,Integer>,\ \r\n\ a\ chaque\ mot\ du\ CHAPITRE2,\ est\ associe\ son\ nombre\ d'occurrence\r\n
+numComments=3

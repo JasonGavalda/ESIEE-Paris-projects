@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=VisiteurExpressionBooleenne
+comment1.params=v
+comment1.target=java.lang.Object\ visite(Vrai)
+comment2.params=f
+comment2.target=java.lang.Object\ visite(Faux)
+comment3.params=n
+comment3.target=java.lang.Object\ visite(Non)
+comment4.params=ou
+comment4.target=java.lang.Object\ visite(Ou)
+comment5.params=et
+comment5.target=java.lang.Object\ visite(Et)
+comment6.params=sup
+comment6.target=java.lang.Object\ visite(Sup)
+comment7.params=eg
+comment7.target=java.lang.Object\ visite(Egal)
+comment8.params=inf
+comment8.target=java.lang.Object\ visite(Inf)
+numComments=9

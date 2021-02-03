@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=pC
+comment0.target=org.jdom.Element\ visite(question1.Contributeur)
+comment1.params=pG
+comment1.target=org.jdom.Element\ visite(question1.GroupeDeContributeurs)
+numComments=2

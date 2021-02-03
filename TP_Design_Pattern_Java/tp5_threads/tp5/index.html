@@ -1,0 +1,530 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>tp5_threads</title>
+</head>
+
+<body bgcolor="#C9A6FF">
+
+<p align="center"><font size="6">Tp5</font><font size="5"> </font></p>
+<div align="center"><center>
+
+<table border="18" cellpadding="2">
+    <tr>
+        <td valign="top"><div align="center"><center><table
+        border="0" cellpadding="2">
+            <tr>
+                <td align="center"><font size="4">Lectures
+                préalables : &nbsp; </font></td>
+            </tr>
+            <tr>
+                <td align="center"><ul>
+                    <li><p align="left">Le pattern <a
+                        href="http://www.eli.sdsu.edu/courses/spring98/cs635/notes/chain/chain.html">Chaîne
+                        de responsabilités</a> <br>
+                        (note 25). </p>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        </table>
+        </center></div></td>
+        <td><table border="0" cellpadding="2">
+            <tr>
+                <td><font size="4">Thèmes du TP</font> :</td>
+            </tr>
+            <tr>
+                <td><ul>
+                    <li>Les threads </li>
+                    <li>Les requêtes HTTP </li>
+                    <li>Le pattern Chaîne de responsabilités </li>
+                </ul>
+                </td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+</table>
+</center></div>
+
+<ul>
+    <li><b>Visualisez le sujet en ouvrant <tt>index.html</tt> du
+        répertoire qui a été créé à l'ouverture de <tt>tp5.jar</tt>
+        par BlueJ; vous aurez ainsi accès aux différents liens
+        qui sont proposés pour vous aider, et aux applettes.</li>
+    <li>Soumettez chaque question à l'outil d'évaluation JNews.</b></li>
+</ul>
+
+<hr>
+
+<p align="left"><img src="question1.jpg" alt="[Image]" width="91"
+height="73"><font size="5"><strong>Acquisition cyclique</strong></font>
+</p>
+
+<p><font size="4">Il s'agit de lire les valeurs d'un capteur
+accessible sur internet, en protocole HTTP.</font> </p>
+
+<ul>
+    <li><font size="4">Ce capteur est un </font><za
+        href="http://www.maxim-ic.com/quick_view2.cfm/qv_pk/2919"><font
+        size="4">DS2438</font></a><font size="4"> qui délivre le
+        taux d'</font><a href="#HR"><font size="4">HumiditéRelative</font></a><font
+        size="4"> d'un bureau au CNAM/Paris 75003. </font></li>
+    <li><font size="4">Il est relié au serveur <i>lmi92.cnam.fr</i>
+        par un adaptateur port série &lt;--&gt; bus </font><a
+        href="http://www.maximintegrated.com/en/products/comms/one-wire.html"><font
+        size="4">1-Wire</font></a><font size="4"> de </font><a
+        href="http://www.ibutton.com/ibuttons/index.html"><font
+        size="4">Dallas Semiconductor/MAXIM</font></a><font
+        size="4">. </font></li>
+    <li><font size="4">Depuis 2011, il s'agit d'un capteur simulé, accessible à cette
+        <a href="http://163.173.228.92/ds2438/ds2438/">URL</a></font>.
+        </li>
+    <li><font size="4">Un exemple de requête depuis un
+        navigateur :</font> <p align="left"><img
+        src="Capture-4.jpg" width="552"> <br>
+        <font size="3"><em><strong>le source de cette page :</strong></em></font>
+        </p>
+        <table border="1">
+            <tr>
+                <td><tt># ibutton: DS2438; Adapter: DS9097U;
+                Port:
+                COM2;&lt;br&gt;1C0000000D536B26=27.90428559505445</tt>
+                </td>
+            </tr>
+        </table>
+        <p>(<tt>1C0000000D536B26</tt> représente le numéro du
+        composant, <tt>27.90428559505445</tt> le taux d'humidité
+        relative) </p>
+    </li>
+   </ul>
+
+<blockquote>
+   <hr>
+<p align="left"><img src="question1.jpg" alt="[Image]"
+align="middle" width="91" height="73"><font size="4"><strong>.0)
+Si le capteur simulé ci-dessus est inaccessible, exécutez cette commande </strong>
+</p>
+<font size=3>
+                depuis le répertoire du tp :<br>
+                <tt>rep_du_tp5&gt;&nbsp;java -cp
+                AppliSimulateurDS2438.jar question1.AppliSimulateurDS2438</tt> <br>
+<!--
+
+        <p align="left"><a name="applette"><applet
+        code="question1.SimulateurDS2438" align="baseline"
+        width="700" height="200" archive="simulateurDS2438.jar"></applet></a>
+        </p>
+        <p><br>
+        <font size="4"><strong>Simulateur du capteur d'humidité
+        sur le Web</strong></font><br>
+-->
+<p>
+        Cette application contient un serveur Web sur le port 8999,
+        par défaut inaccessible depuis un autre poste.<br>
+        <font size="4">L'url pour les requ&ecirc;tes devient alors </font><a
+        href="http://localhost:8999/ds2438/"
+        target="_blank"><font size="4">http://localhost:8999/ds2438/</font></a> <br>
+        <b>Vous pouvez cliquer !</b> (réponse dans une nouvelle fen&ecirc;tre du navigateur).<br>
+        Observez aussi les traces dans la fen&ecirc;tre DOS (ou Terminal) :<br>
+        le site client, localhost ou 127.0.0.1, puis
+        date et heure de la requête, puis
+        la réponse retournée au client HTTP. </p>
+        <p><b>AIDE :</b> Si <tt>localhost</tt> ne fonctionne pas sur un PC à l'ESIEE, remplacer ce terme
+         par le nom de votre PC (voir étiquette sur le PC ou prompt sous linux).
+         C'est généralement <tt>pc<font color=blue>xxxx</font><font color=red>n</font></tt> où
+         <font color=blue>xxxx</font> représente le numéro de la salle de TP et
+         <font color=red>n</font> la lettre de votre PC. 
+         Si ça ne fonctionne toujours pas, ajoutez <tt>.esiee.fr</tt> après 
+         <tt>pc<font color=blue>xxxx</font><font color=red>n</font></tt>.
+    </li>
+</ul>
+
+</blockquote>
+<hr>
+
+<p><font size="4">Architecture présentée :</font> </p>
+
+<blockquote>
+    <p align="left"><img src="Capture-1.jpg" width="570"> </p>
+
+    <p><font size="4"><strong>HumiditySensor</strong> reflète ce
+    que l'on attend d'un capteur : une valeur, et la période
+    minimale de lecture<br>
+    <strong>HTTPSensor</strong> le capteur au protocole HTTP,
+    d'autres types capteurs pourraient être installés<br>
+    <strong>Main</strong> et <strong>Main2</strong> sont des
+    applications Java, qui doivent s'exécuter dans une fenêtre
+    DOS</font> </p>
+    <p><font size="4"><strong>CyclicAcquisition</strong> effectue
+    une acquisition périodique de la valeur du capteur et
+    transmet cette information<br>
+    <strong>Command&lt;T&gt;</strong> est une interface qui
+    propose le traitement d'une information de type T, ici une
+    valeur du capteur<br>
+    <strong>ConsoleCommand&lt;T&gt;</strong> se contente
+    d'afficher T et l'heure courante</font> </p>
+</blockquote>
+
+<hr>
+
+<p align="left"><img src="question1.jpg" alt="[Image]"
+align="middle" width="91" height="73"><font size="4"><strong>.1)
+Complétez la classe Main, en affichant, pour l'instant, le résultat de </strong></font><font
+color="#8800EE" size="4"><strong>2</strong></font><font size="4"><strong>
+requêtes au capteur.</strong> </p>
+</font>
+
+<p><font size="4"><b>ouvrez une fenêtre DOS&gt; </b></font><br>
+Si DOS ne trouve pas la commande <tt>java</tt>, tapez : <br>
+<tt>SET PATH=&quot;C:\Program Files\java\jdk....\bin&quot;;%PATH%</tt>
+<br>
+où <tt>jdk....</tt> est le répertoire de la dernière version du
+JDK. (pas du JRE !) </p>
+
+<ol>
+    <li>Classes préalablement compilées avec BlueJ</li>
+    <li>Placez-vous dans le répertoire du TP</li>
+    <li><font size="4">exécutez la commande suivante</font><p><font
+        size="4"><tt>java -cp . question1.</tt><strong><tt>Main </tt></strong><tt>http://localhost:8999/ds2438/</tt></font>
+        &nbsp; en mode simulé </p>
+    </li>
+</ol>
+<!--
+<ul>
+    <li>ou bien <font size="4"><tt>java -cp . question1.</tt><strong><tt>Main
+        </tt></strong><tt>http://lmi92.cnam.fr:8999/ds2438/</tt></font>
+    </li>
+</ul>
+-->
+<blockquote>
+    <p><font color="#8800EE" size="4"><b>Aide : si vous êtes en
+    mode simulé, n'oubliez pas de laisser tourner AppliSimulateurDS2438
+    dans une fen&ecirc;tre DOS (ou Terminal) ... </b></font> </p>
+    <p><font color="#8800EE" size="4"><b>Aide : Erreur 503 ==&gt;
+     mauvais nom de machine</b></font> </p>
+</blockquote>
+
+<hr>
+
+<p align="left"><img src="question1.jpg" alt="[Image]"
+align="middle" width="91" height="73"><font size="4"><strong>.2)
+A] Complétez la classe HTTPSensor en implémentant la méthode </strong><strong><tt>value()</tt></strong></font>
+</p>
+qui doit appeler la méthode <tt>request()</tt>
+
+<blockquote>
+    <p><font size="4">Cette méthode a la signature suivante :</font>
+    </p>
+    <blockquote>
+        <p><font size="4" face="Courier"><strong>public float
+        value() throws Exception;</strong></font><font size="4"> </font></p>
+    </blockquote>
+    <p><font color="#8800EE" size="4">La valeur retournée aura
+    un seul chiffre après la virgule (non par arrondi, mais par
+    troncature).
+    <br>
+    Séparez&nbsp; <i>l'extraction de la String</i> &nbsp;du&nbsp; <i>calcul de la troncature</i>&nbsp;!
+    <br>
+    <b>Exemples de <u>calcul</u> : &nbsp; 1.23456 &rarr; 12.3456 &rarr; 12 &rarr; 1.2 &nbsp;
+    </b>OU<b> &nbsp; 98.7654 &rarr; 987.654 &rarr; 987 &rarr; 98.7
+    </b></font> </p>
+</blockquote>
+
+<p><br>
+Pour répondre à cette question, <strong>vous pouvez utiliser la
+classe </strong><a
+href="http://java.sun.com/javase/6/docs/api/java/util/StringTokenizer.html"><font
+size="4"><strong>java.util.StringTokenizer</strong></font></a><br>
+<blockquote>
+<font color="#8800EE" size="4">Ne pas utiliser <tt>split()</tt>. Quel d&eacute;limiteur choisir ?  Quel token
+ contient alors l'information d&eacute;sir&eacute;e ? (nul besoin de boucle !)
+ <br>
+ Comprendre l'exemple en tête de la javadoc peut aider à comprendre le
+ fonctionnement de <tt>StringTokenizer</tt>.
+</font>
+</blockquote>
+
+<p><font size="4"><b>B]</b> Complétez de nouveau la classe <strong>Main</strong>,
+en <u>rempla&ccedil;ant</u> le résultat des 2 requ&ecirc;tes par
+seulement les 2 valeurs.
+(les <i>properties</i> sont inutiles dans notre cas)</font> </p>
+
+<hr>
+
+<p align="left"><img src="question1.jpg" alt="[Image]"
+align="middle" width="91" height="73"><font size="4"><strong>.3)
+Complétez la classe </strong><strong><b><tt>CyclicAcquisition</tt></b></strong><strong>,
+contenant un Thread local.</strong> <br>
+Ce Thread permet l'acquisition cyclique du taux d'humidité.</font>
+</p>
+
+<p><font size="4">Remarquez le constructeur qui accepte en param&egrave;tres
+ un capteur, une p&eacute;riode, et une commande.</font></p>
+
+<p><font size="4">La période d'acquisition doit être respectée
+en utilisant la méthode <b>minimalPeriod() </b>de la classe <b>HumiditySensor</b>,
+cette version néglige le temps de communication : Requête HTTP
+et analyse du résultat. </font></p>
+
+<p><font size="4">Si une exception survient pendant la requ&ecirc;te,
+ retourner la valeur -1.</font></p>
+
+<p><font size="4">L'information reçue est affichée sur la
+console par une implémentation de l'interface Command&lt;T&gt;,
+ici ConsoleCommand&lt;T&gt;.</font> </p>
+
+<p><font size="4">Utilisez la classe Main2 pour tester
+CyclicAcquisition; le programme doit s'arrêter au bout de 2
+secondes.</font> </p>
+
+<p><font size="4"><b>ouvrez une fenêtre DOS&gt; </b></font></p>
+
+<ol>
+    <li><font size="4">placez-vous dans le répertoire du tp</font></li>
+    <li><font size="4">exécutez les commandes suivantes</font> <ol>
+            <li>Classes préalablement compilées avec bluej</li>
+            <li><font size="4"><tt>java -cp . question1.</tt><strong><tt>Main2
+                </tt></strong><tt>http://localhost:8999/ds2438/</tt></font>
+                &nbsp; en mode simulé <ul>
+<!--
+                    <li>ou bien <font size="4"><tt>java -cp .
+                        question1.</tt><strong><tt>Main2 </tt></strong><tt>http://lmi92.cnam.fr:8999/ds2438/</tt></font>
+                    </li>
+-->
+                </ul>
+            </li>
+        </ol>
+    </li>
+</ol>
+
+<blockquote>
+    <p><font color="#8800EE" size="4"><b>Rappel : si vous êtes en
+    mode simulé, n'oubliez pas de laisser tourner AppliSimulateurDS2438
+    dans une fen&ecirc;tre DOS (ou Terminal) ... </b></font> </p>
+</blockquote>
+
+<p><font size="4"><strong>Un exemple de traces possible, ici en
+utilisant le simulateur</strong></font> (la période minimale est
+de 500ms) </p>
+
+<p><img src="Capture-3.jpg" width="627"> </p>
+<!--
+<p><font size="4"><strong>Le </strong></font><a href="#applette"><font
+size="4"><strong>simulateur</strong></font></a><font size="4"><strong>
+inclus dans cet énoncé doit afficher :</strong></font> </p>
+-->
+<p><font size="4"><strong>L'application AppliSimulateurDS2438
+(qui tourne toujours dans une fen&ecirc;tre DOS (ou Terminal)
+ doit afficher :</strong></font> </p>
+
+<p><img src="Capture-9.jpg" width="698"> </p>
+
+<hr>
+
+<p><font size="5"><strong><img src="question2.jpg" width="90"
+height="73">Chaîne de responsabilités</strong></font> </p>
+
+<p><font size="4">L'information reçue, le taux d'humidité, est
+maintenant transmise à différents consommateurs
+(responsables...). Les consommateurs sont chainés entre eux. Ce
+type de conception est issu du pattern &quot;</font><a
+href="http://www.eli.sdsu.edu/courses/spring98/cs635/notes/chain/chain.html"><font
+size="4">chaîne de responsabilités</font></a><font size="4">&quot;.
+Le principe est de transmettre l'information à une chaîne de
+consommateurs, chaque consommateur décide s'il doit laisser
+passer l'information vers son successeur ou bien arrêter sa
+propagation (<i>l'ordre a donc de l'importance ...</i>).<br>
+</font></p>
+
+<hr>
+
+<p align="left"><img src="question2.jpg" alt="[Image]"
+align="middle" width="91" height="73"><font size="4"><strong>.1)
+Proposez une première &quot;</strong><strong><b>Chaîne de
+responsabilités</b></strong><strong>&quot; constituée de 3
+&quot;Handlers&quot;</strong></font> <br>
+liée à notre application de lecture cyclique du taux
+d'humidité et <b>complétez les classes Main, MinHandler et
+MaxHandler.</b> </p>
+
+<ul>
+    <li><font size="4"><strong>TraceHandler</strong> : affiche la
+        date et l'heure courante ainsi que la valeur du taux
+        d'humidité relative sur la console et transmet
+        l'information à son successeur), </font></li>
+    <li><font size="4"><strong>MinHandler</strong> : détecte et
+        affiche une valeur d'humidité relative
+        (non d&eacute;tect&eacute;e par MaxHandler)
+        strictement inférieure à 35% </font>
+        &rArr; valeur &isin; [0,35[
+    </li>
+    <li><font size="4"><strong>MaxHandler</strong> : détecte et affiche une
+        valeur d'humidité relative (non détectée par MinHandler)
+        strictement inférieure à 100% (100%
+        : c'est le point de rosée !!! ) </font>
+        &rArr; valeur &isin; [35,100[
+    </li>
+</ul>
+
+<p><b>Attention !</b> Respectez les formats d'affichage montrés
+dans la fenêtre DOS ci-dessous ;
+l'ordre de chainage a de l'importance, mais on doit pouvoir
+inverser l'ordre de MinHandler et MaxHandler.
+ <br>
+</p>
+
+<p><img src="Capture-5.jpg" width="682" height="436"> </p>
+
+<p><font size="4"><b>Architecture retenue :</b></font> </p>
+
+<blockquote>
+    <p><font size="4"><strong>Handler&lt;T&gt;, TraceHandler,
+    MinHandler, MaxHandler </strong>les gestionnaires attendus<br>
+    <strong>ChainCommand&lt;T&gt; </strong>convertit la
+    &quot;commande&quot; vers une chaîne de responsabilités<br>
+    <strong>Main</strong> est une application Java, qui doit
+    s'exécuter dans une fenêtre DOS</font> </p>
+</blockquote>
+
+<p><font size="4"><b>ouvrez une fenêtre DOS&gt; </b></font></p>
+
+<ol>
+    <li><font size="4">placez-vous dans le répertoire du tp</font></li>
+    <li><font size="4">exécutez les commandes suivantes</font> <ol>
+            <li>Classes préalablement compilées avec bluej</li>
+            <li><font size="4"><tt>java -cp . question2.</tt><strong><tt>Main
+                </tt></strong><tt>http://localhost:8999/ds2438/</tt></font>
+                &nbsp; en mode simulé <ul>
+                </ul>
+            </li>
+        </ol>
+    </li>
+</ol>
+
+<p><font size="5" face="Times New Roman"><strong>Une Trace
+d'exécution possible</strong></font><font size="5"><strong> </strong></font><br>
+<img src="Capture-6.jpg" width="597"> </p>
+
+<p>&nbsp;</p>
+
+<table border="2">
+    <tr>
+        <td><ul>
+            <li><font size="3"><strong>Pour information, ces
+                quelques lignes Java fournissent la date et heure
+                courante :</strong></font> <pre><font size="3">    Calendar c = Calendar.getInstance();</font>
+<font size="3">    DateFormat df = DateFormat.getDateInstance(DateFormat.SHORT,Locale.FRANCE);</font>
+<font size="3">    DateFormat dt = DateFormat.getTimeInstance(DateFormat.SHORT,Locale.FRANCE);</font>
+<font size="3">    String date = df.format(c.getTime()) + &quot;-&quot; + dt.format(c.getTime());</font>
+
+avec	import java.util.Calendar;
+	import java.text.DateFormat;
+	import java.util.Locale;
+</pre>
+            </li>
+            <li><font size="2">Pour plus de détails, voir la
+                classe </font><a
+                href="http://java.sun.com/javase/7/docs/api/java/util/Calendar.html"><font
+                size="2">Calendar</font></a><font size="2">. </font></li>
+        </ul>
+        </td>
+    </tr>
+</table>
+
+<hr>
+
+<p align="left"><img src="question2.jpg" alt="[Image]"
+align="middle" width="91" height="73"><font size="4"><strong>.2)
+Ajoutez le maillon FileHandler </strong>dans la chaîne et au bon
+endroit. <br>
+Ce 'handler' est chargé de la sauvegarde sur fichier des mesures
+obtenues.</font></p>
+
+<ul>
+    <li><font size="4"><strong>FileHandler</strong> enregistre
+        sur fichier les couples (date, valeur) ;
+        il engendre un fichier à la syntaxe HTML. Ce
+        fichier est sauvegardé par exemple toutes les X mesures.
+        <br>
+        Votre fichier de mesures </font><a href="mesures.html"
+        target="_blank"><font size="4">mesures.html</font></a> (<i>Afficher
+        le source html</i>)<font size="4"> pourra être ensuite
+        lu par ce navigateur. (cette page est réactualisée
+        toutes les 30secondes)</font> </li>
+</ul>
+
+<blockquote>
+    <p><font size="4"><img src="Capture-7.jpg" width="640"></font> </p>
+</blockquote>
+<p><font color="#8800EE" size="4"><b>Aide :</b>
+ Comment est produit l'objet <tt>Date</tt> dans l'exemple de code ci-dessus
+ (avec <tt>Calendar</tt>) ?
+</font></p>
+
+<a name="HR"><font size="4"><!-- --></font></a>
+
+<hr>
+
+<hr>
+
+<h2>Documentations annexes :</h2>
+
+<p><font size="4"><strong>Humidité Relative : définition
+extraite de </strong></font><a
+href="http://www.credo.fr/fr/monde_credo_world/humidite_relative.htm"><font
+size="4"><strong>http://www.credo.fr/fr/monde_credo_world/humidite_relative.htm</strong></font></a><font
+size="4"> <br>
+L'Humidité Relative (HR) exprime le rapport entre la quantité
+effective de vapeur d'eau dans un volume donné d'air et la
+quantité maximale que ce volume peut contenir à la même
+température. <br>
+L'eau s'évapore dans l'atmosphère jusqu'à ce que soit atteinte
+une proportion maximale de vapeur d'eau dans l'air, dite
+humidité saturante. <br>
+Quand cette condition est atteinte, la moindre chute de
+température provoque la condensation de la vapeur et
+l'apparition de minuscules gouttes d'eau. Il s'agit du
+phénomène de rosée. <br>
+La saturation de l'air en vapeur d'eau (ou point de rosée)
+correspond donc à 100 % d'humidité relative.</font> </p>
+
+<p><font size="2" face="Arial, Helvetica, sans-serif"><br>
+</font><font size="4"><img src="index_files/RelHum.jpg"
+align="left" hspace="0" width="305" height="222"></font><font
+size="4">La quantité de vapeur d'eau dans l'air à 100 % HR est
+d'environ 15 grammes d'eau par mètre cube d'air.<br>
+<br>
+Quand la quantité de vapeur d'eau dans l'air est en deçà de la
+saturation, l'humidité relative est infèrieure à 100 %. <br>
+A peu de choses près, une HR de 70 % correspond à une quantité
+d'eau par mètre cube d'air de 70 % de la quantité présente à
+saturation: environ 10,5 grammes d'eau par mètre cube d'air. </font></p>
+
+<p><font size="4"><br>
+</font></p>
+
+<p>&nbsp; </p>
+
+<p>&nbsp; </p>
+
+<p>&nbsp; </p>
+
+<hr>
+
+<p align="left"><font size="4">Design Pattern et UML</font> </p>
+
+<p align="left">extrait de <a
+href="http://www.eli.sdsu.edu/courses/spring04/cs635/notes/chain/chain.html#slide20">http://www.eli.sdsu.edu/courses/spring04/cs635/notes/chain/chain.html</a>
+</p>
+
+<p align="left"><img src="chain04.gif" width="478" height="193"> </p>
+
+<p align="left"><img src="chain05.gif" width="466" height="76"> </p>
+
+<hr>
+</body>
+</html>

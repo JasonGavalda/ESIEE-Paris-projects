@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=PolygoneRegulierTest
+comment1.params=
+comment1.target=void\ setUp()
+comment2.params=
+comment2.target=void\ testEquals_hashCode()
+comment2.text=\ la\ regle\ \:\r\n\ Objects\ that\ are\ equal\ according\ to\ the\ equals\ method\ must\ return\ the\ same\ hashCode\ value\r\n\ If\ two\ objects\ are\ not\ equal\ according\ to\ equals,\ they\ are\ not\ required\ to\ return\ different\ hashCode\ values.\r\n\ voir\ \ http\://java.sun.com/j2se/1.5/docs/api/java/lang/Object.html\#hashCode()\ \r\n
+numComments=3

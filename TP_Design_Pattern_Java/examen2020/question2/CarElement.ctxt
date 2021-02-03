@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=CarElement
+comment1.params=name
+comment1.target=CarElement(java.lang.String)
+comment2.params=visitor
+comment2.target=java.lang.Object\ accept(CarElementVisitor)
+comment3.params=
+comment3.target=java.lang.String\ getName()
+comment4.params=
+comment4.target=CarElement\ getParent()
+comment5.params=parent
+comment5.target=void\ setParent(CarElement)
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7

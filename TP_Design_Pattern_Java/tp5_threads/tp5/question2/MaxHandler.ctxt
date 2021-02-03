@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=MaxHandler
+comment1.params=pSuccessor
+comment1.target=MaxHandler(Handler)
+comment2.params=pValue
+comment2.target=boolean\ handleRequest(java.lang.Float)
+numComments=3

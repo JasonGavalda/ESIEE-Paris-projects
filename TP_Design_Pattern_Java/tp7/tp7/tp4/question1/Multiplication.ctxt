@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=op1\ op2
+comment0.target=Multiplication(tp6.question1.Expression,\ tp6.question1.Expression)
+comment1.params=v
+comment1.target=java.lang.Object\ accepter(tp6.question1.VisiteurExpression)
+numComments=2
