@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+
+<!-- Navbar contenant les liens vers les différents onglets du site-->
+{% block navbar %}
+
+<a class="nav-text nav-item nav-link" href="/">Home</a>
+<a class="nav-text nav-item nav-link" href="/post_bac">Post Bac</a>
+<a class="nav-text nav-item nav-link active" href="/cpge">CPGE</a>
+<a class="nav-text nav-item nav-link" href="/licence_dut_bts">Licence/DUT/BTS</a>
+
+{% endblock %}
+
+{% block bot %}
+<div class="container-fluid">
+  <!-- Bouton reset permettant de vider les cookies de session, enlevant l'historique de chat-->
+  <div class="d-flex justify-content-end" style="height: 63.4px;">
+    <button type="button" class="reset-button all-buttons button-size btn my-2" data-toggle="modal" data-target="#clearModal">Reset</button>
+  </div>
+  <!-- Fenetre modale (pop-up) pour validation du clear des cookies -->
+    <div class="modal fade" id="clearModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <!-- Titre de la fenetre modale-->
+            <h5 class="modal-title" id="exampleModalLabel">Voulez-vous vraiment supprimer l'historique de chat ?</h5>
+            <!-- Croix pour fermer la fenetre-->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-footer">
+            <!-- Bouton annuler-->
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+            <!-- Bouton confirmer-->
+            <button type="button" class="confirm-button all-buttons btn"><a class="confirm nav-item nav-link p-0 text-white" href="/clear">Confirmer</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  <!-- Bloc for permettant d'afficher tout l'historique de chat-->
+  {% for i in range (chat_r|length) %}
+  <div class="row justify-content-end pr-2">
+    <div class="mw-92">
+      <!-- Alerte de couleur "secondaire" (gris) affichant la question de l'utilisateur dans le chat -->
+      <div class="question alert alert-secondary" role="alert">
+        {{chat_q[i]}}
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-start pl-2">
+    <div class="col-sm-2 col-md-1 col-12">
+      <!-- Image du bot ajoutée à chaque réponse de celui-ci dans le chat-->
+      <img src="./../static/images/bot.jpg" class="rounded-circle" alt="ESIEEbot" width="50px" height="50px">
+    </div>
+    <!-- Alerte de couleur bleu (définit dans style2.css via réponse) affichant la réponse du bot dans le chat-->
+    <div class="mw-92">
+      <div class="reponse alert" role="alert">
+        {{chat_r[i]}}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock bot %}
+
+{% block chatname %}
+
+<!-- Champ dans lequel l'utilisateur entre ses questions-->
+<input type="text" name="chatzone_c" id="questioninput" class="chatzone fixed-bottom form-control border-secondary"
+  placeholder="Entrez votre question">
+
+{% endblock chatname %}
+
+<!-- Partie "article" contenant différentes ressources utiles-->
+{% block article %}
+
+<div class="collapse fixed-top" id="articlePart" style="position: inherit;">
+  <div class="article-nav bg-dark p-4">
+
+    <!-- "Article" vers la rubrique "Actualités" du site de l'ESIEE-->
+    <div class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <!-- Lien local vers l'image-->
+          <img src="./../static/images/Actualités.png" class="card-img-top bg-esiee-color" alt="Actualités">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Actualités ESIEE Paris</h5>
+            <p class="card-text">Découvrez les dernières actualités à ESIEE Paris.</p>
+            <!-- Lien vers la page-->
+            <a href="https://www.esiee.fr/fr/esiee_search/news/home" class="all-buttons button-size btn" target="_blank">Aller voir</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- "Article" vers le PDF présentant l'Université Gustave Eiffel-->
+    <div class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <!-- Lien local vers l'image-->
+          <img src="./../static/images/uge_logo.png" class="card-img-top bg-esiee-color" alt="uge_logo">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Présentation Université Gustave Eiffel</h5>
+            <p class="card-text">ESIEE Paris et ses voisins s'allient à travers l'Université Gustave Eiffel.</p>
+            <!-- Lien vers la page-->
+            <a href="https://www.esiee.fr/sites/default/files/atoms/files/cp-decret-universite-gustave-eiffel.pdf"
+              class="all-buttons button-size btn" target="_blank">Aller voir</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- "Article" vers la rubrique "Formations" du site de l'ESIEE-->
+    <div class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <!-- Lien local vers l'image-->
+          <img src="./../static/images/Formations.PNG" class="card-img" alt="Formations">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Formations</h5>
+            <p class="card-text">Retrouvez toutes les informations concernant les différentes formations de l'ESIEE.</p>
+            <!-- Lien vers la page-->
+            <a href="https://www.esiee.fr/fr/formations/" class="all-buttons button-size btn" target="_blank">Aller voir</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- "Article" vers la rubrique "Logements" du site de l'ESIEE-->
+    <div class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <!-- Lien local vers l'image-->
+          <img src="./../static/images/Logements.PNG" class="card-img" alt="Logements">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Logements</h5>
+            <p class="card-text">Retrouvez toutes les informations concernant les différentes résidences étudiantes à
+              proximité de ESIEE Paris.</p>
+              <!-- Lien vers la page-->
+            <a href="https://www.esiee.fr/fr/espace-etudiants/logements" class="all-buttons button-size btn" target="_blank">Aller voir</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- "Article" vers la rubrique "Frais de scolarité" du site de l'ESIEE-->
+    <div class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <!-- Lien local vers l'image-->
+          <img src="./../static/images/Bourses.PNG" class="card-img" alt="Bourses">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Financement de vos études</h5>
+            <p class="card-text">Retrouvez toutes les informations concernant le financement de vos études à ESIEE
+              Paris.</p>
+              <!-- Lien vers la page-->
+            <a href="https://www.esiee.fr/fr/formations/ingenieur/frais-scolarites/aides-financieres"
+              class="all-buttons button-size btn" target="_blank">Aller voir</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+
+{% endblock article %}

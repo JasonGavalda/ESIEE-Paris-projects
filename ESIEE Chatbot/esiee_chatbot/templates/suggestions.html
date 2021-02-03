@@ -1,0 +1,54 @@
+{% extends "maj.html" %}
+
+<!-- Les liens, qui font partie de la navbar, vers les différents onglets des pages de mise a jour -->
+{% block navbar %}
+
+<a class="nav-text nav-item nav-link" href="/rech">Recherche</a>
+<a class="nav-text nav-item nav-link active" href="/suggestions">Suggestions</a>
+<a class="nav-text nav-item nav-link" href="/ajout">Ajout</a>
+<a class="nav-text nav-item nav-link" href="/modif">Modification</a>
+<a class="nav-text nav-item nav-link" href="/suppr">Suppression</a>
+
+{% endblock navbar %}
+
+
+
+{% block form %}
+
+<h3>Nombre de suggestions <span class="badge badge-secondary">{{nb_sug}}</span></h3>
+
+<!-- Balise proposée que l'on peut que lire -->
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Voici la balise proposée : </span>
+  </div>
+  <input type="text" name="balise" class="form-control" aria-describedby="basic-addon1" value="{{balise}}" required readonly>
+</div>
+
+<!-- Zone de texte que l'on peut modifiée dans laquelle on a de base le modele associé à la balise -->
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon2">Voici le modèle suggéré : </span>
+  </div>
+  <input type="text" name="modele" class="form-control" aria-describedby="basic-addon2" value="{{modele}}" required>
+</div>
+
+<!-- Une entrée de type radio qui permet de choisir entre appliquer la suggestion ou supprimer la suggestion -->
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="application" id="appliquer" value="true" checked>
+  <label class="form-check-label" for="appliquer">
+    Rajouter
+  </label>
+</div>
+<div class="form-check mb-3">
+  <input class="form-check-input" type="radio" name="application" id="supprimer" value="false">
+  <label class="form-check-label" for="supprimer">
+    Supprimer
+  </label>
+</div>
+
+<!-- Alerte pour prévenir qu'ajouter un "autres" ne fait rien et qu'il faut passer par les autres pages -->
+<div class="alert alert-warning" role="alert">
+  Attention, si la balise correspond à "autres", la suggestion ne sera pas rajoutée. Il faut rajouter le modèle (voire la balise associée) avec les autres onglets. </div>
+
+{% endblock form %}

@@ -1,0 +1,282 @@
+/* Ajout de la police personnalisée TTNorms, qui est la police de la charte de l'ESIEE, pour le graissage de police "Bold"*/
+@font-face {
+    font-family: 'TTNorms';
+    src: url(./../fonts/TTNorms-Bold.otf) format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Ajout de la police personnalisée TTNorms, qui est la police de la charte de l'ESIEE, pour le graissage de police "Regular"*/
+@font-face {
+    font-family: 'TTNorms';
+    src: url(./../fonts/TTNorms-Regular.otf) format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+Utilisation des polices indiquées par la charte
+"!important" nous permet de surpasser l'utilisation de la police donnée par Bootstrap
+Suppression de l'overflow des parties body et html
+*/
+body, html {
+    font-family: 'TTNorms', Tahoma, sans-serif !important;
+    overflow: hidden;
+}
+
+/* Ensemble des deux navbar */
+.navbar-block {
+    position: relative;
+    z-index: 3;
+}
+
+/*Définit, pour le logo ESIEE, la taille min définie par la charte et la taille max pour éviter qu'il soit trop grand en version PC*/
+.esiee-img {
+    max-height: 131px;
+    min-width: 95px;
+}
+
+/*Définit, pour le logo UGE, la taille min définie par la charte et la taille max pour éviter qu'il soit trop grand en version PC*/
+.uge-img {
+    max-height: 86px;
+    min-width: 95px;
+}
+
+/*Permet de responsive du texte de la navbar*/
+.nav-text {
+    font-size: calc(1.3rem + .75vw);
+    margin: 3px;
+}
+
+/*Définit la couleur de fond avec la couleur bleu marine de l'ESIEE*/
+.bg-esiee-color {
+    background-color: #0F273B;
+}
+
+/* Contenu de la page active */
+.page-content {
+    height: 100vh;
+    background-image: url(./../images/esiee_rue.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+/*
+Définit le fond de la partie chatbot :
+    - l'image de fond
+    - le motif de l'image de fond
+    - la position de l'image de fond
+    - la taille de l'image de fond
+    - fixe l'image de fond
+    - ajoute une barre de défilement
+    - fixe la taille verticale de la fenêtre chatbot
+    - ajoute une marge interne en bas de la fenêtre
+    - met une marge automatique gauche au bloc
+    - met une marge automatique droite au bloc (centrer le bloc)
+    - fixe la taille de la police
+    - fixe une taille horizontale maximale
+    - ajoute une bordure extérieure pleine
+    - couleur de la bordure
+    - taille de la bordure
+*/
+.chatbotpart {
+    background-image: url(./../images/fond_2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-y: scroll;
+    height: calc(100vh - 225px);
+    padding-bottom: 38px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.4rem;
+    max-width: 1100px;
+    outline: solid;
+    outline-color: #343a40;
+    outline-width: 5px;
+}
+    
+/*Définit une largeur maximale de 92%*/
+.mw-92 {
+    max-width: 92%;
+}
+
+/*Permet de garder le form en bas de la page et centré*/
+.chatzone {
+    position: sticky;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+Définit la partie article :
+    - la position par rapport aux autres éléments
+    - la position selon z par rapport aux autres éléments
+    - largeur
+    - mise en place d'une barre de défilement
+    - hauteur
+    - décalage par rapport au haut de la page
+*/
+.article-nav {
+    position: sticky;
+    z-index: 2;
+    width: 100vw;
+    overflow-y: scroll;
+    height: calc(100vh - 187px);
+    top: 187px;
+    text-decoration: none;
+}
+
+/* Modification de la forme des reponses */
+.reponse {
+    border-radius: 1rem !important;
+}
+
+/* Modification de la forme des questions */
+.question {
+    border-radius: 1rem !important;
+}
+
+/* unvisited link */
+.lien-reponse {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  /* visited link */
+.lien-reponse:visited {
+    color: white;
+    text-decoration: underline;
+  }
+
+/* visited link */
+.lien-reponse:hover {
+    color: #dddddd;
+    text-decoration: underline;
+    }
+
+  /* visited link */
+.lien-reponse:visited:hover {
+    color: #dddddd;
+    text-decoration: underline;
+  }
+
+  /* reponses du bot */
+.reponse {
+    background-color: #0097d7;
+    color: #ffffff;
+}
+
+/* taille de la majorité des boutons */
+.button-size {
+    font-size: 1.4rem !important;
+}
+
+/* boutons du site */
+.all-buttons {
+    background-color: #0097d7;
+    outline-color: #0097d7;
+    color: #ffffff;
+    font-family: 'TTNorms', Tahoma, sans-serif;
+}
+
+/* boutons du site lorsque l'on passe dessus */
+.all-buttons:hover {
+    background-color: #0080c0;
+    outline-color: #0080c0;
+    color: #ffffff;
+}
+
+/* checkbox de feedback */
+.checkbox {
+    z-index: 1;
+    border-radius: .25rem;
+}
+
+/* bouton reset permettant de supprimer les cookies enregistrés */
+.reset-button {
+    position: absolute;
+    z-index: 1;
+}
+
+/* bouton de confirmation de suppression des cookies */
+.confirm-button {
+    font-size: 16px;
+}
+
+/* alerte de cookies */
+.cookies {
+    position: absolute !important;
+    bottom: -17px;
+    width: 100vw;
+    z-index: 2;
+    
+}
+
+/* bouton de validation */
+.validate {
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+    background-color: #ffeeba;
+    border-color: #ffe1a9;
+    color: #856404;
+}
+
+/* bouton de validation lorsque la souris est dessus */
+.validate:hover {
+    background-color: #f9e1a9;
+    border-color: #f9dd94;
+    color: #856404;
+}
+
+/* 
+Quand la largeur de l'écran est inférieure ou égale à 1440px :
+    - Hauteur minimale du chatbot
+    - Hauteur de la partie article
+    - Décalage par rapport au haut de la page
+*/
+@media only screen and (max-width:  1440px){
+    .chatbotpart {
+        height:  calc(100vh - (147px + (100vw - 570px)*(76/870)));
+    }
+    .article-nav {
+        height: calc(100vh - (108px + (100vw - 570px)*(76/870)));
+        top: calc(108px + (100vw - 570px)*(76/870));
+    }
+}
+
+/* 
+Quand la largeur de l'écran est inférieure ou égale à 570px :
+    - Hauteur minimale du chatbot
+    - Hauteur de la partie article
+    - Décalage par rapport au haut de la page
+*/
+@media only screen and (max-width: 570px){
+    .chatbotpart {
+        height: calc(100vh - 150px);
+    }
+    .article-nav {
+        height: calc(100vh - 112px);
+        top: 112px;
+    }
+}
+
+/* 
+Quand la largeur de l'écran est inférieure ou égale à 334px :
+    - Hauteur minimale du chatbot
+    - Hauteur de la partie article
+    - Décalage par rapport au haut de la page
+*/
+
+@media only screen and (max-width: 334px){
+    .chatbotpart {
+        height: calc(100vh - 190px);
+    }
+    .article-nav {
+        height: calc(100vh - 152px);
+        top: 152px;
+    }
+}

@@ -1,0 +1,73 @@
+﻿AMARGER Corentin-AUBRY Nicolas                                             Tuteurs :
+BRILLET Clément-GAVALDA Jason                                        BERLAND Corinne
+JANNOT Pierre-PINAUD Lorenzo                                          BUREAU Denis
+
+
+
+
+ESIEEbot
+
+
+Sommaire
+
+
+
+
+Introduction        2
+Problématique        2
+Conception        2
+Problème rencontré        2
+Amélioration possible        2
+Conclusion        2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Introduction
+
+
+
+
+
+
+Problématique
+
+
+Tous les ans à ESIEE Paris, les admissions sont sources de multiples questions. Cependant malgré l'accessibilité de la réponse de la majorité d’entre elles sur le site esiee.fr, cela amène à un grand nombre d’appels pour le service administratif. 
+De plus, les questions sont souvent similaires et possèdent des réponses sur le site, ce qui amène une baisse de réactivité face aux questions pertinentes.
+Ainsi après de nombreuses recherches non fructueuses d’un chatbot correspondant à leurs critères, ESIEE Paris a proposé ce projet de site hébergeant un chatbot qui permettrait de répondre aux questions lors des admissions et soulager le service administratif.
+Le principe est alors de créer un site sur lequel est implémenté un chatbot qui répondra aux questions et redirigera l’utilisateur vers les réponses sur le site esiee.fr ou le rediriger vers le service d’administration si aucune réponse n’est disponible.
+
+
+Conception
+
+
+
+
+
+
+Problème rencontré
+ 
+
+
+
+
+Amélioration possible
+
+
+        
+
+
+Conclusion

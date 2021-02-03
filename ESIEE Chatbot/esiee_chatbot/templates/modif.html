@@ -1,0 +1,43 @@
+{% extends "maj.html" %}
+
+<!-- Les liens, qui font partie de la navbar, vers les différents onglets des pages de mise a jour -->
+{% block navbar %}
+
+<a class="nav-text nav-item nav-link" href="/rech">Recherche</a>
+<a class="nav-text nav-item nav-link" href="/suggestions">Suggestions</a>
+<a class="nav-text nav-item nav-link" href="/ajout">Ajout</a>
+<a class="nav-text nav-item nav-link active" href="/modif">Modification</a>
+<a class="nav-text nav-item nav-link" href="/suppr">Suppression</a>
+
+{% endblock navbar %}
+
+
+
+{% block form %}
+
+<!-- Menu déroulant pour sélectionner une balise parmi l'ensemble des balises du json -->
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Veuillez sélectionner parmi la liste suivante la balise que vous souhaitez modifier :</label>
+  </div>
+  <select name="balise" class="custom-select" id="inputGroupSelect01" required>
+    <option selected disabled value="">Pas de balise sélectionnée</option>
+    {% for i in range (balises|length) %}
+    <option value={{balises[i]}}>{{balises[i]}}</option>
+    {% endfor %}
+  </select>
+</div>
+
+<!-- Menu déroulant permettant de choisir l'objet à modifier pour cette balise -->
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Voulez-vous modifier les modèles (questions) ou la réponse ?</label>
+  </div>
+  <select name="objet" class="custom-select" id="inputGroupSelect01" required>
+    <option selected disabled value="">Pas d'objet sélectionnée</option>
+    <option value="modeles">Modeles (questions)</option>
+    <option value="reponses">Reponse</option>
+  </select>
+</div>
+
+{% endblock form %}

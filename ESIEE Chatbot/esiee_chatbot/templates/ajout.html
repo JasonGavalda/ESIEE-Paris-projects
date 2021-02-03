@@ -1,0 +1,70 @@
+{% extends "maj.html" %}
+
+<!-- Les liens, qui font partie de la navbar, vers les différents onglets des pages de mise a jour -->
+{% block navbar %}
+
+<a class="nav-text nav-item nav-link" href="/rech">Recherche</a>
+<a class="nav-text nav-item nav-link" href="/suggestions">Suggestions</a>
+<a class="nav-text nav-item nav-link active" href="/ajout">Ajout</a>
+<a class="nav-text nav-item nav-link" href="/modif">Modification</a>
+<a class="nav-text nav-item nav-link" href="/suppr">Suppression</a>
+
+{% endblock navbar %}
+
+
+
+{% block form %}
+
+<!-- Une entrée texte dans laquelle on rentre une balise à ajouter -->
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Indiquez le nom de la balise (en quelques mots clés comme
+      bonjour, webaurion, problème payement, etc...) :</span>
+  </div>
+  <input type="text" name="Balise" class="form-control" aria-label="Username" aria-describedby="basic-addon1"
+    required>
+</div>
+
+<!-- Trois entrées textes dans laquelle on rentre des questions associées à la balise -->
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Indiquez 3 questions types qui correspondraient à la balise :</span>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <input type="text" aria-label="Question 1" class="form-control" name="Q1" required>
+      </div>
+      <div class="col-12">
+        <input type="text" aria-label="Question 2" class="form-control" name="Q2" required>
+      </div>
+      <div class="col-12">
+        <input type="text" aria-label="Question 3" class="form-control" name="Q3" required>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Un menu déroulant pour choisir entre les différentes catégories -->
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Sélectionnez la catégorie correspondante :</label>
+  </div>
+  <select name="Categorie" class="custom-select" id="inputGroupSelect01" required>
+    <option selected disabled value="">Pas de catégorie sélectionnée</option>
+    <option value="general">General</option>
+    <option value="Post-bac">E1</option>
+    <option value="CPGE">CPGE</option>
+    <option value="DUT">DUT</option>
+  </select>
+</div>
+
+<!-- Une entrée texte dans laquelle on rentre une réponse associée à la balise -->
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Indiquez une réponse type qui correspondrait à la balise :</span>
+  </div>
+  <input type="text" name="Reponses" aria-label="" class="form-control">
+</div>
+
+{% endblock form %}

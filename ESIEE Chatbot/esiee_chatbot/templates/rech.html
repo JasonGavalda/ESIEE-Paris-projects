@@ -1,0 +1,47 @@
+{% extends "maj.html" %}
+
+<!-- Les liens, qui font partie de la navbar, vers les différents onglets des pages de mise a jour -->
+{% block navbar %}
+
+<a class="nav-text nav-item nav-link active" href="/rech">Recherche</a>
+<a class="nav-text nav-item nav-link" href="/suggestions">Suggestions</a>
+<a class="nav-text nav-item nav-link" href="/ajout">Ajout</a>
+<a class="nav-text nav-item nav-link" href="/modif">Modification</a>
+<a class="nav-text nav-item nav-link" href="/suppr">Suppression</a>
+
+{% endblock navbar %}
+
+
+
+{% block form %}
+
+<!-- Menu déroulant pour sélectionner une balise parmi l'ensemble des balises du json -->
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Veuillez sélectionner parmi la liste suivante la balise que vous souhaitez afficher :</label>
+  </div>
+  <select name="balise" class="custom-select" id="inputGroupSelect01" required>
+    <option selected disabled value="">Pas de balise sélectionnée</option>
+    {% for i in range (balises|length) %}
+    <option value="{{balises[i]}}">{{balises[i]}}</option>
+    {% endfor %}
+  </select>
+</div>
+
+<!-- Ensembles des éléments de la balise (balise, modeles, questions) sous forme de zones texte seulement lisibles -->
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Voici tout sur cette balise :</span>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      {% for i in range (tout|length) %}
+      <div class="col-12">
+        <input type="text" aria-label="" class="form-control" value="{{tout[i]}}" readonly>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock form %}

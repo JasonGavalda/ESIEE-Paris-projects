@@ -1,0 +1,46 @@
+{% extends "maj.html" %}
+
+<!-- Les liens, qui font partie de la navbar, vers les différents onglets des pages de mise a jour -->
+{% block navbar %}
+
+<a class="nav-text nav-item nav-link" href="/rech">Recherche</a>
+<a class="nav-text nav-item nav-link" href="/suggestions">Suggestions</a>
+<a class="nav-text nav-item nav-link" href="/ajout">Ajout</a>
+<a class="nav-text nav-item nav-link active" href="/modif">Modification</a>
+<a class="nav-text nav-item nav-link" href="/suppr">Suppression</a>
+
+{% endblock navbar %}
+
+
+
+{% block form %}
+
+<!-- Alerte pour ne pas casser le site en revenant en arriere -->
+<div class="alert alert-danger" role="alert">
+  Attention ne pas revenir en arrière avec la flèche. Il faut absolument valider (même sans changements). </div>
+
+<!-- Autant de zones texte que de modeles existants remplis de base avec la valeur des modeles + une zone de texte vide pour rajouter un modele -->
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Voici tout :</span>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      {% for i in range (objets|length) %}
+      <div class="col-12">
+        <input type="text" aria-label="" class="form-control" name="modif{{i}}" value="{{objets[i]}}">
+      </div>
+      {% endfor %}
+
+      {% if page == "modeles" %}
+      <div class="col-12">
+        <input type="text" aria-label="" class="form-control" name="plus">
+      </div>
+      {% else %}
+
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% endblock form %}

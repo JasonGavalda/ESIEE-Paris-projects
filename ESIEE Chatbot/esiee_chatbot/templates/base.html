@@ -1,0 +1,146 @@
+{% block doc -%}
+<!DOCTYPE html>
+<html{% block html_attribs %}{% endblock html_attribs %}>
+  {%- block html %}
+
+  <head>
+    <!-- Metas donnant les informations sur le site-->
+    {%- block metas %}
+    <!-- -->
+    <meta charset="utf-8">
+    <!-- -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- -->
+    <meta name="description" content="Chatbot de l'école d'ingénieur ESIEE Paris">
+    <!-- -->
+    <meta name="keywords" content="ESIEE Paris, Questions, Ask, Chatbot, Admissions">
+    <!-- -->
+    <meta name="author"
+      content="Nicolas AUBRY, Jason GAVALDA, Pierre JANNOT, Corentin AMARGER, Clément BRILLET, Lorenzo PINAUD">
+    <!-- -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {%- endblock metas %}
+
+    {%- block head %}
+
+    <!-- if permettant de définir le titre de la page -->
+    {% if title %}
+
+    <title>ESIEEbot - {{title}}</title>
+
+    {% else %}
+
+    <title>ESIEEbot</title>
+
+    {% endif %}
+
+    {%- block styles %}
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}" crossorigin="anonymous">
+    <link href="{{bootstrap_find_resource('css/bootstrap.css', cdn='bootstrap')}}" rel="stylesheet">
+    <link href="{{bootstrap_find_resource('css/fontawesome-all.css', cdn='bootstrap')}}" rel="stylesheet">
+    {%- endblock styles %}
+    {%- endblock head %}
+  </head>
+  <body{% block body_attribs %}{% endblock body_attribs %}>
+    {% block body -%}
+    <!-- Div permettant de rendre la partie haute du site collante quand on scroll la page-->
+    <div class="navbar-block sticky-top">
+      <div class="container-fluid bg-esiee-color">
+        <div class="row">
+          <!-- Logo ESIEE Paris (responsive avec des limites de taille) avec lien vers le site principal de L'ESIEE-->
+          <div class="col-2 p-0">
+            <a href="https://www.esiee.fr/" target="_blank">
+              <img src="./../static/images/esiee_logo.png" class="float-left esiee-img img-fluid" alt="Responsive image">
+            </a>
+          </div>
+          <div class="col-8 bg-gradient-light">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+              <!-- Bouton déroulant les onglets en cas d'utilisation sur une petite fenêtre-->
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- Navbar contenant les liens vers les différents onglets-->
+              <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+                <div class="navbar-nav">
+                  {% block navbar %}
+                  {%- endblock navbar %}
+                </div>
+              </div>
+            </nav>
+          </div>
+          <!-- Logo UGE avec lien vers le site de l'Université Gustave Eiffel-->
+          <div class="col-2 p-0">
+            <a href="https://www.univ-gustave-eiffel.fr/" target="_blank">
+              <img src="./../static/images/uge_logo.png" class="float-right uge-img img-fluid" alt="Responsive image">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Navbar avec le bouton déroulant la partie "article" ainsi que les liens vers les Réseaux sociaux-->
+      <nav class="navbar navbar-dark bg-dark justify-content-around">
+        <!-- Bouton déroulant la partie "article"-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#articlePart"
+          aria-controls="articlePart" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Liens vers les réseaux sociaux de l'ESIEE (s'ouvre sur un nouvel onglet)-->
+        <a class="nav-item nav-link" href="https://facebook.com/esieeparis/" target='_blank'>
+          <img src="{{ url_for('static', filename='images/facebook.png') }}" alt="Facebook">
+        </a>
+        <a class="nav-item nav-link" href="https://twitter.com/ESIEEPARIS" target='_blank'>
+          <img src="{{ url_for('static', filename='images/twitter.png') }}" alt="Twitter">
+        </a>
+        <a class="nav-item nav-link" href="https://www.linkedin.com/school/esiee-paris/" target='_blank'>
+          <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn">
+        </a>
+        <a class="nav-item nav-link" href="https://www.instagram.com/esieeparis/" target='_blank'>
+          <img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram">
+        </a>
+        <a class="nav-item nav-link" href="https://www.youtube.com/channel/UCHpk9zQGYZWlTCV3Aj9XlTQ" target='_blank'>
+          <img src="{{ url_for('static', filename='images/youtube.png') }}" alt="Youtube">
+        </a>
+      </nav>
+    </div>
+
+    <main role="main" class="page-content container-fluid p-0">
+      <!-- Partie article-->
+      <div class="articlepart" id="article">
+        {% block article %} {% endblock article %}
+      </div>
+      <!-- Partie chatbot-->
+      <div class="chatbotpart">
+        {% block bot %} {% endblock bot %}
+        <form method='POST'>
+          <!-- Champ permettant d'écrire pour communiquer avec le chatbot-->
+          <fieldset class="questionform position-relative" style="z-index: 1;">
+            {% block chatname %}{% endblock chatname %}
+          </fieldset>
+        </form>
+      </div>
+
+      <!-- Alerte d'utilisation des cookies -->
+      {% if not cookie_session %}
+      <div class="cookies alert alert-warning alert-dismissible fade show" role="alert">
+        Ce site nécessite l'utilisation de cookies
+        <a class="validate btn" role="button" aria-pressed="true" data-dismiss="alert" href="/cookiegen">Accepter</a>
+        </button>
+      </div>
+      {% endif %}
+
+      {% block content -%}
+      {%- endblock content %}
+
+      <!-- Scripts Bootstrap-->
+      {% block scripts %}
+      <script src="{{bootstrap_find_resource('jquery.js', cdn='jquery')}}"></script>
+      <script src="{{bootstrap_find_resource('umd/popper.js', cdn='popper')}}"></script>
+      <script src="{{bootstrap_find_resource('js/bootstrap.js', cdn='bootstrap')}}"></script>
+      {%- endblock scripts %}
+      {%- endblock body %}
+  </body>
+  {%- endblock html %}
+
+</html>
+{% endblock doc -%}

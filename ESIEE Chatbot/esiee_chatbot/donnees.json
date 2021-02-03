@@ -1,0 +1,867 @@
+{
+    "intentions": [
+        {
+            "balise": "bonjour",
+            "categorie": "general",
+            "modeles": [
+                "Bonjour",
+                "Comment vas tu",
+                "Il y a quelqun?",
+                "Bonsoir",
+                "Comment ca va",
+                ""
+            ],
+            "reponses": [
+                "Bonjour !"
+            ]
+        },
+        {
+            "balise": "au revoir",
+            "categorie": "general",
+            "modeles": [
+                "Au revoir",
+                "A plus tard",
+                "a plus",
+                "Bonne journee"
+            ],
+            "reponses": [
+                "Au revoir !"
+            ]
+        },
+        {
+            "balise": "nom",
+            "categorie": "general",
+            "modeles": [
+                "nom",
+                "Comment tu t'appelles",
+                "Comment je t'appelle",
+                "Quel est ton nom?"
+            ],
+            "reponses": [
+                "Tu peux m'appeler ESIEEbot."
+            ]
+        },
+        {
+            "balise": "cantine",
+            "categorie": "general",
+            "modeles": [
+                "cantine",
+                " Y a-t-il des restaurants à emporter autour de l’ESIEE ?",
+                "Y a t il un resto U?",
+                "Ou est ce que les étudiants mangent en général ?",
+                "Quelles sont les moyens de restauration à l'intérieur et à l'extérieur de l'ESIEE",
+                "Est qu’il y a d’autres possibilités pour manger le midi ?",
+                "Comment fonctionne la restauration ?",
+                "Un repas coûte combien en général ?",
+                "Quel est le prix de la cantine scolaire?",
+                "Combien coûte la restauration de l’école ?",
+                "On peut manger",
+                "Quelles sont les posibilités pour se nourrir",
+                "tu recommandes de manger où",
+                "Comment fonctionne la cantine ?",
+                "y a t il une cantine ?",
+                "La cantine est ouverte de quelle heure à quelle heure ?",
+                "Quelles sont les options de restauration ?"
+            ],
+            "reponses": [
+                "Le restaurant est ouvert le midi entre 11h15 et 13h45, du lundi au vendredi.\nUne cafeteria propose des boissons chaudes et fraiches, sandwichs, paninis, viennoiseries et pâtisseries. Ouverte du lundi au vendredi de 7h30 à 17h00 en période scolaire et de 7h30 à 15h00 pendant les périodes hors scolaire. Sinon il existe deux restaurants universitaires aux alentours et plusieurs restaurants, fast-food."
+            ]
+        },
+        {
+            "balise": "emploi du temps",
+            "categorie": "general",
+            "modeles": [
+                "heures de cours",
+                "quelle heure",
+                "jours de cours",
+                "samedi",
+                "emploi du temps",
+                "emplois du temps",
+                "semaine de cours",
+                "heures par semaine",
+                "quels sont les horaires",
+                "quels sont les horaires de cours"
+            ],
+            "reponses": [
+                "Les cours sont généralement de 8h à 17h. Une pause d'une heure de 12h à 13h est prévue pour les repas, ainsi que deux pauses de 15 minutes à 10h et 15h. Il est possible, quand l'emploi du temps est chargé, d'avoir cours jusqu'à 19h. Les emplois du temps sont décidés au début de chaque période (chaque semestre étant découpé en 2 périodes) en fonction des unités (matières) choisies (tronc commun + électives). Il n'est pas identique d'une semaine à l'autre (vous n'aurez par exemple pas les mêmes matières d'un lundi à un autre) et peut être sujet à des modifications en cas d'imprévus. Il faut donc le consulter régulièrement. Il existe deux moyens de consulter son emploi du temps : un emploi du temps général est à disposition sur le site de l'ESIEE et répertorie les emplois du temps de toutes les classes et de toutes les salles. La procédure pour y accéder sera détaillée en début d'année. Un emploi du temps personnel paramétrable est à votre disposition à l'aide de vos identifiants ESIEE pendant toute l'année."
+            ]
+        },
+        {
+            "balise": "bourses",
+            "categorie": "general",
+            "modeles": [
+                "bourse",
+                "bourses",
+                "Comment fonctionne les bourses",
+                "Quels sont les critères éligibilité à la bourse ESIEE? ",
+                "Sous quelles conditions peut on bénéficier de la bourse ?",
+                "Des aides sont-ils fournis ?",
+                "Est-ce que la bourse peut couvrir totalement les frais de scolarité ?",
+                "Quels sont les critères pour avoir une bourse ?",
+                "Des aides sont-elles attribuées selon les critères sociaux ?",
+                "Comment payer une tel somme ?",
+                " Y’a t’il une part subventionné ? ",
+                "Existe-t-il une bourse spéciale à l'Esiee?",
+                "Existe-il une bourse que nous pouvons bénéficier en plus de la bourse CROUS ?",
+                "L’école est assez chère, est-ce qu’il y a des bourses accordées par l’école ?",
+                "Est ce qu'il y a des aides",
+                "Comment puis je calculer ma bourse",
+                "bourses",
+                "Y’a t’il une bourse ESIEE?"
+            ],
+            "reponses": [
+                "Vous pouvez d’ores et déjà faire vos calculs pour l’année prochaine :\n Reportez-vous simplement à la simulation de bourse en ligne : <a target='_blank' class='lien-reponse' href='https://www.esiee.fr/fr/formations/ingenieur/frais-scolarites/aides-financieres'> Les aides financières</a>"
+            ]
+        },
+        {
+            "balise": "accord prêt",
+            "categorie": "general",
+            "modeles": [
+                "accord prêt",
+                "Accord entre ESIEE Paris et une banque",
+                "existe t'il un accord entre l'école et des banques pour les prêt"
+            ],
+            "reponses": [
+                "Il existe plusieurs banques avec des taux préférentiels, elles viennent vous voir en début d'année. Sinon vous pouvez avoir des informations ici : <a target='_blank' class='lien-reponse' href='https://www.cafedupatrimoine.com/archive/article/pret-etudiant-comparatif-credit'> Comparatif des prêts </a> "
+            ]
+        },
+        {
+            "balise": "CVEC",
+            "categorie": "general",
+            "modeles": [
+                "CVEC",
+                "Ou est ce que je dois payer la CVEC",
+                "Comment payer la CVEC",
+                "Pourquoi payer la CVEC"
+            ],
+            "reponses": [
+                "Tous les étudiants doivent s'acquitter de la CVEC. Ces informations se trouvent à cet URL : <a target='_blank' class='lien-reponse' href='https://www.etudiant.gouv.fr/pid33626-cid130435/vous-acquitter-de-la-cvec-une-demarche-obligatoire-pour-vous-inscrire-dans-l-enseignement-superieur.html'> Le site de la CVEC </a> "
+            ]
+        },
+        {
+            "balise": "FAR",
+            "categorie": "general",
+            "modeles": [
+                "FAR",
+                "Comment remplir le dossier Far",
+                "ou est l'assurance scolaire dans les formalités administrative de rentrée",
+                "Comment remplir le FAR",
+                "Qu’est ce que le dossier FAR ?"
+            ],
+            "reponses": [
+                "Tout est expliqué ici : <a target='_blank' class='lien-reponse' href='https://www.esiee.fr/formalites/'> Comment remplir les formailtés administratives de rentrée</a>"
+            ]
+        },
+        {
+            "balise": "logement",
+            "categorie": "general",
+            "modeles": [
+                "logement",
+                "À quelle distance les logements se trouvent ils de l’école ?",
+                "Quels sont les logements abordables et pas loin de l'école ?",
+                "Est-il facile de se loger proche de l'école pour pas trop cher ?",
+                "quelles sont les différentes résidences ",
+                "Quels sont les différents logements disponibles pour les étudiants de l’ESIEE ?",
+                "quels sont les logements privilégiés par ces derniers ? ",
+                "Ou puis je trouver un logement",
+                "Où puis-je trouver une logement ?",
+                "ou se trouve les résidence universitaires",
+                "Combien coute un appartement autour de l'école",
+                "Des logements sont ils mis à disposition d’étudiants de l’esiee ?"
+            ],
+            "reponses": [
+                "Il existe plusieurs possibilités listées ici: <a target='_blank' class='lien-reponse' href='https://www.esiee.fr/fr/espace-etudiants/logements'> Liste des logements aux alentours </a> Il existe aussi des aides de l'état APL : Aide personnalisée au logement, ALS : Aide au logement social\nRenseignements sur <a target='_blank' href='www.caf.fr' class='lien-reponse'>le site de la caf</a>"
+            ]
+        },
+        {
+            "balise": "club",
+            "categorie": "general",
+            "modeles": [
+                "club",
+                "clubs",
+                "Comment rentrer dans les clubs?",
+                "clubs proposés à l'ESIEE",
+                "y a t-il un club",
+                "créer un club",
+                "entrer dans un club",
+                "prix d'adhésion d'un club"
+            ],
+            "reponses": [
+                "Tout élève de l'école a la possibilité de rejoindre un club et de participer à ses activités. La plupart d'entre eux nécessitent une cotisation (dont le montant dépend du club) pour pouvoir profiter de tout ce qu'ils proposent, tandis que d'autres clubs réalisent des évènements ponctuels qui nécessitent souvent une participation financière (rassure-toi ce n'est jamais très élevé). Les jeudis après-midi sont la plupart du temps libérés pour justement permettre à chacun de participer à son club favori ! Il est bien entendu possible de créer son propre club ! Pour cela, il sera nécessaire de contacter le BDE et l'administation, qui vous informeront plus en détail sur la procédure. Une liste des clubs déjà existants est disponible à cette adresse : <a target='_blank' class='lien-reponse' href='https://bde.esiee.fr/clubs'>Les clubs à l'ESIEE</a>"
+            ]
+        },
+        {
+            "balise": "BDE",
+            "categorie": "general",
+            "modeles": [
+                "BDE",
+                "vie associative",
+                "associations",
+                "Qu'est-ce que le BDE?",
+                "A quoi sert le BDE",
+                "C'est quoi le BDE?",
+                "être dans le BDE",
+                "Cotiser dans le BDE",
+                "soirées"
+            ],
+            "reponses": [
+                "La vie associative à l'école est gérée par le BDE (Bureau des élèves) élu pour un an. C'est par eux qu'il faut passer pour l'organisation des soirées / évènements / voyages. La cotisation au BDE permet entre autres d'accéder à certains clubs (qui ne demandent pas de cotisation en contrepartie) ainsi que d'avoir une réduction sur la plupart des évènements et autres soirées proposés par les clubs qui auront lieu dans l'année. Plus d'informations sont disponibles à cette adresse : <a target='_blank' class='lien-reponse' href='https://www.esiee.fr/fr/espace-etudiants/vie-etudiante/bureau-des-eleves'> Le site du BDE </a>"
+            ]
+        },
+        {
+            "balise": "BDS",
+            "categorie": "general",
+            "modeles": [
+                "sport",
+                "activités sportives",
+                "BDS",
+                "quels sont les sports",
+                "Gymnase",
+                "sport à haut niveau",
+                "quels sports peut-on pratiquer",
+                "Comment fonctionne le sport à l'école",
+                "Il y a t'il des cours de tennis",
+                "Peut on faire de la boxe à l'école",
+                "A t'on accès a une salle de musculation"
+            ],
+            "reponses": [
+                "Les activités sportives sont gérées par le BDS (Bureau des Sports). Pour une cotisation de 70€ annuelle, tu as accès à l'ensemble des sports proposés par le BDS ainsi qu'à l'ensemble des infrastructures sportives proposées par l'école. Il est tout à fait possible de lier sport à haut niveau et études à l'école. Les jeudis après-midi sont, la plupart du temps, libérés pour permettre à chacun de pratiquer son sport préféré ! Plus d'informations sur les différents sports proposés sont disponibles à cette adresse : <a target='_blank' class='lien-reponse' href='https://www.esiee.fr/fr/espace-etudiants/vie-etudiante/sport'> La liste des sports </a>"
+            ]
+        },
+        {
+            "balise": "webaurion",
+            "categorie": "general",
+            "modeles": [
+                "webaurion",
+                "Comment m'inscrire à l'ESIEE ?",
+                "Comment se fait l'inscription ?",
+                "Comment s'inscrire sur webaurion",
+                "je n'arrive pas a m'inscrire sur webaurion",
+                "je ne comprends pas comment m'inscrire sur webaurion",
+                "Qu’est ce que la plateforme Webaurion ?",
+                "j'ai des problèmes avec webaurion",
+                "s'inscrire",
+                "m'inscrire"
+            ],
+            "reponses": [
+                "Pour vous inscrire, vous devrez d'abord créer votre espace personnel ici: <a target='_blank' class='lien-reponse' href='https://webaurion.esiee.fr/faces/Login.xhtml'> Page inscription webaurion</a> Ensuite grâce à votre adresse email et au mot de passe que vous recevrez par mail, vous pourrez revenir sur ce site pour accéder au formulaire d'inscription.\nSi vous possédez un compte informatique ESIEE, vous devez utiliser vos identifiants ESIEE (Login et mot de passe) pour vous connecter à votre espace personnel."
+            ]
+        },
+        {
+            "balise": "modalités de paiement",
+            "categorie": "general",
+            "modeles": [
+                "modalité de paiement",
+                "C'est quoi webaurion ?",
+                "y’a t il plusieurs versements à faire ou tout se fait il d’un coup ?",
+                "Pour payer l’école , quand devons nous payer? ",
+                "Comment ce passe les paiements",
+                "Ou c'est qu'on paye les frais de scolarité"
+            ],
+            "reponses": [
+                "Les frais de scolarité donnent lieu à l’émission d’une seule facture, établie au cours du premier trimestre par le service comptable de la CCIR et payable par chèque ou virement, en totalité, à réception.\n\nAfin de vous faciliter le règlement, vous pouvez cependant opter pour le prélèvement automatique en 6 mensualités de novembre à avril (entre le 10 et le 20 de chaque mois).\n\nLe choix du mode de paiement s’effectue en début d’année et ne pourra être changé après la facturation.\nSinon on trouve ces inforamtions sur : <a target='_blank' class='lien-reponse' href='https://www.esiee.fr/formalites/financier/'> Informations sur les modalités de paiement</a>."
+            ]
+        },
+        {
+            "balise": "problème paiement",
+            "categorie": "general",
+            "modeles": [
+                "problème paiement",
+                "je n'arrive pas a payer",
+                "j'ai des problèmes avec le paiement",
+                "Comment puis je regler mes problèmes de paiement"
+            ],
+            "reponses": [
+                "Voir avec votre banquier (trop personnel pour donner une réponse précise)."
+            ]
+        },
+        {
+            "balise": "document prêt",
+            "categorie": "general",
+            "modeles": [
+                "document prêt",
+                "j'ai besoin d'un document pour faire un prêt à la banque"
+            ],
+            "reponses": [
+                "Vous allez avoir besoin d'une preuve de résidence en France et d'une attestation d'inscription. Plus d'explications ici : <a target='_blank' class='lien-reponse' href='https://www.inc-conso.fr/content/obtenir-un-pret-etudiant'> Informations sur les prêts </a> "
+            ]
+        },
+        {
+            "balise": "évaluation Post bac",
+            "categorie": "Post_bac",
+            "modeles": [
+                "évaluation",
+                "évaluation Post bac",
+                "Comment se passe la validation d'une matière?",
+                "Y a t il des DST chaque Samedi comme en prépa ?",
+                "Comment fonctionne les DST",
+                "format d’évaluation",
+                "Comment se passent les partiels ?",
+                "Comment se déroulent l’évaluation des unités en général?",
+                "Combien y a t il d'évaluation par unité ?",
+                "Est-ce que l'on aura des semaines de partiels mis a part des semaines de cours?",
+                "Est-ce du contrôle continu ?",
+                "Quel est le rythme des évaluations a l'esiee ? ",
+                "L’école fait elle des évaluations de projets ou de partiels ?",
+                "Comment on est évalué en général, plutôt avec des partiels ou des projets ?",
+                "Y a-t-il des contrôles toutes les semaines ?",
+                "Quelle est la fréquence des évaluations",
+                "Quels sont les type d’évaluation?"
+            ],
+            "reponses": [
+                "Le système d'évaluation prend trois formes : les TP notés avec un compte-rendu à rendre la plupart du temps une semaine après le TP; un partiel ayant lieu tous les samedis (ou presque) prenant la forme d'un contrôle écrit dans une matière; des projets pour les unités restantes. Les partiels peuvent être des qcm aussi bien que des évaluations classiques."
+            ]
+        },
+        {
+            "balise": "évaluation CPGE",
+            "categorie": "CPGE",
+            "modeles": [
+                "évaluation",
+                "évaluation CPGE",
+                "Comment se passe la validation d'une matière?",
+                "Y a t il des DST chaque Samedi comme en prépa ?",
+                "Comment fonctionne les DST",
+                "format d’évaluation",
+                "Comment se passent les partiels ?",
+                "Comment se déroulent l’évaluation des unités en général?",
+                "Combien y a t il d'évaluation par unité ?",
+                "Est-ce que l'on aura des semaines de partiels mis a part des semaines de cours?",
+                "Est-ce du contrôle continu ?",
+                "Quel est le rythme des évaluations a l'esiee ? ",
+                "L’école fait elle des évaluations de projets ou de partiels ?",
+                "Comment on est évalué en général, plutôt avec des partiels ou des projets ?",
+                "Y a-t-il des contrôles toutes les semaines ?",
+                "Quelle est la fréquence des évaluations",
+                "Quels sont les type d’évaluation?"
+            ],
+            "reponses": [
+                "Le système d'évaluation prend trois formes : les TP noté avec un compte-rendu à rendre la plupart du temps une semaine après le TP; les semaines de partiel en fin de semestres; des projets noté pour les unités restantes. Les partiels peuvent être des qcm aussi bien que des évaluations classiques. En général, il y a un partiel par unité mais il est possible pour certaines unités d'avoir plusieurs partiels (ces unités sont des unités avec plus de 30h, ce qui est le nombre d'heures classique pour une unité."
+            ]
+        },
+        {
+            "balise": "évaluation DUT",
+            "categorie": "DUT",
+            "modeles": [
+                "évaluation",
+                "évaluation DUT",
+                "Comment se passe la validation d'une matière?",
+                "Y a t il des DS chaque Samedi comme en prépa ?",
+                "format d’évaluation",
+                "Comment se passent les partiels ?",
+                "Comment se déroulent l’évaluation des unités en général?",
+                "Combien y a t il d'évaluation par unité ?",
+                "Est-ce que l'on aura des semaines de partiels mis a part des semaines de cours?",
+                "Est-ce du contrôle continu ?",
+                "Quel est le rythme des évaluations a l'esiee ? ",
+                "L’école fait elle des évaluations de projets ou de partiels ?",
+                "Comment on est évalué en général, plutôt avec des partiels ou des projets ?",
+                "Y a-t-il des contrôles toutes les semaines ?",
+                "Quelle est la fréquence des évaluations",
+                "Quels sont les type d’évaluation?"
+            ],
+            "reponses": [
+                "Le système d'évaluation prend trois formes : les TP noté avec un compte-rendu à rendre la plupart du temps une semaine après le TP; les semaines de partiel en fin de semestres; des projets noté pour les unités restantes. Les partiels peuvent être des qcm aussi bien que des évaluations classiques. En général, il y a un partiel par unité mais il est possible pour certaines unités d'avoir plusieurs partiels (ces unités sont des unités avec plus de 30h, ce qui est le nombre d'heures classique pour une unité."
+            ]
+        },
+        {
+            "balise": "fonctionnement des cours",
+            "categorie": "general",
+            "modeles": [
+                "fonctionnement des cours",
+                "fonctionnements des cours",
+                "Comment vont se dérouler les cours cette année?",
+                "le nombre de personnes par TD/ promo ?",
+                "Combien sommes nous par classe?",
+                "Cours en amphi ou salle de classe",
+                "Comment se passent les cours en amphi ?",
+                "Il y a beaucoup d'heures en amphi ?",
+                "Combien sommes nous par amphis ?"
+            ],
+            "reponses": [
+                "Le contenu des cours est séparé : cours magistraux, TD et TP. Les cours sont en amphis, entre 70 et 200 selon que le cours concerne toute la promotion ou juste une partie. Les TD et TP se font par groupes d'une vingtaine à trentaine de personnes dans des salles de classe plus classiques ou des salles de TP avec le matériel nécessaire. Les proportions entre les trois formes sont détaillées au début de chaque unité. "
+            ]
+        },
+        {
+            "balise": "modules des cours",
+            "categorie": "general",
+            "modeles": [
+                "modules des cours",
+                "Quel est le programme de l'année ?",
+                "De quoi se compose le tronc commun à l'ESIEE?",
+                "Quelles sont les matières que l'on va étudier?",
+                "Combien de cours pouvons-nous choisir exactement ?",
+                "Qu'est-ce qu'on a comme cours",
+                "L'école fonctionne t'elle sous forme de semestres ou de trimestres?",
+                "Combien y a t-il de modules par semestre ?",
+                "Y’a t il des matières optionnelles que l’on peut choisir ?",
+                "Comment s'organisent les cours ? ",
+                "contenu des cours",
+                "Quels sont tous les différents cours ?",
+                " Peut on choisir les cours que l’on veut suivre ?"
+            ],
+            "reponses": [
+                "Tout dépend de l'année dans laquelle vous vous situez ! Pour les E1, E2 et E3 il existe un tronc commun obligatoire (tout un ensemble de matières) que tous les élèves de la promotion doivent valider. En plus de ce tronc commun, des matières électives (au choix) doivent être validées. Les E4 et E5 étant répartis par filières, ils choisissent au préalable leurs matières selon leurs filières. Les différentes matières vous seront présentées à la rentrée et lors de chaque début de période."
+            ]
+        },
+        {
+            "balise": "filières",
+            "categorie": "general",
+            "modeles": [
+                "filières",
+                "Quelles sont les filière proposées en apprentissage ?",
+                "Comment se passe le choix des filières ?",
+                "Comment sont organisées les filières ?",
+                "Au bout de combien de temps on se spécialise dans notre filière de choix ?",
+                "Quels cours sont disponibles dans la filière ?"
+            ],
+            "reponses": [
+                "Le choix des filières s'effectue en fin de 3ème année (première année de cycle ingénieur ou E3), toutes les informations concernant les différentes filières se trouvent ici : <a target='_blank' class='lien-reponse' href='https://www.esiee.fr/fr/formations/ingenieur/filieres'> Présentation des différentes filières</a>"
+            ]
+        },
+        {
+            "balise": "passage",
+            "categorie": "general",
+            "modeles": [
+                "passage",
+                "Comment fonctionne le système de grades ? ",
+                "Est ce qu'il y a des rattrapages ?",
+                "conditions de passage",
+                "Quelles sont les modalités pour passer a l'année supérieure, passer les rattrapages ?",
+                "Quelles sont les clauses de passage en année supérieure ? "
+            ],
+            "reponses": [
+                "Les notes ne sont pas chiffrées, mais nous donnons des lettres qui définnissent la réussite d'une unité. Pour passer il faut avoir entre E et A dans toutes les unités. Si certaines de nos notes sont en dessous, soit F soit Fx, il est possible de passer aux rattrapages ou de compenser avec des notes hautes, selon un système de compensation qui sera détaillé à la rentrée."
+            ]
+        },
+        {
+            "balise": "handicap",
+            "categorie": "general",
+            "modeles": [
+                "handicap",
+                "handicapé",
+                "handicapés",
+                "L'école est-elle accessible pour les élèves en situation de handicap",
+                "L'école est-elle accessible pour les élèves handicapés",
+                "comment faire pour avoir des aménagements de scolarité quand on a un handicap ?",
+                "Quelle sont les aménagements handicape?"
+            ],
+            "reponses": [
+                " <a target='_blank' class='lien-reponse' href='https://www.esiee.fr/fr/espace-etudiants/relais-handicap'> Présentation de relais handicap</a>, se mettre en relation avec le référent handicap par mail :<a class='lien-reponse' href='mailto:murielle.rougier@esiee.fr'>murielle.rougier@esiee.fr</a>"
+            ]
+        },
+        {
+            "balise": "travail hors cours",
+            "categorie": "general",
+            "modeles": [
+                "bibliothèque",
+                "travail hors cours",
+                "Quand peut-on accéder à la bibliothèque?",
+                "Où puis-je travailler en dehors des cours ?",
+                "Comment peut on travailler",
+                "Existe t'il des salles de travail?"
+            ],
+            "reponses": [
+                "On peut travailler soit à la bibliothèque dans l'école, ou dans n'importe quelle salle sans cours de prévus. Pour des renseignements sur les salles vides il est possible de demander à notre CPE de filière, ou de consulter l'emploi du temps général sur le site de l'ESIEE."
+            ]
+        },
+        {
+            "balise": "double diplôme",
+            "categorie": "general",
+            "modeles": [
+                "double diplome",
+                "double diplôme",
+                "Possibilité de double diplôme pour les alternants ?",
+                "Comment fonctionnent les double diplômes ?"
+            ],
+            "reponses": [
+                "Il existe des possibilités de double diplôme à l'étranger pour tous les élèves qui le souhaitent, y compris les alternants.<a target='_blank' class='lien-reponse' href='https://www.esiee.fr/fr/international/etudier-a-letranger'>Plus d'infos sur les possibilités de doubles diplômes</a>."
+            ]
+        },
+        {
+            "balise": "ouverture de l'école",
+            "categorie": "general",
+            "modeles": [
+                "ouverture de l'école",
+                "Quelles sont les horaires d'ouverture de l'école ?",
+                "L'école reste-t-elle ouverte une fois les cours finis ?",
+                "Est-il possible d’accéder à l’école pendant les vacances ?",
+                "Quelles sont les horaires d'ouverture de l'école?"
+            ],
+            "reponses": [
+                "L'école reste ouverte, une fois les cours finis, jusqu'à 22h. L'accès est également possible le week-end et pendant les vacances, sous demande à l'administration."
+            ]
+        },
+        {
+            "balise": "matériel",
+            "categorie": "general",
+            "modeles": [
+                "matériel",
+                "materiel",
+                "Avons nous besoin d’avoir un ordinateur avec nous ?",
+                "Est-il indispensable d'emmener son ordinateur portable tous les jours?"
+            ],
+            "reponses": [
+                "Il n'est pas nécessaire d'amener un ordinateur personnel pour suivre les cours, l'école étant largement équipée en salles informatiques dont certaines sont en libre accès pour les élèves. Posséder un ordinateur portable et l'utiliser à l'école apporte néanmoins un confort supplémentaire non négligeable."
+            ]
+        },
+        {
+            "balise": "Langues",
+            "categorie": "general",
+            "modeles": [
+                "langue",
+                "Langues",
+                "Quel est le niveau de langue à valider pour obtenir son diplôme?",
+                "Comment sont organisés les cours d'anglais à l'ESIEE ?",
+                "Quel score faut ils obtenir au TOEIC pour obtenir le diplôme ?",
+                "Quel score faut-il obtenir au VOLTAIRE pour obtenir le diplôme ?"
+            ],
+            "reponses": [
+                "Pour valider son diplôme il faut valider le TOEIC (une certification de niveau) en anglais avec un score supérieur à 785. Plus d'informations seront fournies en cours d'anglais, dont le but est de donner aux élèves les clés de la communication en anglais à la fois dans la vie de tous les jours et pour leur future vie professionnelle. Il est également nécessaire de valider le Voltaire, une certification en orthographe en français, avec une maîtrise supérieure à 75%."
+            ]
+        },
+        {
+            "balise": "Répartition élève Post bac",
+            "categorie": "Post_bac",
+            "modeles": [
+                "répartition élève",
+                "Répartition élève Post bac",
+                "Combien y a-t-il d'élèves par classe",
+                "Combien y a-t-il d'élèves par promo",
+                "Comment se fait la répartition des classes"
+            ],
+            "reponses": [
+                "Pour les promotions de premier cycle (E1 et E2), chaque promotion compte environ 300 élèves."
+            ]
+        },
+        {
+            "balise": "Répartition élève CPGE",
+            "categorie": "CPGE",
+            "modeles": [
+                "répartition élève",
+                "Répartition élève CPGE",
+                "Combien y a-t-il d'élèves par classe ",
+                "Combien y a-t-il d'élèves par promo",
+                "Comment se fait la répartition des classes"
+            ],
+            "reponses": [
+                "Pour les promotions de cycle ingénieur (E3, E4 et E5), chaque promotion compte environ 500 élèves, avec les alternants. Parmi eux, environ 200 élèves sont issus de CPGE pour chaque promotion."
+            ]
+        },
+        {
+            "balise": "Répartition élève DUT",
+            "categorie": "DUT",
+            "modeles": [
+                "répartition élève",
+                "Répartition élève DUT",
+                "Combien y a-t-il d'élèves par classe ",
+                "Combien y a-t-il d'élèves par promo",
+                "Comment se fait la répartition des classes"
+            ],
+            "reponses": [
+                "Pour les promotions de cycle ingénieur (E3, E4 et E5), chaque promotion compte environ 500 élèves, avec les alternants. Parmi eux, environ 70 élèves sont issus de Licence, DUT ou BTS pour chaque promotion."
+            ]
+        },
+        {
+            "balise": "Transports",
+            "categorie": "general",
+            "modeles": [
+                "Transports",
+                "Il y a t-il un parc à vélo ?",
+                " Où puis-je me garer ?",
+                "Puis-je venir en voiture ?",
+                "Comment venir à l'ESIEE en transport ?",
+                "Quels transport environnant ?"
+            ],
+            "reponses": [
+                "L'école possède un parking, vélo et voiture, il faudra demander l'accès au début d'année. L'école est aussi à 5 min de la gare de RER A noisy-champs."
+            ]
+        },
+        {
+            "balise": "Echanges internationnaux",
+            "categorie": "general",
+            "modeles": [
+                "Echanges internationnaux",
+                "étranger",
+                "international",
+                "départ à l'étranger",
+                "quand peut-on partir à l'étranger",
+                "L'école aide-t-elle pour trouver un logement à l'étranger ?",
+                "Quelles sont les universités partenaires de l'école?",
+                "Quelles sont les destinations proposées pour l'international ?",
+                "En quelle année pouvons nous partir à l’etranger?"
+            ],
+            "reponses": [
+                "Un départ à l'étranger d'une durée minimale de 3 mois est nécessaire pour valider le diplôme d'ingénieur. Celui-ci peut être effectué en E4 ou en E5, l'école disposant un large panel de partenariats avec des universités réparties dans le monde. Il est également possible d'y effectuer un double-diplôme, l'échange se faisant alors sur une année complète.<a target='_blank' class='liens-réponses' href='https://www.esiee.fr/fr/international/etudier-a-letranger'>Les échanges internationaux</a>."
+            ]
+        },
+        {
+            "balise": "Stages",
+            "categorie": "home",
+            "modeles": [
+                "stages",
+                "stage",
+                "effectuer un stage",
+                "stage à effectuer",
+                "durée d'un stage",
+                "comment fonctionnent les stages",
+                "combien de temps dure un stage",
+                "quand doit-on effectuer un stage",
+                "Quels sont les stages a effectuer",
+                "Combien de stage devons nous faire et quelles sont leur durée ? ",
+                "Combien de stages doivent être effectué ?",
+                "Avons nous beaucoup de stages lors de notre cursus à l'ESIEE ?",
+                "Combien de stage dois-je faire ? ",
+                "Le stage doit-il est orienté informatique ou ingénierie ?",
+                "Y'a-t-il des stages en première année ? ",
+                "Quand est ce qu’on va pouvoir partir en stage? "
+            ],
+            "reponses": [
+                "Certaines périodes dans la scolarité sont réservées aux stages. Pour plus d'informations, veuillez sélectionner un onglet de provenance et reposer votre question."
+            ]
+        },
+        {
+            "balise": "Stages CPGE",
+            "categorie": "CPGE",
+            "modeles": [
+                "stage",
+                "Stages CPGE",
+                "stages",
+                "effectuer un stage",
+                "stage à effectuer",
+                "durée d'un stage",
+                "comment fonctionnent les stages",
+                "combien de temps dure un stage",
+                "quand doit-on effectuer un stage",
+                "Quels sont les stages a effectuer",
+                "Combien de stage devons nous faire et quelles sont leur durée ? ",
+                "Combien de stages doivent être effectué ?",
+                "Avons nous beaucoup de stages lors de notre cursus à l'ESIEE ?",
+                "Combien de stage dois-je faire ? ",
+                "Le stage doit-il est orienté informatique ou ingénierie ?",
+                "Y'a-t-il des stages en première année ? ",
+                "Quand est ce qu’on va pouvoir partir en stage? "
+            ],
+            "reponses": [
+                "Certaines périodes dans la scolarité sont réservées aux stages. Les élèves de E5 doivent obligatoirement valider un stage de 6 mois lors de leur dernier semestre de E5. Un autre stage d'une durée de 3 mois est également prévue pour les E4 à la fin de l'année, mais celui-ci peut être remplacé par un départ à l'étranger."
+            ]
+        },
+        {
+            "balise": "Stages DUT",
+            "categorie": "DUT",
+            "modeles": [
+                "stage",
+                "stages",
+                "Stages DUT",
+                "effectuer un stage",
+                "stage à effectuer",
+                "durée d'un stage",
+                "comment fonctionnent les stages",
+                "combien de temps dure un stage",
+                "quand doit-on effectuer un stage",
+                "Quels sont les stages a effectuer",
+                "Combien de stage devons nous faire et quelles sont leur durée ? ",
+                "Combien de stages doivent être effectué ?",
+                "Avons nous beaucoup de stages lors de notre cursus à l'ESIEE ?",
+                "Combien de stage dois-je faire ? ",
+                "Le stage doit-il est orienté informatique ou ingénierie ?",
+                "Y'a-t-il des stages en première année ? ",
+                "Quand est ce qu’on va pouvoir partir en stage? "
+            ],
+            "reponses": [
+                "Certaines périodes dans la scolarité sont réservées aux stages. Les élèves de E5 doivent obligatoirement valider un stage de 6 mois lors de leur dernier semestre de E5. Un autre stage d'une durée de 3 mois est également prévue pour les E4 à la fin de l'année, mais celui-ci peut être remplacé par un départ à l'étranger."
+            ]
+        },
+        {
+            "balise": "Stages Post-bac",
+            "categorie": "Post_bac",
+            "modeles": [
+                "stage",
+                "Stages Post-bac",
+                "stages",
+                "effectuer un stage",
+                "stage à effectuer",
+                "durée d'un stage",
+                "comment fonctionnent les stages",
+                "combien de temps dure un stage",
+                "quand doit-on effectuer un stage",
+                "Quels sont les stages a effectuer",
+                "Combien de stage devons nous faire et quelles sont leur durée ? ",
+                "Combien de stages doivent être effectué ?",
+                "Avons nous beaucoup de stages lors de notre cursus à l'ESIEE ?",
+                "Combien de stage dois-je faire ? ",
+                "Le stage doit-il est orienté informatique ou ingénierie ?",
+                "Y'a-t-il des stages en première année ? ",
+                "Quand est ce qu’on va pouvoir partir en stage? "
+            ],
+            "reponses": [
+                "Certaines périodes dans la scolarité sont réservées aux stages. En ce qui concerne les élèves de premier cycle, les E1 ont un stage de découverte du monde de l'entreprise d'une durée d'un mois, et les élèves issus de premier cycle doivent effectuer un stage d'une durée de 2 mois lors de leur rentrée en E3. Ils sont ensuite soumis aux même stages que les autres, c'est-à-dire un stage de 3 mois en fin de E4 (pouvant être remplacé par un semestre à l'étranger), et un stage de fin d'études de 6 mois en E5."
+            ]
+        },
+        {
+            "balise": "COVID",
+            "categorie": "general",
+            "modeles": [
+                "covid",
+                "COVID",
+                "coronavirus",
+                "covid-19",
+                "cours à distance",
+                "distanciation sociale",
+                "quarantaine",
+                "pandémie",
+                "Will the school be fully open for all by September 2020 intake ",
+                "L'école sera t-elle ouverte à la rentrée 2020"
+            ],
+            "reponses": [
+                "La récente pandémie a poussé l'école à prendre des mesures pour assurer la sécurité sanitaire de chacun. Lors de la rentrée 2020, les élèves n'auront que 2 jours par semaine de cours en présentiel (afin de limiter le nombre d'élèves présents simultanément dans l'école), le reste des cours étant réalisé à distance. Si un élève de l'école présente des symptômes, il lui est demandé de contacter l'administration dans les plus brefs délais."
+            ]
+        },
+        {
+            "balise": "absences",
+            "categorie": "general",
+            "modeles": [
+                "absences",
+                "absence",
+                "On est obligés d'aller à tous les cours",
+                "On est obligé de suivre tous les cours",
+                "cours facultatifs",
+                "Comment sont gérés les absences"
+            ],
+            "reponses": [
+                "Tous les cours auxquels vous êtes inscrits sont obligatoires. Seuls les cours en post-assistance ou en RESA ne sont pas obligatoires, mais conseillés. Si trop d'absences injustifiées sont notées, cela peut entraîner le retrait des bourses pour l'année en cours voire au refus de passage."
+            ]
+        },
+        {
+            "balise": "rentrée",
+            "categorie": "home",
+            "modeles": [
+                "C'est quand qu'on rentre en cours",
+                "Qu'elle la date de la rentrée des classes",
+                "Quand commence les cours",
+                "Quel est le jour et l'heure de la rentrée",
+                "rentrée"
+            ],
+            "reponses": [
+                "La rentrée des classes dépend de ta provenance, choisis d'abord une des catégories en haut de page."
+            ]
+        },
+        {
+            "balise": "rentrée Post Bac",
+            "categorie": "Post_bac",
+            "modeles": [
+                "rentrée Post Bac",
+                "C'est quand qu'on rentre en cours",
+                "Qu'elle la date de la rentrée des classes",
+                "Quand commence les cours",
+                "Quel est le jour et l'heure de la rentrée",
+                "rentrée"
+            ],
+            "reponses": [
+                "La rentrée a lieu le 1er septembre. L'heure vous sera communiquée ultérieurement."
+            ]
+        },
+        {
+            "balise": "rentrée DUT",
+            "categorie": "DUT",
+            "modeles": [
+                "rentrée DUT",
+                "C'est quand qu'on rentre en cours",
+                "Qu'elle la date de la rentrée des classes",
+                "Quand commence les cours",
+                "Quel est le jour et l'heure de la rentrée",
+                "rentrée"
+            ],
+            "reponses": [
+                "La rentrée a lieu le 2 semptembre. L'heure vous sera communiquée ultérieurement."
+            ]
+        },
+        {
+            "balise": "rentrée CPGE",
+            "categorie": "CPGE",
+            "modeles": [
+                "rentrée CPGE",
+                "C'est quand qu'on rentre en cours",
+                "Qu'elle la date de la rentrée des classes",
+                "Quand commence les cours",
+                "Quel est le jour et l'heure de la rentrée",
+                "rentrée"
+            ],
+            "reponses": [
+                "La rentrée a lieu le 2 semptembre. L'heure vous sera communiquée ultérieurement."
+            ]
+        },
+        {
+            "balise": "emploi / taux d'insertion",
+            "categorie": "general",
+            "modeles": [
+                "emploi / taux d'insertion",
+                "salaire",
+                "salaire à la sortie",
+                "insertion",
+                "taux d'insertion",
+                "quel salaire a-t-on en sortie d'école",
+                "trouve-t-on rapidement du travail en sortie d'école"
+            ],
+            "reponses": [
+                "Toutes ces informations peuvent être trouvées ici : <a target='_blank' class='liens-réponses' href='https://www.esiee.fr/fr/formations/ingenieur/emplois-et-salaires'> Emplois et salaires </a>."
+            ]
+        },
+        {
+            "balise": "ambiance de travail Post-bac",
+            "categorie": "Post-bac",
+            "modeles": [
+                "ambiance de travail Post-bac",
+                "quelle est l'ambiance de travail",
+                "quelle différence avec la prépa",
+                "quelle différence d'ambiance par rapport au lycée",
+                "quelle différence par rapport à la prépa",
+                "quelle différences par rapport à la prépa",
+                "comment est l'ambiance de travail",
+                "ambiance de travail",
+                "ambiance de classe"
+            ],
+            "reponses": [
+                "L'ambiance de travail est à mi-chemin entre la prépa et la fac : d'un côté le travail demandé en prépa intégrée est conséquent, mais de l'autre il n'y a pas la pression des concours comme en prépa donc l'atmosphère est généralement plus détendue. Également, comme la promo est conséquente il est plus difficile d'avoir un esprit de classe comme en prépa."
+            ]
+        },
+        {
+            "balise": "ambiance de travail CPGE",
+            "categorie": "CPGE",
+            "modeles": [
+                "ambiance de travail CPGE",
+                "quelle est l'ambiance de travail",
+                "quelle différence avec la prépa",
+                "quelle différence par rapport à la prépa",
+                "quelle différences par rapport à la prépa",
+                "comment est l'ambiance de travail",
+                "ambiance de travail",
+                "ambiance de classe"
+            ],
+            "reponses": [
+                "L'ambiance de travail change complètement par rapport à la prépa ! Plus question de concours et presque plus de questions de classement (il y a l'international qu'il faut départager quand même). Comme la promo est conséquente en revanche il y a moins une ambiance de classe comme on peut parfois avoir en prépa, mais avoir des potes est très facile avec les soirées et les clubs."
+            ]
+        },
+        {
+            "balise": "ambiance de travail DUT",
+            "categorie": "DUT",
+            "modeles": [
+                "ambiance de travail DUT",
+                "quelle est l'ambiance de travail",
+                "ambiance de classe",
+                "ambiance de travail",
+                "quelle différence au DUT",
+                "quelle différence par rapport au DUT",
+                "quelle différences par rapport au DUT",
+                "quelle différence au BTS",
+                "quelle différence par rapport au BTS",
+                "quelle différences par rapport au BTS",
+                "quelle différence à la fac",
+                "quelle différence par rapport à la fac",
+                "quelle différences par rapport à la fac"
+            ],
+            "reponses": [
+                "L'ambiance de travail se rapproche de ce qui se fait en fac avec des cours en amphi et des TD. La présence des clubs et des organisations de soirées renforce fortement l'ambiance de promo et il te sera facile de te faire une tonne de potes !"
+            ]
+        }
+    ]
+}

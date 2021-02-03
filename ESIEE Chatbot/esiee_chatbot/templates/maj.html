@@ -1,0 +1,130 @@
+{% block doc -%}
+<!DOCTYPE html>
+<html{% block html_attribs %}{% endblock html_attribs %}>
+  {%- block html %}
+
+  <head>
+    <!-- Metas donnant les informations sur le site-->
+    {%- block metas %}
+    <!-- -->
+    <meta charset="utf-8">
+    <!-- -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- -->
+    <meta name="description" content="Chatbot de l'école d'ingénieur ESIEE Paris">
+    <!-- -->
+    <meta name="keywords" content="ESIEE Paris, Questions, Ask, Chatbot, Admissions">
+    <!-- -->
+    <meta name="author"
+      content="Nicolas AUBRY, Jason GAVALDA, Pierre JANNOT, Corentin AMARGER, Clément BRILLET, Lorenzo PINAUD">
+    <!-- -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {%- endblock metas %}
+
+    {%- block head %}
+
+    <!-- if permettant de définir le titre de la page -->
+    {% if title %}
+
+    <title>ESIEEbot - {{title}}</title>
+
+    {% else %}
+
+    <title>ESIEEbot</title>
+
+    {% endif %}
+
+    {%- block styles %}
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}" crossorigin="anonymous">
+    <link href="{{bootstrap_find_resource('css/bootstrap.css', cdn='bootstrap')}}" rel="stylesheet">
+    <link href="{{bootstrap_find_resource('css/fontawesome-all.css', cdn='bootstrap')}}" rel="stylesheet">
+    {%- endblock styles %}
+    {%- endblock head %}
+  </head>
+  <body{% block body_attribs %}{% endblock body_attribs %}>
+    {% block body -%}
+
+    <!-- Partie haute de la page-->
+    <div class="container-fluid bg-esiee-color">
+      <div class="row">
+        <!-- Logo ESIEE Paris (responsive avec des limites de taille) avec lien vers le site principal de L'ESIEE-->
+        <div class="col-2 p-0">
+          <a href="https://www.esiee.fr/" target="_blank">
+            <img src="./../static/images/esiee_logo.png" class="float-left esiee-img img-fluid" alt="Responsive image">
+          </a>
+        </div>
+        <div class="col-8 bg-gradient-light">
+          <nav class="navbar navbar-expand-md navbar-dark">
+            <!-- Bouton déroulant les onglets en cas d'utilisation sur une petite fenêtre-->
+            <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar contenant les liens vers les différents onglets de mise a jour du json-->
+            <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+              <div class="navbar-nav">
+                <!-- Les liens, qui font partie de la navbar, vers les différents onglets de mise a jour du json -->
+                {% block navbar %} {% endblock %}
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- Logo UGE avec lien vers le site de l'Université Gustave Eiffel-->
+        <div class="col-2 p-0">
+          <a href="https://www.univ-gustave-eiffel.fr/" target="_blank">
+            <img src="./../static/images/uge_logo.png" class="float-right uge-img img-fluid" alt="Responsive image">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partie formulaire de la page-->
+    <div class="container-fluid mt-3">
+      <form class="needs-validation" method='POST' novalidate>
+
+        {% block form %} {% endblock %}
+
+        <!-- Bouton de validation qui va soumettre le formulaire -->
+        <button type="submit" class="btn btn-success" name="Bouton">Valider</button>
+
+      </form>
+
+      <script>
+        // Javascript qui désactive la soumission du formulaire si il y a un champs est invalide
+        (function () {
+          'use strict';
+          window.addEventListener('load', function () {
+            //Selectionne tous les formulaires auquel on veut appliquer la modification de style
+            var forms = document.getElementsByClassName('needs-validation');
+            //Boucle sur eux et empeche la soumission si un champs est invalide
+            var validation = Array.prototype.filter.call(forms, function (form) {
+              form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+      </script>
+
+    </div>
+
+    {% block content -%}
+    {%- endblock content %}
+
+    <!-- Scripts Bootstrap-->
+    {% block scripts %}
+    <script src="{{bootstrap_find_resource('jquery.js', cdn='jquery')}}"></script>
+    <script src="{{bootstrap_find_resource('umd/popper.js', cdn='popper')}}"></script>
+    <script src="{{bootstrap_find_resource('js/bootstrap.js', cdn='bootstrap')}}"></script>
+    {%- endblock scripts %}
+    {%- endblock body %}
+    </body>
+    {%- endblock html %}
+
+    </html>
+    {% endblock doc -%}
