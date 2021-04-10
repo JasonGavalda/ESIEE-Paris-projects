@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RDVManager</string>
+    <string name="AddRDVButton">Créer un RDV</string>
+    <string name="tvDate">Date :</string>
+    <string name="tvTime">Heure :</string>
+    <string name="btnPickTime">Sélectionner une heure</string>
+    <string name="tvTitle">Titre :</string>
+    <string name="tvCreator">Editer un RDV</string>
+    <string name="btnPickDate">Sélectionner une date</string>
+    <string name="tvContact">Contact :</string>
+    <string name="tvPhone">Téléphone :</string>
+    <string name="tvAddress">Adresse :</string>
+    <string name="btnSave">Sauvegarder</string>
+    <string name="etTitle">Titre</string>
+    <string name="etDate">Date</string>
+    <string name="etTime">Heure</string>
+    <string name="etAddress">Adresse</string>
+    <string name="etContact">Contact</string>
+    <string name="etPhone">N° de téléphone</string>
+    <string name="btnCancel">Annuler</string>
+    <string name="tvEmpty">Pas de RDVs !</string>
+    <string name="btnPickAddress">Ouvrir Maps</string>
+    <string name="btnCall">Appeler</string>
+</resources>

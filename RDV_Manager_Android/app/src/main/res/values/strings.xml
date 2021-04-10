@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">RDVManager</string>
+    <string name="AddRDVButton">Create a new appointment</string>
+    <string name="tvDate">Date :</string>
+    <string name="tvTime">Time :</string>
+    <string name="btnPickTime">Pick a Time</string>
+    <string name="tvTitle">Title :</string>
+    <string name="tvCreator">Edit a RDV</string>
+    <string name="btnPickDate">Pick a Date</string>
+    <string name="tvContact">Contact :</string>
+    <string name="tvPhone">Phone :</string>
+    <string name="btnSave">Save</string>
+    <string name="etTitle">Title</string>
+    <string name="etDate">Date</string>
+    <string name="etTime">Time</string>
+    <string name="etAddress">Address</string>
+    <string name="etContact">Contact</string>
+    <string name="etPhone">Phone Number</string>
+    <string name="btnCancel">Cancel</string>
+    <string name="tvEmpty">RDV list empty !</string>
+    <string name="tvAddress">Address :</string>
+    <string name="btnPickAddress">Open Maps</string>
+    <string name="rdv_id" />
+    <string name="btnCall">Call</string>
+</resources>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/etTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:labelFor="@+id/etTitle"
+                android:text="@string/etTitle" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/etDate"
+                android:layout_width="152dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="0dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:inputType="date"
+                android:labelFor="@+id/etDate"
+                android:text="@string/etDate"
+                app:layout_constraintStart_toStartOf="@+id/etAddress"
+                app:layout_constraintTop_toBottomOf="@+id/etTitle" />
+
+            <Button
+                android:id="@+id/btnPickDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="0dp"
+                android:onClick="pickDate"
+                android:text="@string/btnPickDate"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/etDate" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/etTime"
+                android:layout_width="152dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:inputType="time"
+                android:labelFor="@+id/etTime"
+                android:text="@string/etTime"
+                app:layout_constraintStart_toStartOf="@+id/etAddress"
+                app:layout_constraintTop_toBottomOf="@+id/etDate" />
+
+            <Button
+                android:id="@+id/btnPickTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:onClick="pickTime"
+                android:text="@string/btnPickTime"
+                app:layout_constraintStart_toEndOf="@+id/etTime" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="152dp"
+                android:layout_height="48dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:inputType="textPostalAddress"
+                android:labelFor="@+id/etAddress"
+                android:text="@string/etAddress"
+                app:layout_constraintEnd_toStartOf="@+id/btnPickAddress"
+                app:layout_constraintStart_toEndOf="@+id/tvAddress" />
+
+            <Button
+                android:id="@+id/btnPickAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:onClick="launchMaps"
+                android:text="@string/btnPickAddress"
+                app:layout_constraintStart_toEndOf="@+id/etAddress" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/etContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:labelFor="@+id/etContact"
+                android:text="@string/etContact" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:inputType="phone"
+                android:labelFor="@+id/etPhone"
+                android:text="@string/etPhone" />
+
+            <Button
+                android:id="@+id/btnCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:onClick="phoneCall"
+                android:text="@string/btnCall"
+                app:layout_constraintStart_toEndOf="@+id/etTime" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnSave"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="saveRDV"
+                android:text="@string/btnSave" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onCancelClick"
+                android:text="@string/btnCancel" />
+        </TableRow>
+
+    </TableLayout>
+</ScrollView>
