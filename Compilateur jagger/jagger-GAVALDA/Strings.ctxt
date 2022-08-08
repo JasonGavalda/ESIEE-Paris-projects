@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Strings
+comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ Strings\ ici.\r\n\r\n\ @author\ (votre\ nom)\r\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\r\n
+comment1.params=pS
+comment1.target=Strings(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getValue()
+comment3.params=v
+comment3.target=void\ accept(Visitor)
+numComments=4

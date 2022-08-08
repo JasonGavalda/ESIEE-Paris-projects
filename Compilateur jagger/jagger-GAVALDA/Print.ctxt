@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Print
+comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ Print\ ici.\r\n\r\n\ @author\ (votre\ nom)\r\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\r\n
+comment1.params=pExp
+comment1.target=Print(Expression)
+comment2.params=
+comment2.target=Expression\ getExpression()
+comment3.params=v
+comment3.target=void\ accept(Visitor)
+numComments=4

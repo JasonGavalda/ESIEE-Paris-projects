@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Scope
+comment1.params=
+comment1.target=Scope()
+comment10.params=v
+comment10.target=void\ accept(Visitor)
+comment2.params=pS
+comment2.target=Scope(Scope)
+comment3.params=
+comment3.target=Scope\ getParent()
+comment4.params=pSt
+comment4.target=void\ addStatement(Statement)
+comment5.params=
+comment5.target=java.util.ArrayList\ getStatements()
+comment6.params=pVar
+comment6.target=void\ addVariable(Variable)
+comment7.params=pName\ pValue
+comment7.target=void\ changeValue(java.lang.String,\ int)
+comment8.params=pName
+comment8.target=boolean\ isInScope(java.lang.String)
+comment9.params=pName
+comment9.target=Variable\ getVariable(java.lang.String)
+numComments=11

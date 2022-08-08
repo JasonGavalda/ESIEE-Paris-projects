@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Variable
+comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ Variable\ ici.\r\n\r\n\ @author\ (votre\ nom)\r\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\r\n
+comment1.params=pName
+comment1.target=Variable(java.lang.String)
+comment2.params=
+comment2.target=int\ getValue()
+comment3.params=pValue
+comment3.target=void\ setValue(int)
+comment4.params=
+comment4.target=java.lang.String\ getName()
+comment5.params=v
+comment5.target=void\ accept(Visitor)
+numComments=6

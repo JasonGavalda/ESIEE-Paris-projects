@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=TokenMgrError
+comment0.text=Token\ Manager\ Error.
+comment1.params=str
+comment1.target=java.lang.String\ addEscapes(java.lang.String)
+comment1.text=\r\n\ Replaces\ unprintable\ characters\ by\ their\ escaped\ (or\ unicode\ escaped)\r\n\ equivalents\ in\ the\ given\ string\r\n
+comment2.params=EOFSeen\ lexState\ errorLine\ errorColumn\ errorAfter\ curChar
+comment2.target=java.lang.String\ LexicalError(boolean,\ int,\ int,\ int,\ java.lang.String,\ char)
+comment2.text=\r\n\ Returns\ a\ detailed\ message\ for\ the\ Error\ when\ it\ is\ thrown\ by\ the\r\n\ token\ manager\ to\ indicate\ a\ lexical\ error.\r\n\ Parameters\ \:\ \r\n\ \ \ \ EOFSeen\ \ \ \ \ \:\ indicates\ if\ EOF\ caused\ the\ lexical\ error\r\n\ \ \ \ curLexState\ \:\ lexical\ state\ in\ which\ this\ error\ occurred\r\n\ \ \ \ errorLine\ \ \ \:\ line\ number\ when\ the\ error\ occurred\r\n\ \ \ \ errorColumn\ \:\ column\ number\ when\ the\ error\ occurred\r\n\ \ \ \ errorAfter\ \ \:\ prefix\ that\ was\ seen\ before\ this\ error\ occurred\r\n\ \ \ \ curchar\ \ \ \ \ \:\ the\ offending\ character\r\n\ Note\:\ You\ can\ customize\ the\ lexical\ error\ message\ by\ modifying\ this\ method.\r\n
+comment3.params=
+comment3.target=java.lang.String\ getMessage()
+comment3.text=\r\n\ You\ can\ also\ modify\ the\ body\ of\ this\ method\ to\ customize\ your\ error\ messages.\r\n\ For\ example,\ cases\ like\ LOOP_DETECTED\ and\ INVALID_LEXICAL_STATE\ are\ not\r\n\ of\ end-users\ concern,\ so\ you\ can\ return\ something\ like\ \:\ \r\n\r\n\ \ \ \ \ "Internal\ Error\ \:\ Please\ file\ a\ bug\ report\ ....\ "\r\n\r\n\ from\ this\ method\ for\ such\ cases\ in\ the\ release\ version\ of\ your\ parser.\r\n
+comment4.params=
+comment4.target=TokenMgrError()
+comment4.text=No\ arg\ constructor.
+comment5.params=message\ reason
+comment5.target=TokenMgrError(java.lang.String,\ int)
+comment5.text=Constructor\ with\ message\ and\ reason.
+comment6.params=EOFSeen\ lexState\ errorLine\ errorColumn\ errorAfter\ curChar\ reason
+comment6.target=TokenMgrError(boolean,\ int,\ int,\ int,\ java.lang.String,\ char,\ int)
+comment6.text=Full\ Constructor.
+numComments=7

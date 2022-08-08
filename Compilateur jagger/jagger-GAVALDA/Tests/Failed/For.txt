@@ -1,0 +1,5 @@
+let var i := 1
+in
+  for i := 2 to 3 do print(i),
+  print(i)
+end

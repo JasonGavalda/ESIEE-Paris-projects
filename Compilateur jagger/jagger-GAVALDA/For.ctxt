@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=For
+comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ For\ ici.\r\n\r\n\ @author\ (votre\ nom)\r\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\r\n
+comment1.params=pAssign\ pTo\ pDo
+comment1.target=For(Statement,\ Expression,\ Statement)
+comment2.params=
+comment2.target=Statement\ getAssign()
+comment3.params=
+comment3.target=Expression\ getTo()
+comment4.params=
+comment4.target=Statement\ getDo()
+comment5.params=v
+comment5.target=void\ accept(Visitor)
+numComments=6

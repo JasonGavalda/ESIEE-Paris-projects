@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=ifThenElse
+comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ ifThenElse\ ici.\r\n\r\n\ @author\ (votre\ nom)\r\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\r\n
+comment1.params=pCond\ pThen\ pElse
+comment1.target=ifThenElse(Expression,\ Statement,\ Statement)
+comment2.params=
+comment2.target=Expression\ getCond()
+comment3.params=
+comment3.target=Statement\ getThen()
+comment4.params=
+comment4.target=Statement\ getElse()
+comment5.params=v
+comment5.target=void\ accept(Visitor)
+numComments=6

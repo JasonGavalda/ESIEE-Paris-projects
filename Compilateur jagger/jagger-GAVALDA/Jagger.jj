@@ -1,0 +1,158 @@
+// Options for JavaCC.
+options { LOOKAHEAD=2; FORCE_LA_CHECK=true; }
+
+
+// Fonction principale
+PARSER_BEGIN(Jagger)
+
+public class Jagger
+{
+    public static void main(String args[]) throws ParseException {
+        Jagger parser = new Jagger(System.in);
+        parser.mainloop();
+    }
+}
+PARSER_END(Jagger)
+
+// Characters to ignore.
+SKIP: { " " | "\r" | "\t"}
+
+// Token specifications.
+TOKEN:
+{
+    < NUMBER: (<DIGIT>)+>  // A integer number.
+|   < DIGIT: ["0"-"9"] >                      // A decimal digit.
+|   < TYPE: "int" | "float" | "void">
+
+|   < EOL: "\n" >                             // End of line.
+
+|   < IN : "in">
+|   < END : "end">
+|   < LET : "let">
+|   < VARIABLE : "var">
+|   < PRINT : "print" >
+|   < IF    : "if"  >
+|   < THEN  : "then" >
+|   < ELSE  : "else" >
+|   < WHILE : "while" >
+|   < FOR : "for" >
+|   < TO : "to" >
+|   < DO : "do" >
+
+|   < LPAR : "(" >
+|   < RPAR : ")" >
+|   < COPEN: "{">
+|   < CEND: "}">
+|   <EQ: "=">
+|   <ENDL: ";">
+|   <COMMA: ",">
+|   <COLON: ":">
+|   < ID: (["a"-"z"]|["A"-"Z"])+ >
+|   < STRING: "\"" ((~["\n", "\r", "\""])*)? "\"" > 
+}
+
+void mainloop():
+
+{ Statement a; }
+{
+    {Scope s = new Scope();}
+    (
+        a=statement(s) <EOL> {
+        Evaluator EV = new Evaluator(s);
+        TypeChecker TC = new TypeChecker();
+        PrettyPrinter PP = new PrettyPrinter();
+        
+        TC.visit(a);
+        EV.visit(a);
+        PP.visit(a);
+
+        System.out.println("Type: " + TC.aType);
+        PP.visit(a);
+        System.out.println(PP.aString);
+        System.out.println("=> "+EV.aString);
+      }
+
+    )*
+    <EOF>
+}
+
+Statement statement(Scope s):
+{Statement a, b; Expression e; Token t; Scope parent = s;}
+{   
+    (
+        <LET> (<EOL>)?{s = new Scope(parent);}
+        (
+             <VARIABLE> t=<ID> <COLON><EQ> e=expression(s) {return new Initialization(new ID(t.toString()), e, parent);}
+        )*
+        <IN>
+            a=statement(s) {s.addStatement(a);}
+            (<COMMA> a=statement(s)  {s.addStatement(a);})*
+
+        <END>  {return s;}
+    )   
+    | <VARIABLE> t=<ID> <COLON><EQ> e=expression(s) {return new Initialization(new ID(t.toString()), e, s);}
+    | t=<ID> <COLON><EQ> e=expression(s)  {return new Assign(new Variable(t.toString()), e);}      
+    | e = expression(s){return e;}
+    | <WHILE> e=expression(s) <DO> (<EOL>)? b=statement(s) {return new WhileDo(e, b);}
+    | <FOR> a=statement(s) <TO> e=expression(s) <DO> b=statement(s) {return new For(a, e, b);}
+    | <PRINT> <LPAR> e=expression(s) <RPAR> {return new Print(e);}
+    | <IF> (<IF>)* e=expression(s) <THEN> a=statement(s) <ELSE> b=statement(s) (ThenElse(e, s))* {return new ifThenElse(e, a, b);}
+}
+
+Statement ThenElse(Expression e, Scope s):
+{Statement a, b;}
+{
+    <THEN> a=statement(s) <ELSE> b=statement(s) {return new ifThenElse(e, a, b);}
+}
+
+Expression expression(Scope s):
+{ Expression op1, op2, out;}
+{
+    op1 = arithmetic(s) {out = op1; }
+    (
+        "<" op2=arithmetic(s) { out = new BoolBinOp(op1, op2, "<");}
+    |   ">" op2=arithmetic(s) { out = new BoolBinOp(op1, op2, ">");}
+    |   "<=" op2=arithmetic(s) { out = new BoolBinOp(op1, op2, "<=");}
+    |   ">=" op2=arithmetic(s) { out = new BoolBinOp(op1, op2, ">=");}
+    |   "=" op2=arithmetic(s) { out = new BoolBinOp(op1, op2, "=");}
+    |   "<>" op2=arithmetic(s) { out = new BoolBinOp(op1, op2, "<>");}
+    )?{ return out; }
+}
+
+Expression arithmetic(Scope s):
+{Expression op1, op2;}
+{
+    op1 = term(s)
+    (
+        "+" op2=term(s) { op1 = new BinOp(op1, op2, "+"); }
+    |   "-" op2=term(s) { op1 = new BinOp(op1, op2, "-"); }
+
+    )* {return op1; }
+}
+
+// Term.
+// T -> F ('*'F | '/'F)*
+Expression term(Scope s):
+{ Expression op1, op2; }
+{
+    op1 = factor(s)
+    (
+        "*" op2=factor(s) { op1 = new BinOp(op1, op2, "*"); }
+    |   "/" op2=factor(s) { op1 = new BinOp(op1, op2, "/"); }
+
+    )* {return op1; }
+}
+
+// Factor of an expression.
+// F -> <NUMBER> | "(" E ")"
+Expression factor(Scope s):
+{ Token t; Expression exp; }
+{
+      t=<NUMBER> { return new Number(Integer.parseInt(t.toString())); }
+      | t=<STRING> { return new Strings(t.toString());}
+      | t=<ID> { return s.getVariable(t.toString());}
+      |"+" t=<NUMBER> { return new UnOp(new Number(Integer.parseInt(t.toString())), "+");}
+      |"-" t=<NUMBER> { return new UnOp(new Number(Integer.parseInt(t.toString())), "-");}
+      | "(" exp=expression(s) ")" { return exp; }
+}
+

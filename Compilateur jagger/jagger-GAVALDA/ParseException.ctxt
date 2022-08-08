@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=ParseException
+comment0.text=\r\n\ This\ exception\ is\ thrown\ when\ parse\ errors\ are\ encountered.\r\n\ You\ can\ explicitly\ create\ objects\ of\ this\ exception\ type\ by\r\n\ calling\ the\ method\ generateParseException\ in\ the\ generated\r\n\ parser.\r\n\r\n\ You\ can\ modify\ this\ class\ to\ customize\ your\ error\ reporting\r\n\ mechanisms\ so\ long\ as\ you\ retain\ the\ public\ fields.\r\n
+comment1.params=currentTokenVal\ expectedTokenSequencesVal\ tokenImageVal
+comment1.target=ParseException(Token,\ int[][],\ java.lang.String[])
+comment1.text=\r\n\ This\ constructor\ is\ used\ by\ the\ method\ "generateParseException"\r\n\ in\ the\ generated\ parser.\ \ Calling\ this\ constructor\ generates\r\n\ a\ new\ object\ of\ this\ type\ with\ the\ fields\ "currentToken",\r\n\ "expectedTokenSequences",\ and\ "tokenImage"\ set.\ \ The\ boolean\r\n\ flag\ "specialConstructor"\ is\ also\ set\ to\ true\ to\ indicate\ that\r\n\ this\ constructor\ was\ used\ to\ create\ this\ object.\r\n\ This\ constructor\ calls\ its\ super\ class\ with\ the\ empty\ string\r\n\ to\ force\ the\ "toString"\ method\ of\ parent\ class\ "Throwable"\ to\r\n\ print\ the\ error\ message\ in\ the\ form\:\r\n\ \ \ \ \ ParseException\:\ <result\ of\ getMessage>\r\n
+comment2.params=
+comment2.target=ParseException()
+comment2.text=\r\n\ The\ following\ constructors\ are\ for\ use\ by\ you\ for\ whatever\r\n\ purpose\ you\ can\ think\ of.\ \ Constructing\ the\ exception\ in\ this\r\n\ manner\ makes\ the\ exception\ behave\ in\ the\ normal\ way\ -\ i.e.,\ as\r\n\ documented\ in\ the\ class\ "Throwable".\ \ The\ fields\ "errorToken",\r\n\ "expectedTokenSequences",\ and\ "tokenImage"\ do\ not\ contain\r\n\ relevant\ information.\ \ The\ JavaCC\ generated\ code\ does\ not\ use\r\n\ these\ constructors.\r\n
+comment3.params=message
+comment3.target=ParseException(java.lang.String)
+comment3.text=Constructor\ with\ message.
+comment4.params=
+comment4.target=java.lang.String\ getMessage()
+comment4.text=\r\n\ This\ method\ has\ the\ standard\ behavior\ when\ this\ object\ has\ been\r\n\ created\ using\ the\ standard\ constructors.\ \ Otherwise,\ it\ uses\r\n\ "currentToken"\ and\ "expectedTokenSequences"\ to\ generate\ a\ parse\r\n\ error\ message\ and\ returns\ it.\ \ If\ this\ object\ has\ been\ created\r\n\ due\ to\ a\ parse\ error,\ and\ you\ do\ not\ catch\ it\ (it\ gets\ thrown\r\n\ from\ the\ parser),\ then\ this\ method\ is\ called\ during\ the\ printing\r\n\ of\ the\ final\ stack\ trace,\ and\ hence\ the\ correct\ error\ message\r\n\ gets\ displayed.\r\n
+comment5.params=str
+comment5.target=java.lang.String\ add_escapes(java.lang.String)
+comment5.text=\r\n\ Used\ to\ convert\ raw\ characters\ to\ their\ escaped\ version\r\n\ when\ these\ raw\ version\ cannot\ be\ used\ as\ part\ of\ an\ ASCII\r\n\ string\ literal.\r\n
+numComments=6

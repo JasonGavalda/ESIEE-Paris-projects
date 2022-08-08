@@ -1,0 +1,9 @@
+let var i := 10
+in
+  print(i),
+  let var i := i * i
+  in
+    print(i)
+  end,
+  print(i)
+end

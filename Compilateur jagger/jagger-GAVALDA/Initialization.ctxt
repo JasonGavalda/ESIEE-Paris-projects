@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Initialization
+comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ Initialization\ ici.\r\n\r\n\ @author\ (votre\ nom)\r\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\r\n
+comment1.params=pVar\ pExp\ pS
+comment1.target=Initialization(ID,\ Expression,\ Scope)
+comment2.params=
+comment2.target=ID\ getID()
+comment3.params=
+comment3.target=Expression\ getExpression()
+comment4.params=
+comment4.target=Scope\ getScope()
+comment5.params=v
+comment5.target=void\ accept(Visitor)
+numComments=6

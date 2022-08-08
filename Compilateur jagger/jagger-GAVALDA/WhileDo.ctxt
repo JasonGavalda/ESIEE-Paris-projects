@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=WhileDo
+comment1.params=pCond\ pDo
+comment1.target=WhileDo(Expression,\ Statement)
+comment2.params=
+comment2.target=Expression\ getCond()
+comment3.params=
+comment3.target=Statement\ getDo()
+comment4.params=v
+comment4.target=void\ accept(Visitor)
+numComments=5

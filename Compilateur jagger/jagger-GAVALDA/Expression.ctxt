@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Expression
+comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ Expression\ ici.\r\n\r\n\ @author\ (votre\ nom)\r\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\r\n
+comment1.params=
+comment1.target=Type\ getType()
+comment2.params=pType
+comment2.target=void\ setType(Type)
+numComments=3

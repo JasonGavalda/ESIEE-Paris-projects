@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Assign
+comment1.params=pVar\ pExp
+comment1.target=Assign(Variable,\ Expression)
+comment2.params=
+comment2.target=Variable\ getVariable()
+comment3.params=
+comment3.target=Expression\ getExpression()
+comment4.params=v
+comment4.target=void\ accept(Visitor)
+numComments=5
